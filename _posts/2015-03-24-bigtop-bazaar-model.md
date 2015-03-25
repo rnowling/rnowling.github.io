@@ -23,7 +23,7 @@ We model customer preferences for booths by randomly generating the matrices $$L
 Once the preferences for each customer are known, we model the customer movement as particles in a 2D space with booths as attractive sources.  We can describe the attractive effect of the booths using an inverted, scaled Gaussian:
 
 $$
-U(x) = \sum_{i,j} -\frac{s_{i, j}}{\sqrt{2 \pi \sigma^2}} e^{-\frac{|x_i - x_j|^2}{2 \sigma^2}} + B
+U(x) = \sum_{i,j} -\frac{s_{i, j}}{\sqrt{2 \pi \sigma^2}} e^{-\frac{|x_i - x_j|^2}{2 \sigma^2}} + B(x)
 $$
 
 where $$x_i$$ is a 2D vector of the position of the customer $$i$$, $$x_j$$ is a 2D vector of the position of the booth $$j$$, and $$s_{i,j}$$ is the interaction strength between customer $$i$$ and booth $$j$$.  The $$s_{i, j}$$ values come from the matrix $$Z$$.  (Note that the interactions may need to be scaled to get the desired "residence times.") The function B represents a force acting as a boundary condition (e.g., the shape of the room) so that particles don’t float off into oblivion. (Note that there are no interactions between the particles themselves -- we could add some if desired.)
