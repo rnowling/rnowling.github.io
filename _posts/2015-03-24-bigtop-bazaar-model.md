@@ -40,7 +40,7 @@ The [Langevin equation](http://rnowling.github.io/math/2015/03/21/langevin-equat
 The customers’ preferences for certain booths can be inferred by measuring the residence time, or basically, the elapsed time between a customer entering and leaving the radius of a booth.
 
 ## Implementation and Evaluation ##
-Infuture posts, I'll describe my implementation and evaluation of the model.
+In future posts, I'll describe my implementation and evaluation of the model.
 
 (Thanks to [Will Benton](http://web.willbenton.com/) and [Jay Vyas](http://jayunit100.blogspot.com/) for thoughtful discussion.)
 
