@@ -5,7 +5,7 @@ date:   2015-04-02 7:00:00
 categories: "software engineering"
 ---
 
-I recently decided to learn more about functional programming by developing a few projects in OCaml and reading [Real World OCaml](https://realworldocaml.org/). Setting up the OCaml environment provded to be a bit of a challenge, however.
+I recently decided to learn more about functional programming by developing a few projects in OCaml and reading [Real World OCaml](https://realworldocaml.org/). Setting up the OCaml environment proved to be a bit of a challenge, however.
 
 For my environment, I'm using the OCaml compiler, `ocamlbuild` tool, [OPAM](https://opam.ocaml.org/) package manager, and several libraries including Jane Street Capital's Core library.  I'm using the [taureg](https://github.com/ocaml/tuareg) emacs mode for editing.
 
@@ -17,7 +17,7 @@ The first step is to install OPAM from packages provided by the OpenSUSE develop
 	$ opam init
     $ eval `opam config env`
 
-Originally, I made the mistake of installing the `ocaml` packages through yum. However, I ran into compatibility issues with `opam` when trying to install `camlp4`.  Instead, you should use `opam` to install the compiler:
+Originally, I made the mistake of installing the `ocaml` packages through `yum`. However, I ran into compatibility issues with `opam` when trying to install `camlp4`.  Instead, you should use `opam` to install the compiler:
 
     $ opam switch 4.02.1
 
