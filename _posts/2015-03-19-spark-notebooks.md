@@ -2,7 +2,8 @@
 layout: post
 title:  "Open-Source Spark Notebooks"
 date:   2015-03-19 12:13:19
-categories: conferences spark
+categories: spark
+tags: ["spark", "conferences", "zeppelin"]
 ---
 Several of my colleagues from Red Hat and I attended [Spark Summit East](http://spark-summit.org/east) 2015.  [Apache Spark](http://spark.apache.org/) is a powerful distributed compute engine.  Spark enables users to write data pipelines using Scala, Python, Java, and R with the Resilient Distributed Data set (RDD) abstraction.  Spark keeps data in-memory, which provides better performance for iterative algorithms like K-means clustering or PageRank.
 

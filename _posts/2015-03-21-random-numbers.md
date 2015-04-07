@@ -3,6 +3,7 @@ layout: post
 title:  "Random Number Generation Horror Stories"
 date:   2015-03-21 17:30:19
 categories: "math"
+tags: ["math", "spark"]
 ---
 Random number generation is an important component of simulation and sampling problems.  
 

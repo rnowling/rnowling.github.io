@@ -3,6 +3,7 @@ layout: post
 title:  "Langevin Equation"
 date:   2015-03-21 16:55:19
 categories: "math"
+tags: ["math", "physics"]
 ---
 
 A significant portion of my Ph.D. work was focused on the use of the [Langevin equation](http://en.wikipedia.org/wiki/Langevin_dynamics) for simulating molecular movements.  The Langevin equation can be seen as an "extension" of standard Newtonian mechanics with the addition of damping and random noise terms.  The Langevin equation is given as follows:

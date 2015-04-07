@@ -3,6 +3,7 @@ layout: post
 title:  "BigTop Bazaar: Simulating a Bazaar"
 date:   2015-03-24 12:13:19
 categories: "math"
+tags: ["math", "physics", "bigtop bazaar", "data generators"]
 ---
 
 Where do you get data for building and testing a real-time analytics system for a conference?  Simulate it!

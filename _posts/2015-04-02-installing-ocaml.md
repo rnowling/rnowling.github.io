@@ -3,6 +3,7 @@ layout: post
 title:  "Installing OCaml on CentOS"
 date:   2015-04-02 7:00:00
 categories: "software engineering"
+tags: ["ocaml", "software engineering", "functional programming"]
 ---
 
 I recently decided to learn more about functional programming by developing a few projects in OCaml and reading [Real World OCaml](https://realworldocaml.org/). Setting up the OCaml environment proved to be a bit of a challenge, however.

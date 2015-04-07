@@ -2,8 +2,8 @@
 layout: post
 title:  "Configuring a Multi-User Spark Cluster with Mesos and Gluster"
 date:   2015-03-31 12:13:19
-categories: "infrastructure"
-tags: ["spark", "gluster", "mesos", "devops"]
+categories: spark
+tags: ["spark", "gluster", "mesos", "devops", "zeppelin"]
 ---
 My team at Red Hat is a big proponent of [Apache Spark](https://spark.apache.org/) for data processing and analysis work.  We're big fans of Spark's programming model, freely switching between functional programming with RDDs and SQL queries.  The model is more expressive and convenient programming than competitors such as MapReduce.  Combined with libraries for machine learning and graph analysis, Spark represents an "all-in-one" solution.  It's simpler and easier to use Spark for everything rather than picking and choosing between the numerous and fractured components of the Hadoop ecosystem.
 
