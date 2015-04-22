@@ -22,7 +22,7 @@ The playbook above does the following:
 5. Creates a volume
 6. Starts the volume
 
-Creating a volume is a bit complicated and warrants some explanation.  The `gluster_volume` and `cluster` parameters take strings seperated by commas.  (The machines specified in the `cluster` parameter are used for peer probing).The `force` parameters allows us to specify bricks in the same partition as `/` (for use in VMs).  The `present` state tells the `gluster_volume` module to create the volume.  The `run_once` parameter specified that the task is run on only one machine rather than on each machine.
+Creating a volume is a bit complicated and warrants some explanation.  The `bricks` and `cluster` parameters take strings seperated by commas.  (The machines specified in the `cluster` parameter are used for peer probing).The `force` parameters allows us to specify bricks in the same partition as `/` (for use in VMs).  The `present` state tells the `gluster_volume` module to create the volume.  The `run_once` parameter specified that the task is run on only one machine rather than on each machine.
 
 The `gluster_volume` builds the brick list by iterating over each host and then each brick.  For example, the brick list for two hosts and two bricks would be
 
