@@ -28,6 +28,6 @@ The `gluster_volume` builds the brick list by iterating over each host and then 
 
     host1:/brick1 host2:/brick1 host1:/brick2 /host2:/brick2
 
- When N replicas are used, Gluster groups every N bricks into a replica.  With 2 replicas, the first replica would consist of `host1:/brick1` and `host2:/brick1` while the second replica would consist of `host1:/brick2` and `/host2:/brick2`.  Thus, we must be careful to coordinate the number of replicas with the number of hosts and bricks.
+ When R replicas, N nodes, and M bricks are used, Gluster groups every (N * M) / R bricks into a replica.  With 2 replicas, the first replica would consist of `host1:/brick1` and `host2:/brick1` while the second replica would consist of `host1:/brick2` and `/host2:/brick2`.  Thus, we must be careful to coordinate the ordering of the bricks and the number of nodes and bricks with the number of replicas.
 
  In the future, I would like to improve the `gluster_volume` API to make the specification of replica and striping groups more explicit and provide some error checking.
