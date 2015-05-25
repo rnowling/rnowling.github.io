@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The Lennard-Jones Potential Can Cause Simulations to Blow Up"
-date:   2015-05-19 23:41:19
+date:   2015-05-25 12:23:19
 categories: "science"
 tags: ["math", "science", "biophysics", "molecular dynamics"]
 ---
