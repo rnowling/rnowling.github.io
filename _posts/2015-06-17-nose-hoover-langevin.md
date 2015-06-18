@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The Nos&eacute;-Hoover-Langevin Thermostat"
-date:   2015-06-01 10:41:19
+date:   2015-06-17 10:41:19
 categories: "math"
 tags: ["math", "molecular dynamics", "science"]
 ---
