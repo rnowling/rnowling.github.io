@@ -74,6 +74,9 @@ Note that the population counts are nearly uniform!  Not good!  The reason for t
 
 Since we use the same loopback weight regardless of the preference of the current and proposed states, we end up getting stuck in single state over the 10 states of the customer's trajectory.
 
+
+Conclusion
+==========
 The model has a few weaknesses:
 
 * We can only express whether it's important for a particular field to be equal or not.  We cannot express preferences for specific values such as "corn" or "wheat".
@@ -81,6 +84,4 @@ The model has a few weaknesses:
 * The resulting population counts are nearly uniformally distributed!
 * The model requires $$O(N_p^2 N_f)$$ calculations due to normalization requirements.
 
-Conclusion
-==========
-My experiments have identified weaknesses of the current model.  As I explore additional model ideas, I'll write them up here.
+As a result, we need to fix the model.  As I explore additional model ideas, I'll write them up here.
