@@ -74,6 +74,30 @@ Note that the population counts are nearly uniform!  Not good!  The reason for t
 
 Since we use the same loopback weight regardless of the preference of the current and proposed states, we end up getting stuck in single state over the 10 states of the customer's trajectory.
 
+But what if we use a smaller loopback weight of 0.1?  Unfortunately, we still get nearly-uniform population counts
+
+    ('chicken', 'soy'): 1006
+    ('beef', 'potatoes'): 997
+    ('pork', 'potatoes'): 955
+    ('beef', 'corn'): 1010
+    ('chicken', 'potatoes'): 1027
+    ('pork', 'corn'): 1033
+    ('beef', 'soy'): 1018
+    ('chicken', 'corn'): 978
+    ('pork', 'soy'): 976
+
+with fewer self-transitions
+
+    ('chicken', 'soy'): 15
+    ('beef', 'potatoes'): 18
+    ('pork', 'potatoes'): 16
+    ('beef', 'corn'): 19
+    ('chicken', 'potatoes'): 15
+    ('pork', 'corn'): 11
+    ('beef', 'soy'): 15
+    ('chicken', 'corn'): 16
+    ('pork', 'soy'): 20
+
 
 Conclusion
 ==========
