@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Customer Segmentation with the BigPetStore Multinomial Model"
-date:   2015-07-07 12:13:19
+date:   2015-07-11 12:13:19
 categories: "math"
 tags: ["math", "bigpetstore"]
 ---
@@ -23,7 +23,7 @@ Group 1 is clearly separated from Groups 0 and 2.  Group 0 and 2 are similar but
 
 K-Means Clustering
 ==================
-I clustered the resulting customer purchasing data using K-means as implemented in [scikit-learn]().  I used the standard Euclidean distance (although cosine similarity would also be interesting).  I analyzed the clustering results by sweeping over 1 to 9 clusters and computed the "inertia" for each cluster count.  A plot of the cluster sizes versus the inertia shows that inertia plateaus at 3 clusters, corresponding to our 3 customer groups:
+I clustered the resulting customer purchasing data using K-means as implemented in [scikit-learn](http://scikit-learn.org/stable/).  I used the standard Euclidean distance (although cosine similarity would also be interesting).  I analyzed the clustering results by sweeping over 1 to 9 clusters and computed the "inertia" for each cluster count.  A plot of the cluster sizes versus the inertia shows that inertia plateaus at 3 clusters, corresponding to our 3 customer groups:
 
 ![](/images/bps-multinomial-segmentation/pmf_kmeans_inertia.png)
 
