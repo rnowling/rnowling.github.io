@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Encoding Categorical Variables and Feature Importance Bias with Random Forests"
+title:  "Categorical Variable Encoding and Feature Importance Bias with Random Forests"
 date:   2015-08-10 12:13:19
 categories: "machine learning"
 tags: ["math", "machine learning"]
