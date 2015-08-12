@@ -41,5 +41,7 @@ For my work with SNPs, I'm lucky in two respects.  First, I only care about feat
 
 (I [posted my code](https://gist.github.com/rnowling/fa6f1007e3547c75f8b2) so you can recreate my results.)
 
+PS -- [Tolosi, et al.](http://bioinformatics.oxfordjournals.org/content/27/14/1986.abstract) also investigated bias with correlated features and proposed a similar feature clustering solution.  I'm glad to see others had similar ideas.  :)
+
 
 
