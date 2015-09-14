@@ -5,7 +5,7 @@ date:   2015-09-13 12:13:19
 categories: "math"
 tags: ["math", "software engineering", "open source"]
 ---
-For the last year, I've been an active contributor to [Apache Bigtop's](http://bigtop.apache.org/) BigPetStore, realistic application blueprints for the big data ecosystem.  At the core of BigPetStore is the [BigPetStore Data Generator](https://github.com/rnowling/bigpetstore-data-generator/blob/master/bdcloud_paper/latex/paper.pdf) which simulates customer purchasing behavior to generate realistic but synthetic transaction records.
+For the last year, I've been an active contributor to [Apache BigTop's](http://bigtop.apache.org/) BigPetStore, realistic application blueprints for the big data ecosystem.  At the core of BigPetStore is the [BigPetStore Data Generator](https://github.com/rnowling/bigpetstore-data-generator/blob/master/bdcloud_paper/latex/paper.pdf) which simulates customer purchasing behavior to generate realistic but synthetic transaction records.
 
 Over time, we began to realize the far-reaching applicability of data generators beyond BigPetStore.  Applications which operate on sensitive data are a good example.  Synthetic data can be used for work on personal machines and automated CI systems without compromising the real data. For more details on the [advantages of synthetic data](http://sched.co/3ztl), please check out my upcoming talk at [Apache Big Data Europe 2015](http://events.linuxfoundation.org/events/apache-big-data-europe).
 
