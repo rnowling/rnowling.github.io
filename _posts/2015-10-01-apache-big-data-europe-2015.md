@@ -17,7 +17,7 @@ Apache Geode described itself more narrowly, focusing on its role as an in-memor
 
 [Netflix](http://www.netflix.com/) and JPL gave great talks on scaling Apache Spark.  Netflix presented on snags their teams ran into and their resulting patches back to the Spark project.  JPL's talk concerned scaling the throughput on Spark streaming using techniques such as operating on raw byte arrays and customized networking code.  Although their final implementation would be unsteady in production due to much higher ingestion than output, their optimization tips and findings are useful.
 
-Due to the overlap between Apache Big Data and ApacheCon: Core, I also meet a few Apache community members outside of Big Data.  I learned a few neat things about CouchBase from [Benjamin Young](one of its developers), had the opportunity to reminisce about Sydney with [Justin Mclean](http://www.classsoftware.com/), and discuss the role of Spark in a neat neuroscience project with Christoph Wille.  I also enjoyed meeting a couple fellow Red Hatters.
+Due to the overlap between Apache Big Data and ApacheCon: Core, I also meet a few Apache community members outside of Big Data.  I learned a few neat things about CouchBase from [Benjamin Young](one of its developers), had the opportunity to reminisce about Sydney with [Justin Mclean](http://www.classsoftware.com/), and discussed the role of Spark in a neat neuroscience project with Christoph Wille.  I also enjoyed meeting a couple fellow Red Hatters.
 
 
 Synthetic Data Talk
