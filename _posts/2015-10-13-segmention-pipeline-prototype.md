@@ -7,9 +7,11 @@ tags: ["python", "sklearn", "software engineering", "open source"]
 ---
 Recommendation engines are a popular and widely-used application of machine learning.  For example, Amazon, Netflix, and well, most online retailers use recommendation engines to cross-sell items. But what if you want to gain insight into customer purchasing patterns -- interpetation, not just prediction?
 
-Customer segmentation involves dividing customers into groups, with each group inhabiting some unique set of properties. Segmentation can be used for understanding the customer types and adjust business strategy to meet the needs of those distinct types.  In this case, I'm focusing on data involving explicit ratings (1-5 stars) or implicit ratings (number of times a song was played or a page was viewed).
+Customer segmentation involves dividing customers into groups, with each group inhabiting some unique set of properties. Segmentation can be used for understanding the customer types and adjust business strategy to meet the needs of those distinct types.
 
-I'm interested in developing a segmentation pipeline in Spark, but I decided to start with a prototype in Python using [scikit-learn](http://scikit-learn.org/stable/). I used the [MovieLens](http://grouplens.org/datasets/movielens/) 100K data set since it's similar to data like tracking customer page views of web portals.  Particularly, we have users, we have items, and we have ratings.
+In this case, I'm focusing on data involving explicit ratings (e.g., 1-5 stars) or implicit ratings (e.g., number of times a song was played or a page was viewed) -- data representable as triplets of `(user, item, rating)`.   Regardless of scale, ratings represent the intensity of the users' intererests in the product.  I used the [MovieLens](http://grouplens.org/datasets/movielens/) 100K data set since it's similar to data like customer page views of web portals, even if the first involves explicit ratings and the second involves implicit ratings. 
+
+I'm interested in developing a segmentation pipeline in Spark, but I decided to start with a prototype in Python using [scikit-learn](http://scikit-learn.org/stable/). 
 
 ![](/images/segmentation-prototype/pipeline.png)
 
@@ -19,25 +21,25 @@ I'm interested in developing a segmentation pipeline in Spark, but I decided to 
 
 ## Unsupervised Learning
 
-* **PCA**  We perform a PCA of the matrix.  We plot the explained variance ratios as a guide for choosing the number of PCs to use in projecting the full matrix to a reduced-dimensionality matrix.  I chose to use 10 PCs.
+* **PCA**  We perform a [PCA](http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html) of the matrix.  We plot the explained variance ratios as a guide for choosing the number of PCs to use in projecting the full matrix to a reduced-dimensionality matrix.  I chose to use 10 PCs.
 
 ![](/images/segmentation-prototype/pca_explained_var_ratio.png)
 
-* **Clustering** We cluster the projected data using K-Means. We plot the inertia for different numbers of clusters to aid use in choosing the number of clusters.  We use the clusters to label the customers.  I chose to use 25 clusters.
+* **Clustering** We cluster the projected data using [K-Means](http://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html). We plot the inertia for different numbers of clusters to aid use in choosing the number of clusters.  (The term ["inertia"](http://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html) is used by scikit-learn to represent the sum of the squared distances between each data point and its cluster center.) We use the clusters to label the customers.  I chose to use 25 clusters.
 
 ![](/images/segmentation-prototype/kmeans_inertia.png)
 
-Note that I plotted the inertia of clusterings on the reduced-dimensionality and full data.  (The term "inertia" is used by scikit-learn to represent the sum of the squared distances between each data point and its cluster center.) Clustering on the PCA-projected reduced-dimensionality data results enables us to model the data with fewer clusters, each of which is better defined than on the raw data.
+Note that I plotted the inertia of clusterings on the reduced-dimensionality and full data.  Clustering on the PCA-projected reduced-dimensionality data results enables us to model the data with fewer clusters, each of which is better defined than on the raw data.
 
 ## Validation
 
-* **Naive Bayes** To validate the clusters, we train a Naive Bayes model on the full matrix with the cluster labels, predict the labels, and plot a confusion matrix of the cluster labels and Naive Bayes labels.  If the matrix is mostly diagonal, then we can assume that the clusters are relatively distinct.
+* **Naive Bayes** To validate the clusters, we train a [Naive Bayes](http://scikit-learn.org/stable/modules/naive_bayes.html) model on the full matrix with the cluster labels, predict the labels, and plot a [confusion matrix](http://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html) of the cluster labels and Naive Bayes labels.  If the matrix is mostly diagonal, then we can assume that the clusters are relatively distinct.
 
 ![](/images/segmentation-prototype/confusion_matrix.png)
 
 ## Analysis
 
-* **TF-IDF Transformation** To highlight the most unique elements of each cluster, we transform the movings ratings using Text Frequency-Inverse Document Frequency.  Ratings of movies with high ratings in nearly almost every cluster will be scaled down, while ratings of movies unique to a cluster will be not be affected.
+* **TF-IDF Transformation** To highlight the most unique elements of each cluster, we transform the movings ratings using Text Frequency-Inverse Document Frequency ([TF-IDF](https://en.wikipedia.org/wiki/Tf%E2%80%93idf)).  Ratings of movies with high ratings in nearly almost every cluster will be scaled down, while ratings of movies unique to a cluster will be not be affected.
 
 * **Investigate Clusters** At this point, we can evaluate our clusters.  For each cluster, we can sort the movies by the average of the ratings by the cluster's members.
 
