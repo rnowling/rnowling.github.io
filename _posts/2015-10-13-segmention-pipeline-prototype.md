@@ -5,9 +5,11 @@ date:   2015-10-13 12:13:19
 categories: "machine learning"
 tags: ["python", "sklearn", "software engineering", "open source"]
 ---
-A common machine learning task is to segment customers into groups, each representing a unique profile.  Segmentation can be used for understanding the customer types and adjust business strategy to meet the needs of those distinct types.
+Recommendation engines are a popular and widely-used application of machine learning.  For example, Amazon, Netflix, and well, most online retailers use recommendation engines to cross-sell items. But what if you want to gain insight into customer purchasing patterns -- interpetation, not just prediction?
 
-I'm interested in developing a segmentation pipeline in Spark, but I decided to start with a prototype in Python using [scikit-learn](http://scikit-learn.org/stable/). I used the [MovieLens](http://grouplens.org/datasets/movielens/) 100K data set since it's similar to data like tracking customer page views of web portals.
+Customer segmentation involves dividing customers into groups, with each group inhabiting some unique set of properties. Segmentation can be used for understanding the customer types and adjust business strategy to meet the needs of those distinct types.  In this case, I'm focusing on data involving explicit ratings (1-5 stars) or implicit ratings (number of times a song was played or a page was viewed).
+
+I'm interested in developing a segmentation pipeline in Spark, but I decided to start with a prototype in Python using [scikit-learn](http://scikit-learn.org/stable/). I used the [MovieLens](http://grouplens.org/datasets/movielens/) 100K data set since it's similar to data like tracking customer page views of web portals.  Particularly, we have users, we have items, and we have ratings.
 
 ![](/images/segmentation-prototype/pipeline.png)
 
@@ -25,6 +27,8 @@ I'm interested in developing a segmentation pipeline in Spark, but I decided to 
 
 ![](/images/segmentation-prototype/kmeans_inertia.png)
 
+Note that I plotted the inertia of clusterings on the reduced-dimensionality and full data.  (The term "inertia" is used by scikit-learn to represent the sum of the squared distances between each data point and its cluster center.) Clustering on the PCA-projected reduced-dimensionality data results enables us to model the data with fewer clusters, each of which is better defined than on the raw data.
+
 ## Validation
 
 * **Naive Bayes** To validate the clusters, we train a Naive Bayes model on the full matrix with the cluster labels, predict the labels, and plot a confusion matrix of the cluster labels and Naive Bayes labels.  If the matrix is mostly diagonal, then we can assume that the clusters are relatively distinct.
@@ -38,6 +42,7 @@ I'm interested in developing a segmentation pipeline in Spark, but I decided to 
 * **Investigate Clusters** At this point, we can evaluate our clusters.  For each cluster, we can sort the movies by the average of the ratings by the cluster's members.
 
 ## Example Cluster Output
+I picked two representative clusters from the output of the pipeline:
 
     22 (33, 1682)
     Star Trek: The Wrath of Khan (1982) 0.0694880144587
@@ -64,6 +69,11 @@ I'm interested in developing a segmentation pipeline in Spark, but I decided to 
     Clockwork Orange, A (1971) 0.0468088933486
     Monty Python's Life of Brian (1979) 0.0466346420988
 
+The two clusters are relatively distinct.  The users in the first cluster generally prefer science fiction films, while the users in the second cluster prefer films that tend to be independent films with relatively unique and distinct profiles.
 
+## Conclusion
+I've outlined a prototype for a customer segmentation pipeline, implemented with scikit-learn.  I've described the basic steps as well as points for human evaluation and decision-making.  I validated the pipeline using MovieLens data.
+
+My next steps will be to implement the pipeline in Spark.  Larger data sets and distributed computing represent a few challenges, mainly how to perform the dimensionality reduction.
 
 If you want to play with the code, you can grab it [here](https://gist.github.com/rnowling/cd05281eeafe46b38158).
