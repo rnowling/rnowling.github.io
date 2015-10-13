@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Segmentation Pipeline Prototype"
+title:  "Customer Segmentation Pipeline Prototype"
 date:   2015-10-13 12:13:19
 categories: "machine learning"
 tags: ["python", "sklearn", "software engineering", "open source"]
