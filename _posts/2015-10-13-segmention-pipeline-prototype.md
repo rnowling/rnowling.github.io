@@ -9,7 +9,7 @@ Recommendation engines are a popular and widely-used application of machine lear
 
 Customer segmentation involves dividing customers into groups, with each group inhabiting some unique set of properties. Segmentation can be used for understanding the customer types and adjust business strategy to meet the needs of those distinct types.
 
-In this case, I'm focusing on data involving explicit ratings (e.g., 1-5 stars) or implicit ratings (e.g., number of times a song was played or a page was viewed) -- data representable as triplets of `(user, item, rating)`.   Regardless of scale, ratings represent the intensity of the users' intererests in the product.  I used the [MovieLens](http://grouplens.org/datasets/movielens/) 100K data set since it's similar to data like customer page views of web portals, even if the first involves explicit ratings and the second involves implicit ratings. 
+In this case, I'm focusing on data involving explicit ratings (e.g., 1-5 stars) or implicit ratings (e.g., number of times a song was played or a page was viewed) -- data representable as triplets of `(user, item, rating)`.   Regardless of scale, ratings represent the intensity of the users' interests in the products.  I used the [MovieLens](http://grouplens.org/datasets/movielens/) 100K data set since it's similar to data like customer page views of web portals, even if the first involves explicit ratings and the second involves implicit ratings. 
 
 I'm interested in developing a segmentation pipeline in Spark, but I decided to start with a prototype in Python using [scikit-learn](http://scikit-learn.org/stable/). 
 
