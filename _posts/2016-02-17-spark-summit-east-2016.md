@@ -3,7 +3,7 @@ layout: post
 title:  "Spark Summit East 2016"
 date:   2016-02-17 12:13:19
 categories: "conferences"
-tags: ["apache", "software engineering", "open source", "spark", "data science"]
+tags: ["software engineering", "spark", "data science", "math"]
 ---
 I was fortunate to have the opportunity to speak at the [Spark Summit East 2016](https://spark-summit.org/east-2016/) conference this year and had a wonderful time.
 
