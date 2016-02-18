@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Spark Summit East 2016"
-date:   2016-02-27 12:13:19
+date:   2016-02-17 12:13:19
 categories: "conferences"
 tags: ["apache", "software engineering", "open source", "spark", "data science"]
 ---
