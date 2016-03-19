@@ -13,7 +13,7 @@ The core technique for detecting duplicates is straightforward:
 2. Compute the distances between all pairs of vectors
 3. Return those document pairs whose vectors had distances less than some threshold
 
-The devil is in the details, as usual.  How you preprocess the documents' text and vectorize the documents can significantly impact accuracy. I'm using the same data set and approach I discussed in [my talk](conferences/2016/02/17/spark-summit-east-2016.html) at [Spark Summit East 2016](https://spark-summit.org/east-2016/).
+The devil is in the details, as usual.  How you preprocess the documents' text and vectorize the documents can significantly impact accuracy. I'm using the same data set and approach I discussed in [my talk](/conferences/2016/02/17/spark-summit-east-2016.html) at [Spark Summit East 2016](https://spark-summit.org/east-2016/).
 
 From a performance perspective, most applications use hashing techniques such as [simhash](http://www2007.org/papers/paper215.pdf), which can avoid all-pairs calculations.  I wanted to gain a better understanding of the trade offs between how vectors are weighted, the choices of distance functions, and the resulting distribution of distances, so I chose to not to use hash functions for now.
 
