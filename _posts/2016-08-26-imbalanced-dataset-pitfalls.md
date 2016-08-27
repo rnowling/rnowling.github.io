@@ -41,7 +41,7 @@ I decided to print out a confusion matrix for a model of each type and that's wh
 | **Click** | 30.1% | 69.9% |
 
 
-I was using the wrong metrics.  The ROC curves and area under the curve scores use the predicted probabilities, not the predicted class labels.  The models are likely producing probabilities of different magnitudes but of consistent ordering. But since the logit function, centered around zero, is used as the decision function, the probabilities from the first model are resulting in different class predictions.
+I was using the wrong metrics.  The ROC curves and area under the curve scores use the predicted probabilities, not the predicted class labels.  The models are likely producing probabilities of different magnitudes but of consistent ordering. But since the decision function is probably centered around 0.5, the probabilities from the first model are resulting in different class predictions.  This is an example of why you should be careful about using a default decision function and even consider approaches like [probability calibration](http://scikit-learn.org/stable/modules/calibration.html).
 
 On the other hand, the log loss metric weights each type of misclassification equally.  Due to the extreme inbalance, the model can predict no user will click the ad and appear to be doing better than if some of the click predictions are correct.  We don't want that -- it's better to predict that a user who won't click will click than to predict that a user who will click won't click.  From that perspective, the models trained with data split by class and upsampled is much better, even if it only has a precision of 69.9%.  This difference is reflected in the confusion matrices.
 
