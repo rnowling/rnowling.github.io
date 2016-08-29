@@ -41,11 +41,16 @@ I decided to print out a confusion matrix for a model of each type and that's wh
 | **Click** | 30.1% | 69.9% |
 
 
-I was using the wrong metrics.  The ROC curves and area under the curve scores use the predicted probabilities, not the predicted class labels.  The models are likely producing probabilities of different magnitudes but of consistent ordering. But since the decision function is probably centered around 0.5, the probabilities from the first model are resulting in different class predictions.  This is an example of why you should be careful about using a default decision function and even consider approaches like [probability calibration](http://scikit-learn.org/stable/modules/calibration.html).
+I was using the wrong metrics.  The ROC curves and area under the curve scores use the predicted probabilities, not the predicted class labels.  The models are likely producing probabilities of different magnitudes but of consistent ordering. Since the decision function is probably centered around 0.5, the probabilities from the first model are resulting in different class predictions than those from the second model.  This is an example of why you should be careful about using a default decision function and even consider approaches like [probability calibration](http://scikit-learn.org/stable/modules/calibration.html).
 
-On the other hand, the log loss metric weights each type of misclassification equally.  Due to the extreme inbalance, the model can predict no user will click the ad and appear to be doing better than if some of the click predictions are correct.  We don't want that -- it's better to predict that a user who won't click will click than to predict that a user who will click won't click.  From that perspective, the models trained with data split by class and upsampled is much better, even if it only has a precision of 69.9%.  This difference is reflected in the confusion matrices.
+On the other hand, the log loss metric does use the class predictions from the decision function, but weights each type of misclassification equally. Because there are very few click user data points, a model can mispredict all click users as no-click users and still appear to have a small log loss.  This is exactly what is happening with the first model.  By balancing the composition of the training set, the second model correctly identifies 69.9% of the click users but mispredicts 15.6% of the no-click users as click users, resulting in a larger number of mispredictions and worse log loss. As such, we have to be careful about using log loss when the costs of the type of mispredictions are unequal or the classes are imbalanced.
 
-So note to future self: be careful about choosing metrics.  Make sure the metrics are evaluating the right output and are appropriate for imbalanced datasets.
+A few lessons learned:
+
+* Class imbalance significantly impacts logistic regression's class predictions if you don't account for the imbalance in the decision function.
+* Orderings of data points by the predicted probabilities seem to be consistent even in the face of class imbalance, though.  It would be good to follow up on this by comparing rankings using something like [Kendall's Tau](https://en.wikipedia.org/wiki/Kendall_rank_correlation_coefficient).
+* ROC curves and AUC seem to be robust to class imbalance.
+* Log loss is not robust to class imbalance. I imagine the metric could be generalized to incorporate misprediction costs and adjusted to account for class imbalance, though.
 
 If you want to play with the models yourself, feel free to [grab the script](https://gist.github.com/rnowling/91717eef5af2524a0fc1161ba1986b0f) I used to generate the figures and metrics.
 
