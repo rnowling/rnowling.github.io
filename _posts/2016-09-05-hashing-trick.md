@@ -41,4 +41,4 @@ We can make a few observations:
 ## Conclusion
 Feature hashing offers some nice advantages, especially for online learning and distributed computing.  We observe that with feature hashing we can achieve comparable accuracy to models without feature hashing.  The feature hashing models do not seem to require as many features to achieve comparable accuracy, but require many more features to prevent collisions.
 
-(You can [download the script](https://gist.github.com/rnowling/8390d1c13f803c00ea5aee14c071d2cf) I used for these experiments and try it for yourself.)
+(You can [download the script](https://gist.github.com/rnowling/659df4f92ae16aaac8b1ce20abd7b53b) I used for this experiment and try it for yourself.)
