@@ -29,7 +29,7 @@ Here are the resulting curves:
 
 ![AUC and non-zero feature weights vs number of features](/images/feature_hashing/hashed_features_auc_weights.png)
 
-The solid cyan line refers to the AUC of the featured hashing models, while the dotted cyan line is the AUC of the TFIDF model.  The solid red line gives the number of features with non-zero weights in the feature hashed models, while the dotted red line gives the number of features from the TFIDF model.
+The solid cyan line refers to the AUC of the featured hashing models, while the dashed cyan line is the AUC of the TFIDF model.  The solid black line gives the number of features with non-zero weights in the feature hashed models, while the dashed black line gives the number of features from the TFIDF model.
 
 We can make a few observations:
 
