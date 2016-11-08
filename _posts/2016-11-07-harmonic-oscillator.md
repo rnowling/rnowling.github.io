@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Harmonic Oscillator"
-date:   2016-11-04 12:13:19
+date:   2016-11-07 12:13:19
 categories: "math"
 tags: ["math"]
 ---
