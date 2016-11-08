@@ -23,7 +23,7 @@ $$
 m\frac{d^2 x}{dx^2} = - m \omega^2 x
 $$
 
-The ordinary has two initial conditions: $$x(0)$$ and $$v(0)$$.
+The ordinary differential equation has two initial conditions: $$x(0)$$ and $$v(0)$$.
 
 The analytical solution of the ODE is given by:
 
@@ -84,7 +84,7 @@ $$
 E_T = E_K(v) + U(x)
 $$
 
-for some fixed $E_T$.
+for some fixed $$E_T$$.
 
 If we plot the kinetic, potential, and total energy, we can see that the total energy (black) is conserved, but is transformed transformed between kinetic (cyan) and potential (magenta) energy over time:
 
