@@ -12,7 +12,7 @@ My particular background is in [molecular dynamics](https://en.wikipedia.org/wik
 The [potential energy function](https://en.wikipedia.org/wiki/Potential_energy) of the harmonic oscillator is given by:
 
 $$
-U(x) = - m \omega^2 x^2
+U(x) = - \frac{1}{2} m \omega^2 x^2
 $$
 
 where $$U$$ is the potential energy, $$x$$ is the position, $$m$$ is the mass, $$\omega$$ is the angular frequency.
