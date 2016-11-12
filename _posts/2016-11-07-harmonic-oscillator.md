@@ -20,7 +20,7 @@ where $$U$$ is the potential energy, $$x$$ is the position, $$m$$ is the mass, $
 We will simulate the harmonic oscillator in the [microcanonical ensemble](https://en.wikipedia.org/wiki/Microcanonical_ensemble).  This is the formulation seen in a first-year physics class where the total energy (potential plus kinetic) of the system is conserved.  The dynamics are captured in the following second-order ordinary differential equation, otherwise known as Newton's equations of motion:
 
 $$
-m\frac{d^2 x}{dx^2} = - m \omega^2 x
+m\frac{d^2 x}{dt^2} = - m \omega^2 x
 $$
 
 The ordinary differential equation has two initial conditions: $$x(0)$$ and $$v(0)$$.
@@ -56,7 +56,7 @@ $$
 
 $$
 v(0) = - A \omega^2 m \sin(\phi) \\
-v(0) = - x(0) m^{-1} \cos^{-1}(\phi) \omega^2 m \sin(\phi) \\
+v(0) = - x(0) m^{-1} \cos^{-1}(\phi) m \omega^2 \sin(\phi) \\
 \frac{v(0)}{x(0)} = - \omega^2 \frac{\sin(\phi)}{\cos(\phi)} \\
 \frac{v(0)}{x(0)} = - \omega^2 \tan(\phi) \\
 \phi = \arctan \Big(- \omega^{-2} \frac{v(0)}{x(0)}\Big)
