@@ -47,7 +47,7 @@ $$
 a(0) = -m^{-1} \nabla(x(0)) \\
 x(\Delta t) = x(0) + v(0)\Delta t + \frac{1}{2}a(0)\Delta t^2 \\
 a(\Delta t) = -m^{-1} \nabla(x(\Delta t)) \\
-v(\Delta t) = v(0) + \frac{1}{2} (a(0) + a(t)) \Delta t \\
+v(\Delta t) = v(0) + \frac{1}{2} (a(0) + a(\Delta t)) \Delta t \\
 $$
 
 Since we truncated the equations for $$x(\Delta t)$$ and $$v(\Delta t)$$ at the second-order terms, the Leapfrog integrator is second-order accurate for a single update of the velocities and positions.  This means that if we half the time step, the error is quartered.
