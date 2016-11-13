@@ -50,6 +50,6 @@ a(\Delta t) = -m^{-1} \nabla(x(\Delta t)) \\
 v(\Delta t) = v(0) + \frac{1}{2} (a(0) + a(\Delta t)) \Delta t \\
 $$
 
-Since we truncated the equations for $$x(\Delta t)$$ and $$v(\Delta t)$$ at the second-order terms, the Leapfrog integrator is second-order accurate for a single update of the velocities and positions.  This means that if we half the time step, the error is quartered.
+Since we truncated the equations for $$x(\Delta t)$$ and $$v(\Delta t)$$ at the second-order terms, the Leapfrog integrator is second-order accurate for a single update of the velocities and positions.  This means that if we half the time step, the per-step error is divided by eight.
 
 In a future blog post, we'll compare the analytical model for the harmonic oscillator to approximations made with the Leapfrog integrator.  This comparison will allow us to verify the order of the error of the Leapfrog integrator.
