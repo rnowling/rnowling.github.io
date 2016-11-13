@@ -41,7 +41,7 @@ x''(t) = v'(t) = a(t) \\
 x'(t) = v(t) 
 $$
 
-By truncating the Maclaurin series at the second-order terms and applying the above substitutions, we get a variation of the Leapfrog integrator:
+By truncating the Maclaurin series for $$x(\Delta t)$$ and $$v(\Delta t)$$ at the second-order terms and applying the above substitutions, we get a variation of the Leapfrog integrator:
 
 $$
 a(0) = -m^{-1} \nabla(x(0)) \\
