@@ -28,7 +28,7 @@ $$
 We need to re-arrange and make substitutions of the terms in the Maclaurin series for $$x(\Delta t)$$ and $$v(\Delta t)$$ so that they only contain the values $$x(0)$$, $$v(0)$$, $$a(0)$$, and $$a(\Delta t)$$. We begin by truncating the Maclaurin series of $$a(\Delta t)$$ after the first-order term and re-arrange:
 
 $$
-a(\Delta t) = a(0) + a'(0)\Delta t + \mathcal{O}(\Delta t)^2 \\
+a(\Delta t) = a(0) + a'(0)\Delta t \\
 a'(0)\Delta t = a(\Delta t) - a(0)
 $$
 
