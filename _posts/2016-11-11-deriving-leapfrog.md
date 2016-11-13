@@ -41,15 +41,15 @@ x''(t) = v'(t) = a(t) \\
 x'(t) = v(t) 
 $$
 
-We substitute into the Maclaurin series, giving us a variation of the Leapfrog integrator:
+By truncating the Maclaurin series at the second-order terms and applying the above substitutions, we get a variation of the Leapfrog integrator:
 
 $$
 a(0) = -m^{-1} \nabla(x(0)) \\
-x(\Delta t) = x(0) + v(0)\Delta t + \frac{1}{2}a(0)\Delta t^2 + \mathcal{O}(\Delta t)^3 \\
+x(\Delta t) = x(0) + v(0)\Delta t + \frac{1}{2}a(0)\Delta t^2 \\
 a(\Delta t) = -m^{-1} \nabla(x(\Delta t)) \\
-v(\Delta t) = v(0) + \frac{1}{2} (a(0) + a(t)) \Delta t + \mathcal{O}(\Delta t^3) \\
+v(\Delta t) = v(0) + \frac{1}{2} (a(0) + a(t)) \Delta t \\
 $$
 
-Since we truncated the equations for $$x(\Delta t)$$ and $$v(\Delta t)$$ at the third-order terms, the the Leapfrog integrator is second-order accurate for the velocities and positions.  This means that if we half the time step, the error is quartered.
+Since we truncated the equations for $$x(\Delta t)$$ and $$v(\Delta t)$$ at the second-order terms, the Leapfrog integrator is second-order accurate for a single update of the velocities and positions.  This means that if we half the time step, the error is quartered.
 
 In a future blog post, we'll compare the analytical model for the harmonic oscillator to approximations made with the Leapfrog integrator.  This comparison will allow us to verify the order of the error of the Leapfrog integrator.
