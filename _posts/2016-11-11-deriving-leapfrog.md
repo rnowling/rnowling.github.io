@@ -8,7 +8,7 @@ tags: ["math"]
 Assume we have a second-order ordinary differential equation
 
 $$
-m\frac{d^2 x}{dt^2} = -\nabla(x)
+m\frac{d^2 x}{dt^2} = -\nabla U(x)
 $$
 
 with initial conditions $$x(0)$$ and $$v(0)$$.
