@@ -5,7 +5,7 @@ date:   2016-11-19 12:13:19
 categories: "math"
 tags: ["math"]
 ---
-In my [last blog post](/math/2016/11/13/leapfrog-local-error.html), I described how to derive the local truncation, or per-step, error analytically.  I then compared the analytical prediction to empirical results from the harmonic oscillator model I described in [another previous blog post](/math/2016/11/07/harmonic-oscillator.html).  In this blog post, I'll derive the *global truncation error*, or the error accumulated over all of the steps in a trajectory, and once again, compare to the error calculated from harmonic oscillator model.
+In my [last blog post](/math/2016/11/13/leapfrog-local-error.html), I described how to derive the local truncation, or per-step, error analytically.  I then compared the analytical prediction to empirical results from the harmonic oscillator model I described in [another previous blog post](/math/2016/11/07/harmonic-oscillator.html).  In this blog post, I'll derive the **global truncation error**, or the error accumulated over all of the steps in a trajectory, and once again, compare to the error calculated from harmonic oscillator model.
 
 In our last blog post, we found the local truncation error $$e_{t+\Delta}$$ for step $$t + \Delta t$$ is given by:
 
