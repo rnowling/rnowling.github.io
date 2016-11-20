@@ -125,7 +125,7 @@ In this post, we showed how to analytically derive an upperbound for the global 
 
 In our numerical experiments, we observed that the global truncation error oscillates periodically with the amplitude growing linearly.  We then derived the exact upperbound of the global truncation error for the harmonic oscillator, which confirmed our observations.
 
-Our numerical experiments also demonstrated that the analytical derivation of the upperbound on the global truncation error is not valid for large timesteps.  The error for the larger timestep is probably affected by linear or nonlinear stabilities, which we will explore in a later blog post.
+Our numerical experiments also demonstrated that the analytical derivation of the upperbound on the global truncation error is not valid for large timesteps.  The error for the larger timestep is probably affected by linear or nonlinear instabilities, which we will explore in a later blog post.
 
 <a name="ode-textbook">1</a>: I used chapter 8 of [Elementary Differential Equations and Boundary Value Problems](https://smile.amazon.com/Elementary-Differential-Equations-Boundary-Problems/dp/0470458313) by Boyce and DiPrima as a reference for how to calculate the error.
 
