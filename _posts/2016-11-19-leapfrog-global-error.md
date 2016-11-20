@@ -5,9 +5,9 @@ date:   2016-11-19 12:13:19
 categories: "math"
 tags: ["math"]
 ---
-In my last blog post, I described how to derive the local truncation, or per-step, error analytically.  I then compared the analytical prediction to empirical results from the harmonic oscillator model I described in another previous blog post.  In this blog post, I'll derive the *global truncation error*, or the error accumulated over all of the steps in a trajecory, and once again, compare to the error calculated from harmonic oscillator model.
+In my [last blog post](/math/2016/11/13/leapfrog-local-error.html), I described how to derive the local truncation, or per-step, error analytically.  I then compared the analytical prediction to empirical results from the harmonic oscillator model I described in [another previous blog post](math/2016/11/07/harmonic-oscillator.html).  In this blog post, I'll derive the *global truncation error*, or the error accumulated over all of the steps in a trajectory, and once again, compare to the error calculated from harmonic oscillator model.
 
-In our last blog post, we found the local truncation error $$e_{t+\Delta}$$ for time $$t + \Delta t$$ is given by:
+In our last blog post, we found the local truncation error $$e_{t+\Delta}$$ for step $$t + \Delta t$$ is given by:
 
 $$
 e_{t+\Delta t} = \frac{1}{6} \Delta t^3 |x'''(t)|
@@ -81,7 +81,7 @@ $$
 
 The $$\sin(\omega \hat{t} + \phi)$$ term explains the periodic behavior we observed, while the $$\hat{t}$$ coefficient explains the linear scaling of the amplitudes we observed.
 
-Next, we empirically validated the order of the scaling of $$E_{\hat{t}}$$ with respect to the timestep $$\Delta t$$.  We ran simulations of the harmonic oscillator model for 100 seconds, but with a range of timesteps and number of steps.  We found the maximum global truncation error for the positions and velocities from each simulation.  The resulting data is reproduced here:
+Next, we empirically validated the order of the scaling of $$E_{\hat{t}}$$ with respect to the time step $$\Delta t$$.  We ran simulations of the harmonic oscillator model for 100 seconds, but with a range of timesteps and number of steps.  We found the maximum global truncation error for the positions and velocities from each simulation.  The resulting data is reproduced here:
 
 | Step size | Steps | Max Position Error | Max Velocity Error |
 |:---------:|:-----:|:----------------------:|:----------------------:|
