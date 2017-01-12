@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Energy Error is Bounded for Symplectic Integrators"
+title:  "Symplectic Integrators Bound Energy Error"
 date:   2017-01-11 12:13:19
 categories: "math"
 tags: ["math"]
