@@ -38,6 +38,8 @@ Let's do a simulation to validate our result.  I simulated the harmonic oscillat
 
 But wait!  The energy doesn't grow over time!  In fact, the error in the energy doesn't seem to change in time once the trajectories are long enough. What's going on?
 
-Our analysis above provided an upper-bound on the energy error over time, but it didn't take into account the stricter property of symplectiness. In my [last blog post](math/2016/12/14/leapfrog-symplectic-harmonic-oscillator.html), I proved that the Leapfrog integrator is symplectic. [Ge and Mardsen](http://www.cds.caltech.edu/~marsden/bib/1988/04-GeMa1988/GeMa1988.pdf) proved that if a symplectic integrator exactly conserves the total energy (Hamiltonian) of a system, then it is computing the exact trajectory for that system. They go on to suggest that for symplectic integrators, the error in the energy is a good proxy for evaluating the error in the trajectory.
+Our analysis above provided an upper-bound on the energy error over time -- the error in the energy could always be less. Specifically, we didn't take into account the stricter property of symplectiness.
 
-A future task will be to explain Ge and Mardsen's proof.
+In my [last blog post](math/2016/12/14/leapfrog-symplectic-harmonic-oscillator.html), I proved that the Leapfrog integrator is symplectic. [Ge and Mardsen](http://www.cds.caltech.edu/~marsden/bib/1988/04-GeMa1988/GeMa1988.pdf) proved that if a symplectic integrator exactly conserves the total energy (Hamiltonian) of a system, then it is computing the exact trajectory for that system. They go on to suggest that for symplectic integrators, the error in the energy is a good proxy for evaluating the error in the trajectory.
+
+Specifically, symplectic integrators seem to bound the error in the energy so that it doesn't grow over time.  This is a useful property when studying physical systems.
