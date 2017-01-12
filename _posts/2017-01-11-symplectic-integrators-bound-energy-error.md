@@ -30,7 +30,7 @@ $$
 \tilde{E}(t) = \frac{1}{2}m v^2(t) + \frac{1}{2} m \omega x^2(t) + \mathcal{O}(t^2)
 $$
 
-For the harmonic oscillator, the positions and velocities are bounded by constants.  Thus, we end up with linear and quadratic error terms depending on $t$. Since the quadratic error term is larger in the infinite limit, we can expect the error in the energies be bounded by quadratic growth with respect to the length of the trajectories.
+For the harmonic oscillator, the positions and velocities are bounded by constants.  Thus, we end up with linear and quadratic error terms depending on $$t$$. Since the quadratic error term to be the largest term in the large $$t$$ limit, we can expect the error in the energies be bounded by quadratic growth with respect to the length of the trajectories.
 
 Let's do a simulation to validate our result.  I simulated the harmonic oscillator using the Leapfrog integrator with a timestep of 0.01 s to generate trajectories ranging from 1 s to 1000 s. I sampled the total energy at each time step and plotted the average and standard deviations of the energies (black) for each trajectory length.  I also included the analytical energy (magenta) as a reference.
 
@@ -42,4 +42,4 @@ Our analysis above provided an upper-bound on the energy error over time -- the 
 
 In my [last blog post](math/2016/12/14/leapfrog-symplectic-harmonic-oscillator.html), I proved that the Leapfrog integrator is symplectic. [Ge and Mardsen](http://www.cds.caltech.edu/~marsden/bib/1988/04-GeMa1988/GeMa1988.pdf) proved that if a symplectic integrator exactly conserves the total energy (Hamiltonian) of a system, then it is computing the exact trajectory for that system. They go on to suggest that for symplectic integrators, the error in the energy is a good proxy for evaluating the error in the trajectory.
 
-Specifically, symplectic integrators seem to bound the error in the energy so that it doesn't grow over time.  This is a useful property when studying physical systems.
+Specifically, symplectic integrators seem to bound the error in the energy so that it doesn't grow over time.  Physicists would say that the error is secular. This is a useful property when studying physical systems.
