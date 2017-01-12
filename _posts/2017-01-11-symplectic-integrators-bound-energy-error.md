@@ -27,10 +27,10 @@ $$
 \tilde{E}(t) = \frac{1}{2}m (v(t) + \mathcal{O}(t))^2 + \frac{1}{2} m \omega (x(t) + \mathcal{O}(t))^2 \\
 \tilde{E}(t) = \frac{1}{2}m (v(t)^2 + \mathcal{O}(v(t)t) + \mathcal{O}(t^2)) + \frac{1}{2} m \omega (x(t)^2 + \mathcal{O}(x(t)t) + \mathcal{O}(t^2)) \\
 \tilde{E}(t) = \frac{1}{2}m v^2(t) + \frac{1}{2} m \omega x^2(t) + \mathcal{O}(v(t)t) + \mathcal{O}(t^2) + \mathcal{O}(x(t)t) + \mathcal{O}(t^2) \\
-\tilde{E}(t) = \frac{1}{2}m v^2(t) + \frac{1}{2} m \omega x^2(t) + \mathcal{O}(t)
+\tilde{E}(t) = \frac{1}{2}m v^2(t) + \frac{1}{2} m \omega x^2(t) + \mathcal{O}(t^2)
 $$
 
-For the harmonic oscillator, the positions and velocities are bounded by constants.  Thus, we end up with estimation of the error in energy growing linearly with time, just like the positions and velocities.
+For the harmonic oscillator, the positions and velocities are bounded by constants.  Thus, we end up with linear and quadratic error terms depending on $t$. Since the quadratic error term is larger in the infinite limit, we can expect the error in the energies be bounded by quadratic growth with respect to the length of the trajectories.
 
 Let's do a simulation to validate our result.  I simulated the harmonic oscillator using the Leapfrog integrator with a timestep of 0.01 s to generate trajectories ranging from 1 s to 1000 s. I sampled the total energy at each time step and plotted the average and standard deviations of the energies (black) for each trajectory length.  I also included the analytical energy (magenta) as a reference.
 
