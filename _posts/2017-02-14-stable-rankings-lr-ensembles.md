@@ -1,0 +1,70 @@
+---
+layout: post
+title: "Stable Rankings with Logistic Regression Ensembles"
+date: 2017-02-14 00:01:19
+categories: "machine learning"
+tags: ["bioinformatcs", "scientific computing"]
+---
+Logistic regression models are commonly used to identify SNPs which are correlated with differences between phenotypes observed associated with population structures. Logistic Regression is particularly popular for genome-wide association studies (GWAS) of human diseases<sup>[1](#liu),[2](#stahl),[3](#hunter),[4](#shi),[5](#han),[6](#turnbull),[7](#chasman),[8](#kumar),[9](#cha),[10](#hu)</sup>.
+
+When applied to SNPs, samples are assigned to classes in accordance with their phenotypes and their variants are encoded as a feature matrix.  A LR model is then trained.  The magnitudes of the weights from the LR model are used to rank the variants, with the top-ranked variants selected for further exploration.
+
+Genomes often have on the order of millions of variants.  With such large data sizes, LR models often need to be trained with approximate, stochastic method such as Stochastic Gradient Descent (SGD).  These methods introduce randomness into the weights and consequently the rankings.  We decided to evaluate the consistency of the rankings.
+
+## Comparison of Rankings from Two Logistic Regression Models
+To demonstrate this effect, we trained a pair of LR models on variants from 149 *An. gambiae* and *An. coluzzii* mosquitoes in the [*Anopheles* 1000 genomes](https://www.malariagen.net/projects/ag1000g) dataset. We encoded each variants as two features, each storing the number of occurrences of one allele. We used the magnitudes (absolute values) of the weights from the models to rank the variants.  We compared the membership of the top 0.01% (466) of the SNPs ranked by each model in each pair using the Jaccard similarity.  We found that only 81% of the top 0.01% (466) of the ranked SNPs agreed between the two models.  The following table contains the similarity for different thresholds:
+
+| Threshold (%) | Number of SNPs | Jaccard Similarity |
+|:-------------:|:--------------:|:------------------:|
+| 0.01%         | 466            | 80.7%              |
+| 0.1%          | 4,662          | 83.8%              |
+| 1%            | 46,620         | 79.2%              |
+| 10%           | 466,204        | 76.6%              |
+
+
+This instability could have significant impacts on the reproducibility and correctness of these GWAS studies.
+
+## Logistic Regression Ensembles
+Leo Breiman realized that certain machine learning models (decision trees, linear regression, others) are unstable<sup>[11](#breiman)</sup> and proposed bagging<sup>[12](#bagging)</sup> as a solution. Breiman's later used bagging in his Random Forests<sup>[13](#random-forests)</sup> algorithm, where it become well-known.  Breiman's focus was on classifier accuracy, however, and not necessarily on calculating variable importance scores or using weights for ranking.
+
+We employ an ensemble approach to Logistic Regression models to stabilize the feature weights and achieve consistent rankings.  We trained pairs of ensembles of Logistic Regression models.  We normalized the weight vector from each model and then computed the average magnitude of the weights for each feature.  We then used the averaged magnitudes to rank the SNPs. We repeated our analysis of the Jaccard similarities of the top 0.01%, 0.1%, 1%, and 10% of the ranked SNPs for ensembles with different numbers of models.
+
+![Jaccard Similarities for Logistic Regression Ensembles](/images/stable_rankings_lr_ensembles/snp_ranking_overlaps_sgd-l2.png)
+
+With ensembles of 250 models, we were able to achieve an agreement of 99% of the top 0.01% of SNPs.
+
+## Conclusion
+
+Logistic Regression models trained with stochastic methods such as Stochastic Gradient Descent (SGD) do not necessarily produce the same weights from run to run. This does not generally affect accuracy, especially in cases with a large number of correlated variables. However, the variations in the weights do affect analyses such as ranking and variable selection. Researchers should be cautious when using Logistic Regression weights for ranking.
+
+We demonstrated that an ensemble approach can be used to stabilize the weights and consequently the resulting variable rankings.  Further validation work will be needed to determine if Logistic Regression ensembles are a suitable solution, but our results are promising.
+
+*The analyses presented here used the development branch of the software package [Asaph](https://github.com/rnowling/asaph).*
+
+## References
+
+<a name="liu">1</a>: [Liu, et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3150510/)
+
+<a name="stahl">2</a>: [Stahl, et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4243840/)
+
+<a name="hunter">3</a>: [Hunter, al.](http://www.nature.com/ng/journal/v39/n7/full/ng2075.html)
+
+<a name="shi">4</a>: [Shi, et al.](http://www.nature.com/ng/journal/v43/n12/abs/ng.978.html)
+
+<a name="han">5</a>: [Han, et al.](http://www.nature.com/ng/journal/v41/n11/abs/ng.472.html)
+
+<a name="turnbull">6</a>: [Turnbull, et al.](http://www.nature.com/ng/journal/v42/n6/abs/ng.586.html)
+
+<a name="chasman">7</a>: [Chasman, et al.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3125402/)
+
+<a name="kumar">8</a>: [Kumar, et al.](http://www.nature.com/ng/journal/v43/n5/abs/ng.809.html)
+
+<a name="cha">9</a>: [Cha, et al.](http://hmg.oxfordjournals.org/content/19/23/4735.short)
+
+<a name="hu">10</a>: [Hu, et al.](http://www.nature.com/ng/journal/v43/n8/abs/ng.875.html)
+
+<a name="breiman">11</a>: [Leo Breiman (1994)](http://projecteuclid.org/euclid.aos/1032181158)
+
+<a name="bagging">12</a>: [Leo Breiman (1996)](http://www.machine-learning.martinsewell.com/ensembles/bagging/Breiman1996.pdf)
+
+<a name="random-forests">13</a>: [Leo Breiman (2001)](http://link.springer.com/article/10.1023/A:1010933404324)
