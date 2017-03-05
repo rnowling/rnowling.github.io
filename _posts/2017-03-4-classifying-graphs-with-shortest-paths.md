@@ -9,19 +9,16 @@ Graphs can be an easy and intuitive way of representing interactions between age
 
 One of the most natural applications of network science is analyzing clickstream data.  In particular, we can represent users' browsing sessions as graphs.  In the simplest case, we can use vertices to represent the pages that users have visited and directed edges to represent that a user has navigated from one page to another.  A more sophisticated model might might use edge weights to record the number of times the user navigated from one page to another in a single session.  In fact, if we normalize the outgoing edge weights of each vertex, we can derive a [Markov model](https://en.wikipedia.org/wiki/Markov_model) of the dynamics of the browsing session.
 
-My motivation and goal of modeling users' browsing sessions as graphs is to be able to segment users by their browsing behaviors. In my previous role at Red Hat, I was interested in segmenting users based on the products they were interested in.  In that case, I modeled traffic from all users to form a single large graph of the site.  I tried applying community detection algorithms (including spectral-clustering-like approaches) but had little success.
+My motivation and goal of modeling users' browsing sessions as graphs is to be able to segment users by their browsing behaviors. For example, I may want to train a machine learning model to discriminate between users who are likely to make a purchase (convert) versus those who are just window shopping using graphs generated from their browsing sessions. I don't know the content of the web sites, and web sites can be structured differently. Thus, I won't be able to match vertices between separate graphs easily. As such, I want to engineer features based purely on topological features of the graphs that are invariant to permutations of vertices and the number of edges and vertices in graphs.
 
-In my current role, I want to train a machine learning model to discriminate between users who are likely to make a purchase (convert) versus those who are window shopping using graphs generated from their browsing sessions. I don't know the content of the web sites and web sites can be structured differently. Thus, I want to engineer features based purely on topological features of the graphs that are invariant to permutations of vertices and the number of edges and vertices in graphs.
+There are several ways to approach classifying graphs with machine learning models. One approach is simply to engineer a bunch of features from different statistics computed from the graphs.  [Li, et al.](http://onlinelibrary.wiley.com/doi/10.1002/sam.11153/full) describe a number of metrics including the [average clustering coefficient](https://en.wikipedia.org/wiki/Clustering_coefficient) and the average path length ([closeness centrality](https://en.wikipedia.org/wiki/Closeness_centrality)). However, be aware that some of their features (such as the numbers of edges and vertices) probably won't be useful if you are comparing graphs of different sizes.
 
-There are several ways to approach for classifying graphs with machine learning models. One approach is simply to engineer a bunch of features from different statistics computed from the graphs.  [Li, et al.](http://onlinelibrary.wiley.com/doi/10.1002/sam.11153/full) describe a number of metrics including the [average clustering coefficient](https://en.wikipedia.org/wiki/Clustering_coefficient) and the average path length ([closeness centrality](https://en.wikipedia.org/wiki/Closeness_centrality)).
+A second approach would be to use [graph kernels](https://en.wikipedia.org/wiki/Graph_kernel), functions for computing a similarity score between two graphs. A number of machine learning methods (called [kernel methods](https://en.wikipedia.org/wiki/Kernel_method)) such as Support Vector Machines and Principal Component Analysis can be adapted to use inner products computed between pairs of data points using a kernel instead of feature vectors.  Such kernel methods are advantageous since they enable these method to be extended to data types that are difficult to represent with traditional feature vectors. Often-cited graph kernels include [Shortest-Paths](http://ieeexplore.ieee.org/abstract/document/1565664/), [Graphlet](http://www.jmlr.org/proceedings/papers/v5/shervashidze09a/shervashidze09a.pdf), and [Random Walk]((https://en.wikipedia.org/wiki/Graph_kernel) kernels. At [NIPS 2016](http://nips.cc), I saw a very nice presentation by [Risi Kondor](https://www.cs.uchicago.edu/directory/risi-kondor) on the [Multiscale Laplacian Graph Kernel](http://papers.nips.cc/paper/6135-learning-bound-for-parameter-transfer-learning.pdf), which both allows incorprating features computed on vertices and edges as well as adapting well to multi-scale problems like protein structures.
 
-A second approach would be to use [graph kernels](https://en.wikipedia.org/wiki/Graph_kernel), functions for computing a similarity score between two graphs. A number of machine learning methods (called [kernel methods](https://en.wikipedia.org/wiki/Kernel_method)) such as Support Vector Machines and Principal Component Analysis can be adapted to use an inner products computed between pairs of data points using a kernel instead of feature vectors.  Such kernel methods are advantageous since they enabled these method to be extended to data types that are difficult to represent with traditional feature vectors. Well-known graph kernel approaches include [Shortest-Paths](http://ieeexplore.ieee.org/abstract/document/1565664/), [Graphlet](http://www.jmlr.org/proceedings/papers/v5/shervashidze09a/shervashidze09a.pdf), and [Random Walk]((https://en.wikipedia.org/wiki/Graph_kernel) kernels. At [NIPS 2016](http://nips.cc), I saw a very nice presentation by [Risi Kondor](https://www.cs.uchicago.edu/directory/risi-kondor) on the [Multiscale Laplacian Graph Kernel](http://papers.nips.cc/paper/6135-learning-bound-for-parameter-transfer-learning.pdf), which both allows incorprating features computed on vertices and edges as well as adapting well to multi-scale problems like protein structures.
-
-For this blog post, I'm going to focus on training and evaluating machine learning models on the ability to discriminate between undirected graphs generated by the [Erdős–Rényi](https://en.wikipedia.org/wiki/Erd%C5%91s%E2%80%93R%C3%A9nyi_model) and [planted partitioned](https://en.wikipedia.org/wiki/Stochastic_block_model) random graph models. I'm using the experimental framework from a paper on [generalized Shortest-Path graph kernels](https://arxiv.org/pdf/1510.06492). Here are examples of two such graphs:
+For this blog post, I'm going to focus on evaluating the ability of machine learning models to discriminate between undirected graphs generated by the [Erdős–Rényi](https://en.wikipedia.org/wiki/Erd%C5%91s%E2%80%93R%C3%A9nyi_model) and [planted partitioned](https://en.wikipedia.org/wiki/Stochastic_block_model) random graph models. I'm using the experimental framework from a paper on the [generalized Shortest-Path graph kernel](https://arxiv.org/pdf/1510.06492). Instead of using graph kernels, I'm first going to focus on features engineered from the distribution of lengths of the shortest-paths between all pairs of vertices. Here are examples of two such graphs:
 
 ![graphs](/images/classifying-graphs-with-shortest-paths/graphs.png)
 
-Instead of using graph kernels, I'm going to focus on features engineered from the distribution of lengths of the shortest-paths between all pairs of vertices.
 
 ## Generating the Graphs
 I'm choosing to generate 100 graphs of each type. Each graph has 100 vertices.  For the ER model, I'm using an edge probability of 0.2.  Following the direction of the generalized shortest-path graph kernels paper, I set the parameters for the planted partitioned model to generate the same number of edges as the ER model, with a multiplier for $$p_1$$ of 1.6.
@@ -43,40 +40,46 @@ The difference in the distribution of distances for graphs from different models
 As I mentioned earlier, instead of using a kernel method, I focused on generating features that could be used with standard machine learnign models.  I focused on four modeling approaches:
 
 1. One feature vector for each graph. The features were the $$L_2$$ normalized histogram of all-pairs shortest-path lengths.  I used bin-sizes of 1 with enough bins to include the longest path found. (In my case, all of the graphs had the same maximum length of 3.) The ER graphs were labeled as 0, while the PP graphs were labeled as 1.
-2. Represent each pair of graphs as a feature vector. I computed the difference in the normalized histograms of the all-pairs shortest-paths lengths.  Feature vectors containing graphs from the same model were labeled 0, while feature vectors for graphs from different models were labeled 0.
-3. Same as #2, except that I took the absolute value of the differences.
-4. Like approaches #2 and #3, I used pairs of graphs. I used a single feature -- the distance calculated between the normalized histograms from each pair.
+2. Represent each pair of graphs as a feature vector. I computed the difference in the normalized histograms of the all-pairs shortest-paths lengths.  Since the differences aren't symmetric, I computed the differences each way and added two feature vectors for each pair. Feature vectors containing graphs from the same model were labeled 0, while feature vectors for graphs from different models were labeled 0.
+3. Same as #2, except that I took the absolute value of the differences and only added one feature vector per pair.
+4. Like approach #3, I used pairs of graphs. I used a single feature -- the Euclidean distance calculated between the normalized histograms from each pair.
 
 ## Experiments
 I used [Logistic Regression with Stochastic Gradient Descent](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDClassifier.html#sklearn.linear_model.SGDClassifier) and [Random Forests](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html) for classification.  I used 1,000 epochs for LR, and 100 trees for RF. I perfomed 10-fold stratified cross-fold validation and used accuracy and area under the ROC curve as metrics. Accuracy utilizes binary predictions, while the ROC AUC utilizes the predicted probabilities.
 
 | Features Type | Classifier | ROC AUC (std) | Accuracy (%, std) |
 |:-------------:|:----------:|:-------------:|:-----------------:|
-| 1             | LR         | 0.999 (0.003) | 93.5 (13.2)       |
-| 1             | RF         | 1.0 (0.0)     | 99.5 (1.5)        |
-| 2             | LR         | 0.490 (0.006) | 49.4 (4.4)        |
-| 2             | RF         | 0.996 (0.011) | 97.4 (0.2)        |
-| 3             | LR         | 0.921 (0.003) | 83.9 (0.4)        |
-| 3             | RF         | 0.999 (0.000) | 99.7 (0.1)        |
-| 4             | LR         | 0.930 (0.004) | 53.1 (9.3)        |
-| 4             | RF         | 0.954 (0.004) | 87.1 (0.5)        |
+| 1             | LR         | **1.0 (0.0)** | **98.0 (3.3)**    |
+| 1             | RF         | **1.0 (0.0)** | **100.0 (0.0)**   |
+| 2             | LR         | 0.490 (0.006) | 66.7 (0.0)        |
+| 2             | RF         | **0.999 (0.0)** | **99.3 (0.0)**  |
+| 3             | LR         | 0.910 (0.007) | 71.1 (0.4)        |
+| 3             | RF         | **0.999 (0.0)** | **99.2 (0.0)**  |
+| 4             | LR         | 0.914 (0.005) | 66.7 (0.0)        |
+| 4             | RF         | 0.921 (0.002) | 84.4 (0.4)        |
 
-We note that the LR performed well with feature type 1 (ROC AUC of 0.999 and accuracy of 93.5%) and reasonably with feature type 3 (ROC AUC of 0.921 and accuracy of 83.9%). LR performed very poorly with feature types 2 and 4.  RFs performed well with all feature types, with a minimum ROC AUC of 0.954 and accuracy of 87.1% on feature type 4. RFs maximum accuracies of 99.5% and 99.7% on feature types 1 and 3 -- where LR also performed best.
+LR performed well with feature type 1 with an average ROC AUC of 1.0 and average accuracy of 98.5%, but performed poorly on all other feature types. RFs performed well with feature types 1-3, achieving a minimum average ROC AUC of 0.999 and average accuracy of 99.2%. 
 
 We see these results reflected in ROC curves generated for each classifier from one of its 10 folds:
 
 ![LR ROC](/images/classifying-graphs-with-shortest-paths/lr_roc.png)
 
-The LR classifier has an abysmal ROC curve for feature type 2. The ROC curves for features types 2 and 3 are decent.  The ROC curve for feature type 1 appears to be perfect. (Note that the ROC curves are based on sorting by predicted probabilities, while the accuracies used the binary labels.)
+The LR classifier has an abysmal ROC curve for feature type 2. The ROC curves for features types 3 and 4 are decent.  The ROC curve for feature type 1 appears to be perfect. (Note that the ROC curves are based on sorting by predicted probabilities, while the accuracies used the binary labels.)
 
 ![RF ROC](/images/classifying-graphs-with-shortest-paths/rf_roc.png)
 
-The RF model performes nearly perfectly on feature types 1 and 3, as indicated by lines that are overlapping and barely visible on the plot. The ROC curve for feature type 2 also looks very good.  The ROC curve for feature type 4 is acceptable, largely an indication of how robust RF classifiers are.
+The RF model performes nearly perfectly on feature type 1, as indicated by the barely visible curve in the upper left of the plot. The ROC curve for feature types 2 and 3 are nearly perfect.  The ROC curve for feature type 4 is acceptable, largely an indication of how robust RF classifiers are.
 
 In terms of computational complexity, feature type 1 only requires creating a feature vector for each graph.  Feature types 2-4 require computing a feature vector or distance for each pair of graphs.
 
+Overall, it looks like feature type 1, where the feature vectors are the normalized histograms (bin size 1) of the all-pairs shortest-path lengths for each graph can be used to very accurately discriminate between graphs generated by the two models, regardless of the classifier used.
+
 ## Conclusion
-In this blog post, I looked at training machine learning models to discriminate between graphs generated by two different random graph models.  I gave some background on feature engineering and kernel methods for graphs.  I evaluated four ways of representing the problem and how the corresponding features would be generated.  I evaluated the four types of features using Logistic Regression and Random Forest classifiers. I observed that both LR and RF classifiers performed well when normalized histograms of the all-pairs shortest-paths lengths were used as features.
+In this blog post, I looked at training machine learning models to discriminate between graphs generated by two different random graph models.  I gave some background on feature engineering and kernel methods for graphs.  I looked at four ways of representing the problem and how the corresponding features would be generated.  I evaluated the four types of features using Logistic Regression and Random Forest classifiers. I observed that both LR and RF classifiers performed well when normalized histograms of the all-pairs shortest-paths lengths were used as features.
+
+Going forward, I'd like to evaluate additional types of features such as the average clustering coefficient and the distributions of graphlets found in the graphs. Using the feature-vector per pair approach (feature type 3), I could incorporate graph kernels as features. However, I would probably need to find a different way to represent the absolute differences in the histograms so that it's feasible to use Logistic Regression.  One may to do so might be to discretize the differences for each bin in the histogram into a set of bins.
+
+Once I have a reasonable set of useful features, I'd like to explore the effectiveness of this approach on small graphs since most user browsing sessions have far fewer than 100 nodes (e.g., 10).
 
 *The scripts used in the analyses are available in my [graph-experiments](https://github.com/rnowling/graph-experiments) repo on GitHub under the Apache Public License v2.*
 
