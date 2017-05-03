@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Talk on Productionizing ML Models"
-date: 2017-04-05 00:02:19
+date: 2017-05-03 00:02:19
 categories: "machine learning"
 tags: ["engineering"]
 ---
