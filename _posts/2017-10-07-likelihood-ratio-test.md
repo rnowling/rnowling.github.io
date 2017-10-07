@@ -28,7 +28,7 @@ $$
 \pi_\theta(x_i) = \frac{e^{\theta \cdot x_i}}{1+e^{\theta \cdot x_i}}
 $$
 
-Note that the intercept is considered part of $\theta$.  We append a columns of 1s to $$x$$ to model the intercept. (In the implementation below, since you control the feature matrices and model, you can model it as you need.)
+Note that the intercept is considered part of $$\theta$$.  We append a columns of 1s to $$x$$ to model the intercept. (In the implementation below, since you control the feature matrices and model, you can model it as you need.)
 
 The likelihood for the Logistic Regression model is given by:
 
