@@ -33,8 +33,8 @@ Note that the intercept is considered part of $\theta$.  We append a columns of 
 The likelihood for the Logistic Regression model is given by:
 
 $$
-L(\theta | x) = \prod_{i=1}^N h_\theta(x_i)^{y_i} (1 - h_\theta)^{1 - y_i} \\
-\log L(\theta | x) = \sum_{i=1}^N y_i \log h_\theta(x_i) + (1 - y_i) \log (1 - h_\theta(x_i))
+L(\theta | x) = \prod_{i=1}^N \pi_\theta(x_i)^{y_i} (1 - \pi_\theta)^{1 - y_i} \\
+\log L(\theta | x) = \sum_{i=1}^N y_i \log \pi_\theta(x_i) + (1 - y_i) \log (1 - \pi_\theta(x_i))
 $$
 
 The Likelihood-Ratio Test is then given by:
