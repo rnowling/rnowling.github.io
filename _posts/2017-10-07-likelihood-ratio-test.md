@@ -20,7 +20,7 @@ The question we are trying to answer with the Likelihood-Ratio Test is:
 
 Using the Likelihood-Ratio Test, we compute a p-value indicating the significance of the additional features.  Using that p-value, we can accept or reject the null hypothesis.
 
-Let $$\theta_0$$ and $$x_0$$ and $$\theta_1$$ and $$x_1$$ be the weights and feature matrices used in the null and alternative models, respectively.  Note that we need $$\theta_0 \subset \theta_1$$, meaning that the models are "nested."  Let $$y$$ be the vector of class labels, $$N$$ denote the number of samples, and $$df$$ be number of additional weights / features in $$\theta_1$$.
+Let $$\theta_0$$ and $$x_0$$ and $$\theta_1$$ and $$x_1$$ be the weights and feature matrices used in the null and alternative models, respectively.  Note that we need $$\theta_0 \subset \theta_1$$ and $$x_0 \subset x_1$$, meaning that the models are "nested."  Let $$y$$ be the vector of class labels, $$N$$ denote the number of samples, and $$df$$ be number of additional weights / features in $$\theta_1$$.
 
 The Logistic Regression model is given by:
 
