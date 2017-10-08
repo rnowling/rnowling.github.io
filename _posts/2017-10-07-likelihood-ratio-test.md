@@ -20,7 +20,7 @@ The question we are trying to answer with the Likelihood-Ratio Test is:
 
 Using the Likelihood-Ratio Test, we compute a p-value indicating the significance of the additional features.  Using that p-value, we can accept or reject the null hypothesis.
 
-Let $$\theta_0$$ and $$x_0$$ and $$\theta_1$$ and $$x_1$$ be the weights and feature matrices used in the null and alternative models, respectively.  Note that we need $$\theta_0 \subset \theta_1$$ and $$x_0 \subset x_1$$, meaning that the models are "nested."  Let $$y$$ be the vector of class labels, $$N$$ denote the number of samples, and $$df$$ be number of additional weights / features in $$\theta_1$$.
+Let $$\theta^0$$ and $$x^0$$ and $$\theta^1$$ and $$x^1$$ be the weights and feature matrices used in the null and alternative models, respectively.  Note that we need $$\theta^0 \subset \theta^1$$ and $$x^0 \subset x^1$$, meaning that the models are "nested."  Let $$y$$ be the vector of class labels, $$N$$ denote the number of samples, and $$df$$ be number of additional weights / features in $$\theta^1$$.
 
 The Logistic Regression model is given by:
 
@@ -33,14 +33,14 @@ Note that the intercept is considered part of $$\theta$$.  We append a columns o
 The likelihood for the Logistic Regression model is given by:
 
 $$
-L(\theta | x) = \prod_{i=1}^N \pi_\theta(x_i)^{y_i} (1 - \pi_\theta)^{1 - y_i} \\
+L(\theta | x) = \prod_{i=1}^N \pi_\theta(x_i)^{y_i} (1 - \pi_\theta)^{1 - y^i} \\
 \log L(\theta | x) = \sum_{i=1}^N y_i \log \pi_\theta(x_i) + (1 - y_i) \log (1 - \pi_\theta(x_i))
 $$
 
 The Likelihood-Ratio Test is then given by:
 
 $$
-G = -2 (\log L(\theta_0 | x) - \log L(\theta_1 | x))
+G = -2 (\log L(\theta^0 | x^0) - \log L(\theta^1 | x^1))
 $$
 
 Finally, we compute the p-value for the null model using the $$\chi^2(df)$$ CDF:
