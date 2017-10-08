@@ -40,7 +40,7 @@ $$
 The Likelihood-Ratio Test is then given by:
 
 $$
-G = -2 (\log L(\theta^0 | x^0) - \log L(\theta^1 | x^1))
+G = 2 (\log L(\theta^1 | x^1) - \log L(\theta^0 | x^0))
 $$
 
 Finally, we compute the p-value for the null model using the $$\chi^2(df)$$ CDF:
