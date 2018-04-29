@@ -13,8 +13,8 @@ Single-SNP association tests are a popular and powerful statistical technique fo
 * RJ Nowling, SJ Emrich. [Adjusted Likelihood-Ratio Test for Variants with Unknown Genotypes](/publications/BICOB_2018.pdf). Proceedings of the 10th International Conference on Bioinformatics and Computational Biology (BICOB 2018), March 2018.
 * RJ Nowling, SJ Emrich. [Stable Feature Ranking with Logistic Regression Ensembles](/publications/BIBM_2017.pdf). Proceedings of the 2017 IEEE International Conference on Bioinformatics and Biomedicine (IEEE BIBM 2017), October 2017.
 
-Selection Procesess Driving Differences between Populations
-===========================================================
+Identifying Processes Driving Differences between Populations
+=============================================================
 Most population genetics studies sort samples into populations and then perform association tests between the variants and population labels.  This approach has a few downsides. For many insect species, populations tend to overlap due to intermating such that defining discrete memberships can be difficult.  In addition, pairwise comparisions between populations can obscure the affects of selection processes affecting multiple populations.  We are working on methods to model the selection processes driving changes as latent variables and to find the changes in the genomics associated with those latent variables.
 
 Transmembrane Receptors
