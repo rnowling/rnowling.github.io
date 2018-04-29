@@ -8,9 +8,10 @@ My main area of research is developing statistical and machine learning methods 
 
 Adjusted Likelihood-Ratio Test
 ==============================
-Single-SNP association tests are a popular and powerful statistical technique for identifying genomics variants that are associated with differences in population structure.  Recently, I proposed an adjusted likelihood -atio test that handles unknown variants by using an uninformative (uniform) prior over all possible genotypes.  I demonstrated that this approach significantly reduces false positives when compared with more commonly-used techniques such as $$F_{ST}$$ and can uncover variation missed by other methods.
+Single-SNP association tests are a popular and powerful statistical technique for identifying genomic variants that are associated with in population structure.  Recently, I proposed an adjusted likelihood-ratio test that handles unknown variants by using an uninformative (uniform) prior over all possible genotypes.  I demonstrated that this approach significantly reduces false positives when compared with more commonly-used techniques such as $$F_{ST}$$ and can uncover variation missed by other methods.
 
 * RJ Nowling, SJ Emrich. [Adjusted Likelihood-Ratio Test for Variants with Unknown Genotypes](/publications/BICOB_2018.pdf). Proceedings of the 10th International Conference on Bioinformatics and Computational Biology (BICOB 2018), March 2018.
+* RJ Nowling, SJ Emrich. [Stable Feature Ranking with Logistic Regression Ensembles](/publications/BIBM_2017.pdf). Proceedings of the 2017 International Conference on Bioinformatics and Biomedicine (BIBM 2017), October 2017.
 
 Selection Procesess Driving Differences between Populations
 ===========================================================
