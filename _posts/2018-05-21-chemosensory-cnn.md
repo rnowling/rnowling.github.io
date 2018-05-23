@@ -10,7 +10,7 @@ In my [previous post](/bioinformatics/2018/05/20/chemosensory-lstm.html), I expl
 
 Wang, et al.'s paper on [predicting protein secondary structure using deep convolutional neural fields](https://www.nature.com/articles/srep18962) inspired me to give CNNs a try and proved to be a useful guide.  I decided to start with a single layer 1D convolutional network since that's the easiest to get started with and used the [Keras IMDB CNN example](https://github.com/keras-team/keras/blob/ce4947cbaf380589a63def4cc6eb3e460c41254f/examples/imdb_cnn.py) as a reference.  My final deep learning model consisted of 3 layers:
 
-* 1D convolutional layer with 20 filters and a kernel size of 11 amino acids using the ReLU activation function
+* 1D convolutional layer with 16 filters and a kernel size of $$11\times20$$ using the ReLU activation function
 * 1D global max pooling layer
 * Single unit output layer with a sigmoid activation function
 
@@ -18,7 +18,7 @@ After 50 epochs, the CNN model achieved an accuracy of 99.6% -- a noticeable imp
 
 In their work, Wang, et al. used a window size of 11 residues, since, as they note, $$\alpha$$-helices have an average length of 11 residues.  I experimented with using kernel sizes of 7, 9, and 13 as well, but found that a kernel size of 11 gave me the best performance.
 
-So, how does this work?  My current understanding is as follows: We treat each amino acid in a protein sequence as a categorical variable, so each protein sequence of $$N$$ residues is encoded as a $$N \times 20$$ matrix.  For each amino acid (row), the 1D convolutional layer convolves a kernel with entries from a sliding window (5 positions before and after) to calculate a new value for each position.  Thus, each amino acid gets its own kernel.  The global max pooling layer then finds the maximum value across all positions for each amino acid, producing a vector of length 20.  This resulting vector is passed into the output layer.
+So, how does this work?  My current understanding is as follows: We treat each amino acid in a protein sequence as a categorical variable, so each protein sequence of $$N$$ residues is encoded as a $$N \times 20$$ matrix.  For each amino acid (row), the 1D convolutional layer convolves a $$11\times20$$ kernel with entries from a sliding window (5 positions before and after) to calculate a new value for each position.  We have 16 kernels in our setup, so the output for a single sequence is $$(N, 16)$$.  The global max pooling layer then finds the maximum value across all of thepositions for each kernel, producing a vector of length 16.  This resulting vector is passed into the output layer.
 
 The CNN model is not only more accurate but noticably faster on my Nvidia GTX 1050 Ti.  Training and prediction is completed in 30 s vs 30 minutes for the LSTM.
 
