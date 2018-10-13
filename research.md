@@ -6,19 +6,20 @@ permalink: /research/
 
 My main area of research is developing statistical and machine learning methods for the study of insects, particularly vectors of disease.  Through their saliva, mosquitoes such as *[Anopheles gambiae](https://en.wikipedia.org/wiki/Anopheles_gambiae)* and other flies transmit the parasites that causes diseases such as [malaria](https://en.wikipedia.org/wiki/Malaria). Disease such as malaria, [dengue fever](https://en.wikipedia.org/wiki/Dengue_fever), and [Zika](https://en.wikipedia.org/wiki/Zika_fever) are major threats to public health; by studying these insects, we aim to understand mechanisms of immunity and insecticide resistance to aid in the fight to eradicate these diseases.  My primary focus is population genetics, or the study of how the genomes of these insects evolve and change in response to changing environmental conditions.
 
-Adjusted Likelihood-Ratio Test
-==============================
-Single-SNP association tests are a popular and powerful statistical technique for identifying genomic variants that are associated with in population structure.  Recently, I proposed an adjusted likelihood-ratio test that handles unknown variants by using an uninformative (uniform) prior over all possible genotypes.  I demonstrated that this approach significantly reduces false positives when compared with more commonly-used techniques such as $$F_{ST}$$ and can uncover variation missed by other methods.
-
-* RJ Nowling, SJ Emrich. [Adjusted Likelihood-Ratio Test for Variants with Unknown Genotypes](/publications/BICOB_2018.pdf). Proceedings of the 10th International Conference on Bioinformatics and Computational Biology (BICOB 2018), March 2018.
-* RJ Nowling, SJ Emrich. [Stable Feature Ranking with Logistic Regression Ensembles](/publications/BIBM_2017.pdf). Proceedings of the 2017 IEEE International Conference on Bioinformatics and Biomedicine (IEEE BIBM 2017), October 2017.
-
 Unsupervised Methods for Population Genetics
 ============================================
 Most population genetics studies sort samples into populations and then perform association tests between the variants and population labels.  This approach has a few downsides. For many insect species, populations tend to overlap due to intermating such that defining discrete memberships can be difficult.  In addition, pairwise comparisions between populations can obscure the effects of selection processes affecting multiple populations.  We are working on unsupervised methods to detect signatures of differentiation between populations.
 
-* RJ Nowling and SJ Emrich. [Detecting Chromosomal Inversions from Dense SNPs by Combining PCA and Association Tests](/publications/ACMBCB_2018.pdf). Proceedings of the 9th ACM International Conference on Bioinformatics, Computational Biology and Health Informatics (ACM-BCB 2018), August 2018. [Slides from the Talk](/publications/RNowling_ACMBCB2018_slides.pdf)
+* RJ Nowling and SJ Emrich. [Detecting Chromosomal Inversions from Dense SNPs by Combining PCA and Association Tests](/publications/ACMBCB_2018.pdf). *Proceedings of the 9th ACM International Conference on Bioinformatics, Computational Biology and Health Informatics* (ACM-BCB 2018), August 2018. [Slides from the Talk](/publications/RNowling_ACMBCB2018_slides.pdf)
 * RJ Nowling,  JL Abrudan, and SJ Emrich. [Population Genetics without the Population Labels](/publications/AGS_2018.pdf). Poster presentation at the 11th Annual Arthropod Genomics Symposium, June 2018, Urbana-Champaign, IL.
+
+Adjusted Likelihood-Ratio Test
+==============================
+Single-SNP association tests are a popular and powerful statistical technique for identifying genomic variants that are associated with in population structure.  Recently, I proposed an adjusted likelihood-ratio test that handles unknown variants by using an uninformative (uniform) prior over all possible genotypes.  I demonstrated that this approach significantly reduces false positives when compared with more commonly-used techniques such as $$F_{ST}$$ and can uncover variation missed by other methods.
+
+* RJ Nowling, SJ Emrich. Adjusted Likelihood-Ratio Test for Variants with Unknown Genotypes. *Journal of Bioinformatics and Computational Biology* (JBCB), 16(5) 2018. **Invited Paper**
+* RJ Nowling, SJ Emrich. [Adjusted Likelihood-Ratio Test for Variants with Unknown Genotypes](/publications/BICOB_2018.pdf). *Proceedings of the 10th International Conference on Bioinformatics and Computational Biology* (BICOB 2018), March 2018.
+* RJ Nowling, SJ Emrich. [Stable Feature Ranking with Logistic Regression Ensembles](/publications/BIBM_2017.pdf). *Proceedings of the 2017 IEEE International Conference on Bioinformatics and Biomedicine* (IEEE BIBM 2017), October 2017.
 
 Transmembrane Receptors
 =======================
