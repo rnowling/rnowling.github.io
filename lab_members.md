@@ -10,7 +10,7 @@ permalink: /members
 
 Email: nowling@msoe.edu<br />[CV](/static/rnowling_resume.pdf)
 
-I started as an Assistant Professor in the Electrical Engineering & Computer Science department of the [Milwaukee School of Engineering](https://www.msoe.edu) in August 2018.  From 2014 to 2018, RJ worked on scalable machine learning systems at [AdRoll](http://www.adroll.com/) and [Red Hat, Inc.](http://www.redhat.com/). Before then, I received a Ph.D. in [Computer Science & Engineering](http://cse.nd.edu/) from the [University of Notre Dame](http://www.nd.edu) and a B.S. in Computer Science and Mathematics from [Eckerd College](http://www.eckerd.edu).  My research over the last few years has employed statistics and machine learning to study the population genetics of insect vectors, but more recently, I have also begin to expand into other areas of machine learning such as biomedical image segmentation.
+I started as an Assistant Professor in the Electrical Engineering & Computer Science department of the [Milwaukee School of Engineering](https://www.msoe.edu) in August 2018.  From 2014 to 2018, I worked on scalable machine learning systems at [AdRoll](http://www.adroll.com/) and [Red Hat](http://www.redhat.com/). Before then, I received a Ph.D. in [Computer Science & Engineering](http://cse.nd.edu/) from the [University of Notre Dame](http://www.nd.edu) and a B.S. in Computer Science and Mathematics from [Eckerd College](http://www.eckerd.edu).  My research over the last few years has employed statistics and machine learning to study the population genetics of insect vectors, but more recently, I have also begin to expand into other areas of machine learning such as biomedical image segmentation.
 
 ## Oliver Blasko
 
