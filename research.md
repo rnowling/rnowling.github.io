@@ -31,3 +31,6 @@ As part of a project to develop novel insecticides, I worked on developing a cla
 * RJ Nowling,  M Wadsworth, JL Abrudan, DA Shoue, B Abdul-Wahid, G Stayback, FH Collins, MA McDowell, and JA Izaguirre. [Identifying GPCRs in the Genome of the Sand Fly *P. papatasi* using Ensemble\*](/publications/AGS_2013.pdf). Poster presentation at the 7th Annual Arthropod Genomics Symposium, June 2013, Notre Dame, IN.
 * RJ Nowling, JL Abrudan, DA Shoue, B Abdul-Wahid, M Wadsworth, G Stayback, FH Collins, MA McDowell, and JA Izaguirre. [Evaluation and Development of GPCR Classifiers for Vectors](/publications/Eck_Institute_Retreat_2013.pdf). Poster presentation at the Second Annual Eck Institute for Global Health Research Retreat, January 2013, Notre Dame, IN.
 
+Biomedical Image Segmentation
+=============================
+Outside of my work in bioinformatics, I recently started collaborating with researchers at the [Medical College of Wisconsin](https://www.mcw.edu/) on applicaitons of deep learning to biomedical image segmentation.  [U-Net](https://arxiv.org/abs/1505.04597) is a relatively new architecture that combines convolutional neural networks and variational autoencoders to perform segmentation.   We are currently evaluating the efficacy of the U-Net model on a range of segmentation tasks involving Magnetic Resonance Imaging (MRI).

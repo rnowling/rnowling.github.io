@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: About RJ
 permalink: /about/
 ---
 I'm an Assistant Professor in the Electrical Engineering & Computer Science department of the [Milwaukee School of Engineering](https://www.msoe.edu).
