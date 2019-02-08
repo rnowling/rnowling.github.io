@@ -33,4 +33,6 @@ As part of a project to develop novel insecticides, I worked on developing a cla
 
 Biomedical Image Segmentation
 =============================
-Outside of my work in bioinformatics, I recently started collaborating with researchers at the [Medical College of Wisconsin](https://www.mcw.edu/) on applicaitons of deep learning to biomedical image segmentation.  [U-Net](https://arxiv.org/abs/1505.04597) is a relatively new architecture that combines convolutional neural networks and variational autoencoders to perform segmentation.   We are currently evaluating the efficacy of the U-Net model on a range of segmentation tasks involving Magnetic Resonance Imaging (MRI).
+Outside of my work in bioinformatics, I recently started collaborating with researchers at the [Medical College of Wisconsin](https://www.mcw.edu/) on applicaitons of deep learning to biomedical image segmentation.  [U-Net](https://arxiv.org/abs/1505.04597) is a relatively new architecture that combines convolutional neural networks and variational autoencoders to perform segmentation.   We are currently evaluating the efficacy of the U-Net model on a range of segmentation tasks on Magnetic Resonance Imaging (MRI).
+
+* RJ Nowling, J Bukowy, SD McGarry, AS Nencka, J Urbain, A Lowman, M Hohenwalter, A Banjeree, K Iczkowski, and PS LaViolette. [Cascading Classifiers Improve Prostate Segmentation](/publications/ISMRM_2019_abstract.pdf). International Society for Magnetic Resonance in Medicine 27th Annual Meeting, May 2019, Montreal, Canada. 
