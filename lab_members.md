@@ -18,6 +18,9 @@ I started as an Assistant Professor in the Electrical Engineering & Computer Sci
 
 GitHub: [https://github.com/oblasko](https://github.com/oblasko)
 
-Oliver is an exchange student from the [Czech Technical University in Prague](https://www.cvut.cz/en) studying at MSOE for the 2018-2019 school year.  Oliver is working on applying convolutional neural networks for detecting prostates in Magnetic Resonance (MR) images.
+Oliver is an exchange student from the [Czech Technical University in Prague](https://www.cvut.cz/en) studying at MSOE for the 2018-2019 school year.  Oliver is working on applying convolutional neural networks to detecting prostates in Magnetic Resonance (MR) images.
 
+## Krystal Manke
+<img src="/images/photos/manke.jpg" width="25%" height="25%" />
 
+Krystal is a senior in the [BioMolecular Engineering](https://www.msoe.edu/academics/undergraduate-degrees/engineering/biomolecular-engineering/) program at MSOE.  Krystal is exploring signatures of inversions in SNP data from insects.
