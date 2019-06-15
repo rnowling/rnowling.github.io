@@ -13,16 +13,16 @@ Chromosomal inversions an important role in ecological adaptation by enabling th
 We are working on methods for detecting inversions from population genomics data.  Methods commonly used in humans rely on aligning reads to a reference genome.  Such methods, even when using long reads, are not as effective in insect genomes.  Such genomes are often full of problematic repetitive elements and their assemblies may be fragmented.  We have found that PCA-based methods can be quite effective for insects.  Our eventual goal is to be able to detect inversions even when the reference genome is highly fragmented.
 
 * K Manke, SJ Emrich, and RJ Nowling. Detecting and Localizing Inversions from SNPs.  Poster presentation at the 12th Annual Arthropod Genomics Symposium, June 2019, Manhattan, KS.
-* RJ Nowling and SJ Emrich. [Detecting Chromosomal Inversions from Dense SNPs by Combining PCA and Association Tests](/publications/ACMBCB_2018.pdf). *Proceedings of the 9th ACM International Conference on Bioinformatics, Computational Biology and Health Informatics* (ACM-BCB 2018), August 2018. [Slides from the Talk](/publications/RNowling_ACMBCB2018_slides.pdf)
+* RJ Nowling and SJ Emrich. [Detecting Chromosomal Inversions from Dense SNPs by Combining PCA and Association Tests](https://dl.acm.org/citation.cfm?id=3233571). *Proceedings of the 9th ACM International Conference on Bioinformatics, Computational Biology and Health Informatics* (ACM-BCB 2018), August 2018. [Slides from the Talk](/publications/RNowling_ACMBCB2018_slides.pdf) [Paper](/publications/ACMBCB_2018.pdf)
 * RJ Nowling,  JL Abrudan, and SJ Emrich. [Population Genetics without the Population Labels](/publications/AGS_2018.pdf). Poster presentation at the 11th Annual Arthropod Genomics Symposium, June 2018, Urbana-Champaign, IL.
 
 Likelihood-Ratio Tests Adjusted for Missing Data
 ================================================
 Single-SNP association tests are a popular and powerful statistical technique for identifying genomic variants that are associated with in population structure.  Recently, I proposed an adjusted likelihood-ratio test that handles unknown variants by using an uninformative (uniform) prior over all possible genotypes.  I demonstrated that this approach significantly reduces false positives when compared with more commonly-used techniques such as $$F_{ST}$$ and can uncover variation missed by other methods.
 
-* RJ Nowling, SJ Emrich. Adjusted Likelihood-Ratio Test for Variants with Unknown Genotypes. *Journal of Bioinformatics and Computational Biology* (JBCB), 16(5) 2018. **Invited Paper**
-* RJ Nowling, SJ Emrich. [Adjusted Likelihood-Ratio Test for Variants with Unknown Genotypes](/publications/BICOB_2018.pdf). *Proceedings of the 10th International Conference on Bioinformatics and Computational Biology* (BICOB 2018), March 2018.
-* RJ Nowling, SJ Emrich. [Stable Feature Ranking with Logistic Regression Ensembles](/publications/BIBM_2017.pdf). *Proceedings of the 2017 IEEE International Conference on Bioinformatics and Biomedicine* (IEEE BIBM 2017), October 2017.
+* RJ Nowling and SJ Emrich. [Adjusted Likelihood-Ratio Test for Variants with Unknown Genotypes](https://www.worldscientific.com/doi/10.1142/S0219720018400206). *Journal of Bioinformatics and Computational Biology* (JBCB), 16(5) 2018. **Invited Paper**
+* RJ Nowling and SJ Emrich. [Adjusted Likelihood-Ratio Test for Variants with Unknown Genotypes](/publications/BICOB_2018.pdf). *Proceedings of the 10th International Conference on Bioinformatics and Computational Biology* (BICOB 2018), March 2018.
+* RJ Nowling and SJ Emrich. [Stable Feature Ranking with Logistic Regression Ensembles](/publications/BIBM_2017.pdf). *Proceedings of the 2017 IEEE International Conference on Bioinformatics and Biomedicine* (IEEE BIBM 2017), October 2017.
 
 Transmembrane Receptors
 =======================
