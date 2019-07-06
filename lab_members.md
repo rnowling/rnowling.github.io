@@ -19,6 +19,7 @@ I started as an Assistant Professor in the Electrical Engineering & Computer Sci
 Krystal is a recent graduate of the [BioMolecular Engineering](https://www.msoe.edu/academics/undergraduate-degrees/engineering/biomolecular-engineering/) program at MSOE. Krystal volunteered in the lab during the Spring 2019 quarter and is funded part-time as a research assistant during the summer of 2019. Krystal evaluated methods for detecting chromsomal inversions from SNPs and is currently working on implementing and running a variant calling pipeline.
 
 ### Matthew Aleck
+<img src="/images/photos/aleck.jpg" width="30%" height="30%" />
 
 Matt is a rising sophomore in the [Computer Science](https://www.msoe.edu/academics/undergraduate-degrees/engineering/computer-science/) program at MSOE.  Matt is implementing a population genetics simulator and exploring how different processes of molecular evolution present in PCA of SNP data.
 
