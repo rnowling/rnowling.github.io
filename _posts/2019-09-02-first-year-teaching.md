@@ -25,16 +25,16 @@ Overall, my first year was incredibly busy and, at times, overwhelming, but it w
 Multiple new faculty members are joining our department this year, and for most of them, this will be their first year as a professor at a PUI.  I found myself repeating some observations, so I wanted to write them down and share them more broadly in case they are useful to others.
 
 
-### 1. Optimize for Short-Term Convenience
-My colleague gave the advice that my only goal for my first year was to survive.  In retrospect, this may have been some of the most useful advice I received. I had very high expectations for myself going in and ended up hitting a wall.  I quickly learned that I needed to moderate my expectations to be able to manage my workload and challenges of constantly doing something new every day for 9 months.
+### 1. Optimize for Short-Term Realities
+One colleague gave the advice that my only goal for my first year was to survive.  In retrospect, this may have been some of the most useful advice I received. I had very high expectations for myself going in and ended up hitting a wall.  I quickly learned that I needed to moderate my expectations to be able to manage my workload and challenges of constantly doing something new every day for 9 months.
 
-In practical terms, I had 5-6 lectures and 2 labs to prepare for every week.  Each lecture and lab took me about 2-3 hours of preparation, which included creating materials as well as reviewing and re-teaching the material to myself.  On top of that, I also had grading, office hours, and service and research commitments. (MSOE has minimal research expectations, but I am passionate about research and mentoring students.)
+In practical terms, I had 5-6 lectures and 2 labs to prepare for every week.  Each lecture and lab took me about 2-3 hours of preparation, which included creating materials as well as reviewing and re-teaching the material to myself.  On top of that, I also had grading, office hours, and service and research commitments. (Research is not a focus at MSOE, but several of my colleagues and I are passionate about research and mentoring students.)
 
-Several faculty gave me well-meaning and good advice on best practices.  I was not, however, in a good position to use all of it.  In particular, I was once told to try to prepare my class materials with the long-term in mind: prepare them well and then you can easily re-use them, saving time in the future.  The same goes with grading and creating processes to facilitate 
+Several faculty gave me well-meaning and good advice on best practices.  I was not, however, in a good position to use all of it.  In particular, I was once told to try to prepare my class materials with the long-term in mind: prepare them well and then you can easily re-use them, saving time in the future.
 
-Simply put, I didn’t have time to do things the “right” way.  In retrospect, I realized that many of my materials were placeholders or drafts.  I created minimal and unpolished slides, examples, labs, and assessments.  In the short term, it is easier to create something that you plan to use once and, potentially, throw away.  Optimizing for the short term was absolutely necessary to hit all of my weekly lecture and lab deadlines.
+Simply put, I didn’t have time to do things the "right" way.  In retrospect, I realized that many of my materials were placeholders or drafts.  I created minimal and unpolished slides, examples, labs, and assessments.  In the short term, it is easier to create something that you plan to use once and, potentially, throw away.  Optimizing for the short term was absolutely necessary to hit all of my weekly lecture and lab deadlines.
 
-The same goes with grading.  I used spreadsheets to record rubrics, point assignments, and comments for labs (homework).  I copied the overall assignment grades and comments into Blackboard and sent a class-wise email with the rubric. Only in my last quarter did I improve on this by creating scripts that generated reports with my comments embedded alongside the students’ code.
+The same goes with grading.  Be careful about spending too much time on grading; course materials go with you from one year to the next but marked assignments do not.  I used spreadsheets to record rubrics, point assignments, and comments for labs (homework).  I copied the overall assignment grades and comments into Blackboard and sent a class-wise email with the rubric. Only in my last quarter did I improve on this by creating scripts that generated reports with my comments embedded alongside the students’ code.
 
 During the summer after your first year, you can spend time polishing, extending, and re-developing your materials.  By then, you’ll have a sense of the “big picture” and overall themes for your courses.  That’s the best time to prepare reusable materials for the long term.
 
@@ -48,9 +48,9 @@ In my case, I showed recorded talks that would be interesting to students.   I f
 Additionally, I would occasionally run out of lecture material because I was still figuring out the timing for my lectures.  I used in-class exercises to fill time.   The exercises gave all of the students opportunities to practice the material and often engaged or entertained more advanced students more than they would be otherwise.  I never required the students to submit their solutions or graded them — the exercises were purely meant to be fun puzzles and provide practice.
 
 ### 3. Quizzes: The Multi-Faceted Tool
-Early on, my colleague suggested I give weekly quizzes.  My views and ways of using quizzes were further shaped by discussions with many of my colleagues.  Quizzes became one of my favorite tools in my toolbox.
+Early on, a colleague suggested I give weekly quizzes.  My views and ways of using quizzes were further shaped by discussions with many of my colleagues.  Quizzes became one of my favorite tools in my toolbox.
 
-I’ve discussed quizzes in a [previous blog post](/teaching/2019/03/09/quizzes-multifaceted-teaching-tool.html).  But, in summary, weekly quizzes provide opportunities for you and your students to see how your students are doing with the material.  They can indicate whether a topic needs to be revisited and do so early enough to enable course corrections ahead of exams.
+I’ve discussed quizzes in a [previous blog post](/teaching/2019/03/09/quizzes-multifaceted-teaching-tool.html).  But, in summary, weekly quizzes provide opportunities for you and your students to see how your students are doing with the material.  They can indicate whether a topic needs to be revisited and do so early enough to enable course corrections (both for students and myself!) ahead of exams.
 
 I also found that quizzes gave opportunities for review.  I would often give a quiz in class and then immediately discuss the answers.  Students were more engaged than in the usual lectures, enjoyed the opportunity to try on their own, and appreciated the immediate feedback.  A quiz and the follow up review would frequently fill an entire lecture.
 
@@ -79,11 +79,13 @@ Feeling overwhelmed, I canceled on the gym and other activities in my first mont
 
 
 ### 7. Seek Advice from Your Colleagues
-My success in teaching in my first year was made possible due in no small part to the wisdom and support of my colleagues.  I benefited greatly by bouncing ideas off of my colleagues and listening to their experiences.  Many of my colleagues have 10 or more years of accumulated experience.  Their advice and feedback often kept me from going down a wrong turn and helped me polish my rough, untested ideas before coming into contact with the harsh nature of reality.  I am greatly indebted to them for the time, attention, and support they gave me.
+My success in teaching in my first year was made possible due in no small part to the wisdom and support of my colleagues.  I benefited greatly by bouncing ideas off of my colleagues and listening to their experiences.  I would often take the same piece of material to two or three faculty members to get different points of view.  Many of my colleagues have 10 or more years of accumulated experience.  Their advice and feedback often kept me from going down a wrong turn and helped me polish my rough, untested ideas before coming into contact with the harsh nature of reality.  I am greatly indebted to them for the time, attention, and support they gave me.
 
 My colleagues were happy, if not eager, to share their course materials with me.  I found that creating my own slides and materials was a necessary part of my process of preparing for lectures.  Nonetheless, having examples to study saved me time when preparing my own materials and made it easier to synchronize across sections.  Don’t be afraid to ask for and borrow materials!
 
 ## Epilogue
-My first year of full-time teaching as an assistant professor at a PUI was quite a challenge, but I’m comfortable calling it a success.  From the various challenges, I was able to grow by leaps and bounds both professionally and personally.  The net result is that as I prepare to enter my second year, I feel more confident in my teaching, like I’m facing fewer unknowns, and better prepared all around.
+My first year of full-time teaching as an assistant professor at a PUI was quite a challenge, but I’m comfortable calling it a success.  From the various challenges, I was able to grow by leaps and bounds both professionally and personally.  The net result is that as I prepare to enter my second year I feel more confident in my teaching; I’m facing fewer unknowns and better prepared all around.
+
+(Thank you to [Josiah Yoder](https://faculty-web.msoe.edu/yoder/) for helpful edits and feedback!)
 
 
