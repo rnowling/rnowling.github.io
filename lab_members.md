@@ -31,5 +31,5 @@ Oliver was an exchange student from the [Czech Technical University in Prague](h
 ### Krystal Manke
 <img src="/images/photos/manke.jpg" width="25%" height="25%" />
 
-Krystal graduated from the [BioMolecular Engineering](https://www.msoe.edu/academics/undergraduate-degrees/engineering/biomolecular-engineering/) program at MSOE in 2019. Krystal volunteered in the lab during the Spring 2019 quarter and was funded part-time as a research assistant during the summer of 2019. Krystal evaluated methods for detecting chromsomal inversions from SNPs and then implemented and ran a variant calling pipeline.  Krystal started a [M.S. in Bioinformatics](https://www.marquette.edu/grad/programs-bioinformatics.php) at [Marquette University](https://www.marquette.edu/) in Fall 2019.
+Krystal graduated from the [BioMolecular Engineering](https://www.msoe.edu/academics/undergraduate-degrees/engineering/biomolecular-engineering/) program at MSOE in 2019. Krystal worked in the lab from the Spring 2019 quarter through the end of the the summer of 2019. Krystal evaluated methods for detecting chromsomal inversions from SNPs and then implemented and ran a variant calling pipeline.  Krystal started a [M.S. in Bioinformatics](https://www.marquette.edu/grad/programs-bioinformatics.php) at [Marquette University](https://www.marquette.edu/) in Fall 2019.
 
