@@ -65,7 +65,7 @@ In contrast, I find that writing productively requires keeping large chunks of c
 
 ### 4. Taking Care of Myself
 1. **I built and relied on a support network.**  Outside of the grant writing group, I had several friends and colleagues I turned to when I needed to vent.  I found that helped me substantially this summer, especially when I was feeling overwhelmed, intimidated, or stressed out by writing my first grant proposal.
-2. **I kept up with my self care.**  I kept a regular schedule with my personal trainer. Exercise has been and continues to be an important part of my mental health; workouts do as for my mental health as they do my physical health.  I could have done a better job of getting out on my bike (that fell by the wayside) and spending time with friends.
+2. **I kept up with my self care.**  I kept a regular schedule with my personal trainer. Exercise has been and continues to be an important part of my mental health; workouts do as much for my mental health as they do my physical health.  I could have done a better job of getting out on my bike (that fell by the wayside) and spending time with friends.
 3. **I (should have) scheduled a vacation or two.**  I took a few days off during the summer (e.g., a trip to a local botanical garden) but nothing that counted as real vacation.  My wife and I did technically schedule a long weekend vacation over Labor Day but had to cancel it.  In retrospect, I should have made more time for downtime.
 
 ## Conclusion
