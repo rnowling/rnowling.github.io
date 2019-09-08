@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Reflection on a Productive First Academic Summer"
+title:  "Reflections on a Productive First Academic Summer"
 date:   2019-09-07 12:13:19
 categories: "research"
 tags: ["teaching"]
