@@ -26,7 +26,7 @@ I effectively used a "flipped" classroom approach.   I recorded my lectures usin
 
 I found it necessary to modify some of my usual teaching tools.  Instead of weekly quizzes, I assigned large homework sets.  I had three reasons for this. First, quizzes with coding and short-response questions were difficult to translate to an online format.  Secondly, I didn't want to force students to conform to short, rigid time frames (e.g., return in 24 hours).  And lastly, the homework sets gave students opportunities to practice and evaluate their own understanding.
 
-I had already begun to provide additional scaffolding in lab assignments; the additional scaffolding carried over to teaching online.  I divided the labs into two parts: implementing an algorithm and then some investigation (e.g., benchmarks) with their implementation.  I scaffolded the implementation by providing automated unit tests.  These unit tests accounted for 30% of the overall lab grade in most cases.  Students said that they found it very helpful to have the tests to make sure they understand what was being asked of them and to check that their work was correct.
+I had already begun to provide additional scaffolding in lab assignments; the additional scaffolding carried over to teaching online.  I divided the labs into two parts: implementing an algorithm and then some investigation (e.g., benchmarks) with their implementation.  I scaffolded the implementation by providing automated unit tests.  These unit tests accounted for 30% of the overall lab grade in most cases.  Students said that they found it very helpful to have the tests to validate their understanding of what was being asked of them and provide feedback on the correctness of their implementation.
 
 ## What Went Well
 
