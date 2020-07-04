@@ -73,7 +73,7 @@ Students do better when expectations are clearly laid out.  Previously, I create
 ## Conclusions
 My approach for adapting my class worked well for both my students and myself. I generally aimed for small but effective adapations that were aligned with teaching techniques with which I was already comfortable. (This is consistent with the advice of the book Small Teaching Online, which I found helpful when preparing my reflection.)  Recording my lectures for students to view asynchonously was easy enough.  I already had a preference for curating streamlined slides and lecturing off of them.  In the past students have found my slides to form a useful set of notes for studying and reviewing.  Similarly, homework sets were similar in format to my quizzes but longer and more comprehensive.
 
-I would feel comfortable teaching online again.  In some ways, I prefer the asynchronous nature of online teaching since I greatly appreciate having a more flexible schedule and being able to teach from home.  I recognize that I may hold a minority view among both students and other faculty.  (It helps that I worked remotely for four years when in industry.)
+I would feel comfortable teaching online again.  In some ways, I prefer the asynchronous nature of online teaching since I greatly appreciate having a more flexible schedule and being able to teach from home.  I recognize that I may hold a minority view among both students and other faculty.  (It helps that I worked entirely remotely for my four years in industry.)
 
 Even if I don't end up teaching online again, however, my experience from last Spring and subsequent reflection have provided opportunities to improve my teaching overall.
 
