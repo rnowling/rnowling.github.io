@@ -44,3 +44,6 @@ Ben graduated from the Software Engineering program at MSOE in Spring 2020.  Dur
 
 Krystal graduated from the [BioMolecular Engineering](https://www.msoe.edu/academics/undergraduate-degrees/engineering/biomolecular-engineering/) program at MSOE in 2019. Krystal worked in the lab from the Spring 2019 quarter through the end of the the summer of 2019. Krystal evaluated methods for detecting chromsomal inversions from SNPs and then implemented and ran a variant calling pipeline.  Krystal started a [M.S. in Bioinformatics](https://www.marquette.edu/grad/programs-bioinformatics.php) at [Marquette University](https://www.marquette.edu/) in Fall 2019.
 
+
+### John Peters
+John worked in the lab during the Winter 2019-2020 quarter.  John explored and optimized the use of ensembles to reduce variance in predictions of enhancer activity from logistic regression models using k-mer count features.
