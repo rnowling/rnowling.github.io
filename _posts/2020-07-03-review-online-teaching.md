@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Reflecting on a Sudden Shift to Online Teaching"
+title:  "Reflecting on the Sudden Shift to Online Teaching"
 date:   2020-07-03 12:13:19
 categories: "teaching"
 tags: ["teaching", "online", "reflection"]
