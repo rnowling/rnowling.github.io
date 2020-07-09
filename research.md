@@ -4,7 +4,17 @@ title: Research
 permalink: /research/
 ---
 
-My main area of research is developing statistical and machine learning methods for the study of insects, particularly vectors of disease.  Through their saliva, mosquitoes such as *[Anopheles gambiae](https://en.wikipedia.org/wiki/Anopheles_gambiae)* and other flies transmit the parasites that causes diseases such as [malaria](https://en.wikipedia.org/wiki/Malaria). Disease such as malaria, [dengue fever](https://en.wikipedia.org/wiki/Dengue_fever), and [Zika](https://en.wikipedia.org/wiki/Zika_fever) are major threats to public health; by studying these insects, we aim to understand mechanisms of immunity and insecticide resistance to aid in the fight to eradicate these diseases.  My primary focus is population genetics, or the study of how the genomes of these insects evolve and change in response to changing environmental conditions.
+My main area of research is developing statistical and machine learning methods for genomics data.  I focus primarily on insect genomes, particularly vectors of disease.  Through their saliva, mosquitoes such as *[Anopheles gambiae](https://en.wikipedia.org/wiki/Anopheles_gambiae)* and other flies transmit the parasites that causes diseases such as [malaria](https://en.wikipedia.org/wiki/Malaria). Disease such as malaria, [dengue fever](https://en.wikipedia.org/wiki/Dengue_fever), and [Zika](https://en.wikipedia.org/wiki/Zika_fever) are major threats to public health.  I aim to aid biologists in uncovering new knowledge and insights into the function of genomes through the development of new machine learning methods.
+
+Regulatory Genomics
+===================
+In addition to genes, genomes contain regulatory elements that are involved in the mechanical process of gene expression.  Regulatory elements can be divided into [*trans*](https://en.wikipedia.org/wiki/Trans-regulatory_element)- and [*cis*](https://en.wikipedia.org/wiki/Cis-regulatory_element)-acting categories.  So-called DNA enrichment assays such as ChIP-Seq, ATAC-Seq, STARR-Seq, and FAIRE-Seq allow us to identify and characterize the activity of *cis*-regulatory elements such as promoters and enhancers.
+
+My lab works on regulatory genomics from two angles.  First, we are collaborate with biologists on several projects to analyze DNA enrichment assay data to annotate and characterize *cis*-regulatory elements in particular organisms.  Secondly, we are applying new machine learning methods to create more sensitive and specific peak calling (filtering) techniques for DNA enrichment assay data.
+
+* RJ Nowling, RR Geromel, and BS Halligan. Filtering STARR-Seq Peaks for Enhancers with Sequence Models. Poster presentation at the 11th Annual ACM International Conference on Bioinformatics, Computational Biology, and Health Informatics, September 2020, Virtual.  [Abstract](/publications/acm_bcb_2020_enhancer_ssl_abstract.pdf)
+* RJ Nowling, CR Beal, SJ Emrich, SK Behura, MS Halfon, and M Duman-Scheel. PeakMatcher: Matching Peaks Across Genome Assemblies. Poster presentation at the 11th Annual ACM International Conference on Bioinformatics, Computational Biology, and Health Informatics, September 2020, Virtual.  [GitHub](https://github.com/rnowling/peak-matcher) [Abstract](/publications/acm_bcb_2020_peak_matcher_abstract.pdf)
+
 
 Detecting Chromosomal Inversions
 ================================
