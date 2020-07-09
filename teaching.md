@@ -4,7 +4,7 @@ title: Teaching
 permalink: /teaching
 ---
 
-### Courses:
+## Courses:
 
 * CS1011 Introduction to Software Development I (Fall 2018, Fall 2019)
 * CS1021 Introduction to Software Development II (Winter 2018-2019, Winter 2019-2020)
