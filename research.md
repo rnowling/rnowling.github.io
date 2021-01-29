@@ -8,15 +8,6 @@ My research lies at the intersection of machine learning and genomics.  A genome
 
 I focus primarily on insect genomes.   Insect genomes present unique and interesting challenges for computational biologists.  More importantly, many insects vector diseases or are important to food security (either as pollinators or pests).  Through their saliva, mosquitoes such as *[Anopheles gambiae](https://en.wikipedia.org/wiki/Anopheles_gambiae)* and *[Aedes aegypti](https://en.wikipedia.org/wiki/Aedes_aegypti)* transmit the parasites and viruses that cause diseases such as [malaria](https://en.wikipedia.org/wiki/Malaria), [dengue fever](https://en.wikipedia.org/wiki/Dengue_fever), and [Zika](https://en.wikipedia.org/wiki/Zika_fever) are major threats to public health.  By partnering with biologists who study these insects, I can ensure that my work solves relevant problems and useful.
 
-## Regulatory Genomics
-In addition to genes, genomes contain regulatory elements that are involved in the mechanical process of gene expression.  Regulatory elements can be divided into [*trans*](https://en.wikipedia.org/wiki/Trans-regulatory_element)- and [*cis*](https://en.wikipedia.org/wiki/Cis-regulatory_element)-acting categories.  So-called DNA enrichment assays such as ChIP-Seq, ATAC-Seq, STARR-Seq, and FAIRE-Seq allow us to identify and characterize the activity of *cis*-regulatory elements such as promoters and enhancers.
-
-My lab works on regulatory genomics from two angles.  First, we are collaborate with biologists on several projects to analyze DNA enrichment assay data to annotate and characterize *cis*-regulatory elements in particular organisms.  Secondly, we are applying new machine learning methods to create more sensitive and specific peak calling (filtering) techniques for DNA enrichment assay data.
-
-**Posters:**
-
-* RJ Nowling, RR Geromel, and BS Halligan. Filtering STARR-Seq Peaks for Enhancers with Sequence Models. Poster presentation at the 11th Annual ACM International Conference on Bioinformatics, Computational Biology, and Health Informatics, September 2020, Virtual.  [Abstract](/publications/acm_bcb_2020_enhancer_ssl_abstract.pdf) [Poster](/publications/ACMBCB_2020_enhancer_ssl.pdf)
-* RJ Nowling, CR Beal, SJ Emrich, SK Behura, MS Halfon, and M Duman-Scheel. PeakMatcher: Matching Peaks Across Genome Assemblies. Poster presentation at the 11th Annual ACM International Conference on Bioinformatics, Computational Biology, and Health Informatics, September 2020, Virtual.  [GitHub](https://github.com/rnowling/peak-matcher) [Abstract](/publications/acm_bcb_2020_peak_matcher_abstract.pdf) [Poster](/publications/ACMBCB_2020_peakmatcher.pdf)
 
 ## Detecting Chromosomal Inversions
 Chromosomal inversions an important role in ecological adaptation by enabling the accumulation of beneficial alleles (Love, et. al. 2016; Fuller, et al. 2017) and reproductive isolation (Noor, et a. 2001). The 2La inversion in the Anopheles gambiae complex has been associated with thermal tolerance of larvae (Rocca, et al. 2009), enhanced desiccation resistance in adult mosquitoes (Gray, et al. 2009), and susceptibility to malaria (Riehle, et al. 2017). Additionally, inversions must be identified and accounted for to avoid bias in population inference and association testing (Seich al Basatena, et al. 2013). 
@@ -32,6 +23,19 @@ We are working on methods for detecting inversions from population genomics data
 * M Aleck and RJ Nowling. [Exploring Mechanisms of Molecular Evolution and Their Representations in PCA](/publications/IEEE_COMPSAC_2019.pdf). Poster presentation at the IEEE 43rd Annual Computer Software and Applications Conference (COMPSAC), July 2019, Milwaukee, WI.
 * KR Manke, SJ Emrich, and RJ Nowling. [Detecting and Localizing Inversions from SNPs](/publications/AGS_2019.pdf).  Poster presentation at the 12th Annual Arthropod Genomics Symposium, June 2019, Manhattan, KS.
 * RJ Nowling, JL Abrudan, and SJ Emrich. [Population Genetics without the Population Labels](/publications/AGS_2018.pdf). Poster presentation at the 11th Annual Arthropod Genomics Symposium, June 2018, Urbana-Champaign, IL.
+
+## Regulatory Genomics
+In addition to genes, genomes contain regulatory elements that are involved in the mechanical process of gene expression.  Regulatory elements can be divided into [*trans*](https://en.wikipedia.org/wiki/Trans-regulatory_element)- and [*cis*](https://en.wikipedia.org/wiki/Cis-regulatory_element)-acting categories.  So-called DNA enrichment assays such as ChIP-Seq, ATAC-Seq, STARR-Seq, and FAIRE-Seq allow us to identify and characterize the activity of *cis*-regulatory elements such as promoters and enhancers.
+
+My lab works on regulatory genomics from two angles.  First, we are collaborate with biologists on several projects to analyze DNA enrichment assay data to annotate and characterize *cis*-regulatory elements in particular organisms.  Secondly, we are applying new machine learning methods to create more sensitive and specific peak calling (filtering) techniques for DNA enrichment assay data.
+
+**Papers:**
+* RJ Nowling, SK Behura, MS Halfon, SJ Emrich, and M Duman-Scheel. [PeakMatcher facilitates updated Aedes aegypti embryonic cis-regulatory element map](https://hereditasjournal.biomedcentral.com/articles/10.1186/s41065-021-00172-2). *Hereditas* 158, Article number: 7 (2021). **Arthropod Genomics thematic series**
+
+**Posters:**
+
+* RJ Nowling, RR Geromel, and BS Halligan. Filtering STARR-Seq Peaks for Enhancers with Sequence Models. Poster presentation at the 11th Annual ACM International Conference on Bioinformatics, Computational Biology, and Health Informatics, September 2020, Virtual.  [Abstract](/publications/acm_bcb_2020_enhancer_ssl_abstract.pdf) [Poster](/publications/ACMBCB_2020_enhancer_ssl.pdf)
+* RJ Nowling, CR Beal, SJ Emrich, SK Behura, MS Halfon, and M Duman-Scheel. PeakMatcher: Matching Peaks Across Genome Assemblies. Poster presentation at the 11th Annual ACM International Conference on Bioinformatics, Computational Biology, and Health Informatics, September 2020, Virtual.  [GitHub](https://github.com/rnowling/peak-matcher) [Abstract](/publications/acm_bcb_2020_peak_matcher_abstract.pdf) [Poster](/publications/ACMBCB_2020_peakmatcher.pdf)
 
 ## Likelihood-Ratio Tests Adjusted for Missing Data
 Single-SNP association tests are a popular and powerful statistical technique for identifying genomic variants that are associated with in population structure.  Recently, I proposed an adjusted likelihood-ratio test that handles unknown variants by using an uninformative (uniform) prior over all possible genotypes.  I demonstrated that this approach significantly reduces false positives when compared with more commonly-used techniques such as $$F_{ST}$$ and can uncover variation missed by other methods.
