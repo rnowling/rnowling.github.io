@@ -35,7 +35,7 @@ My lab works on regulatory genomics from two angles.  First, we are collaborate 
 * RJ Nowling, SK Behura, MS Halfon, SJ Emrich, and M Duman-Scheel. [PeakMatcher facilitates updated Aedes aegypti embryonic cis-regulatory element map](https://hereditasjournal.biomedcentral.com/articles/10.1186/s41065-021-00172-2). *Hereditas* 158, Article number: 7 (2021). **Arthropod Genomics thematic series**
 
 **Posters:**
-
+* CR Beal, JG Peters, and RJ Nowling. Sequence Model Evaluation Framework for STARR-Seq Peak Calling. Poster presentation at the 12th Annual ACM International Conference on Bioinformatics, Computational Biology, and Health Informatics, August 2021, Virtual.  [Abstract](/publications/acm_bcb_2021_abstract.pdf).
 * RJ Nowling, RR Geromel, and BS Halligan. Filtering STARR-Seq Peaks for Enhancers with Sequence Models. Poster presentation at the 11th Annual ACM International Conference on Bioinformatics, Computational Biology, and Health Informatics, September 2020, Virtual.  [Abstract](/publications/acm_bcb_2020_enhancer_ssl_abstract.pdf) [Poster](/publications/ACMBCB_2020_enhancer_ssl.pdf)
 * RJ Nowling, CR Beal, SJ Emrich, SK Behura, MS Halfon, and M Duman-Scheel. PeakMatcher: Matching Peaks Across Genome Assemblies. Poster presentation at the 11th Annual ACM International Conference on Bioinformatics, Computational Biology, and Health Informatics, September 2020, Virtual.  [GitHub](https://github.com/rnowling/peak-matcher) [Abstract](/publications/acm_bcb_2020_peak_matcher_abstract.pdf) [Poster](/publications/ACMBCB_2020_peakmatcher.pdf)
 
