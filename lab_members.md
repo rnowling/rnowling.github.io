@@ -14,14 +14,14 @@ I started as an Assistant Professor in the Electrical Engineering & Computer Sci
 
 ## **Current Students**
 
-### Matt A. (Summer 2019, Fall 2020 - Present)
-Matt worked with me during the summer of 2019 and is back for the 2020-2021 academic year.  Matt is a junior in the [Computer Science](https://www.msoe.edu/academics/undergraduate-degrees/engineering/computer-science/) program at MSOE.  Matt previously implemented a population genetics simulator and explored how different processes of molecular evolution present in PCA of SNP data.  This year, Matt is working on automating parameter selection for the inversion detection using machine learning.
+### Jarred K. (Summer 2021 - Present)
+Jarred is evaluating ensemble techniques for handling imbalanced genomics data in classification problems.
 
 ### Daniel L. (Fall 2020 - Present)
-Daniel is a sophomore in our Computer Science program.  Daniel is working on inversion detection using k-mer count features.
+Daniel worked on inversion detection using k-mer count features and is now exploring approaches for predicting TF-DNA motifs binding pairs.
 
-### John P. (Winter 2019-2020, Winter 2020-Present)
-John worked in the lab during the 2019-2020 and 2020-2021 Winter quarters.  In his first rotation, John explored and optimized the use of ensembles to reduce variance in predictions of enhancer activity from logistic regression models using k-mer count features.  John is now working on comparing *Drosophila* FAIRE peaks across developmental periods and tissues.
+### John P. (Winter 2019-2020, Winter 2021 - Present)
+John worked in the lab during the 2019-2020 and 2020-2021 Winter quarters.  In his first rotation, John explored and optimized the use of ensembles to reduce variance in predictions of enhancer activity from logistic regression models using k-mer count features.  John is working on integrating multi-omics data to identify and annotate putative functional components of enhancer sequences.
 
 ## **Alumni**
 
@@ -42,3 +42,6 @@ Errin worked on characterizing enhancer sequences in the *Anopheles* genome.
 
 ### Andrew R. (Fall and Winter 2020-2021)
 Andrew analyzed differences between FAIRE peaks for versions 3 and 5 of the *Aedes* genome.
+
+### Matt A. (Summer 2019, Fall 2020 - Spring 2021)
+Matt worked with me during the summer of 2019 and is back for the 2020-2021 academic year.  Matt is a junior in the [Computer Science](https://www.msoe.edu/academics/undergraduate-degrees/engineering/computer-science/) program at MSOE.  Matt previously implemented a population genetics simulator and explored how different processes of molecular evolution present in PCA of SNP data.  This year, Matt is working on automating parameter selection for the inversion detection using machine learning.

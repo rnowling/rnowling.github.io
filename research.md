@@ -16,6 +16,8 @@ We are working on methods for detecting inversions from population genomics data
 
 **Papers:**
 
+* RJ Nowling​​, F Fallas-Moya​, A Sadovnik, SJ Emrich, M Aleck, D Leskiewicz, and JG Peters.  [Fast, low-memory detection and localization of large, polymorphic inversions from SNPs](https://peerj.com/articles/12831/). *PeerJ*. 2022.
+* F Fallas-Moya, RJ Nowling, SJ Emrich and A Sadovnik, [Automated Detection and Localization of Genome Inversions using Principal Component Analysis"](https://ieeexplore.ieee.org/document/9612782). 2021. *IEEE 3rd International Conference on BioInspired Processing (BIP)*.
 * RJ Nowling, KR Manke, and SJ Emrich. [Detecting Inversions with PCA in the Presence of Population Structure](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0240429). *PLoS One*. 2020.
 * RJ Nowling and SJ Emrich. [Detecting Chromosomal Inversions from Dense SNPs by Combining PCA and Association Tests](https://dl.acm.org/citation.cfm?id=3233571). *Proceedings of the 9th ACM International Conference on Bioinformatics, Computational Biology and Health Informatics* (ACM-BCB 2018), August 2018. [Slides from the Talk](/publications/RNowling_ACMBCB2018_slides.pdf) [Paper](/publications/ACMBCB_2018.pdf)
 
@@ -26,12 +28,14 @@ We are working on methods for detecting inversions from population genomics data
 * KR Manke, SJ Emrich, and RJ Nowling. [Detecting and Localizing Inversions from SNPs](/publications/AGS_2019.pdf).  Poster presentation at the 12th Annual Arthropod Genomics Symposium, June 2019, Manhattan, KS.
 * RJ Nowling, JL Abrudan, and SJ Emrich. [Population Genetics without the Population Labels](/publications/AGS_2018.pdf). Poster presentation at the 11th Annual Arthropod Genomics Symposium, June 2018, Urbana-Champaign, IL.
 
-## Regulatory Genomics
+## Sequencing for Regulatory Genomics
 In addition to genes, genomes contain regulatory elements that are involved in the mechanical process of gene expression.  Regulatory elements can be divided into [*trans*](https://en.wikipedia.org/wiki/Trans-regulatory_element)- and [*cis*](https://en.wikipedia.org/wiki/Cis-regulatory_element)-acting categories.  So-called DNA enrichment assays such as ChIP-Seq, ATAC-Seq, STARR-Seq, and FAIRE-Seq allow us to identify and characterize the activity of *cis*-regulatory elements such as promoters and enhancers.
 
 My lab works on regulatory genomics from two angles.  First, we are collaborate with biologists on several projects to analyze DNA enrichment assay data to annotate and characterize *cis*-regulatory elements in particular organisms.  Secondly, we are applying new machine learning methods to create more sensitive and specific peak calling (filtering) techniques for DNA enrichment assay data.
 
 **Papers:**
+
+* I Holm, L Nardini, A Pain, E Bischoff, CE Anderson, S Zongo, WM Guelbeogo, N Sagnon, DM Gohl, RJ Nowling, KD Vernick, and MM Riehle. MM [Comprehensive Genomic Discovery of Non-Coding Transcriptional Enhancers in the African Malaria Vector Anopheles coluzzii](https://www.frontiersin.org/articles/10.3389/fgene.2021.785934/full). *Front. Genet.* 2022
 * RJ Nowling, SK Behura, MS Halfon, SJ Emrich, and M Duman-Scheel. [PeakMatcher facilitates updated Aedes aegypti embryonic cis-regulatory element map](https://hereditasjournal.biomedcentral.com/articles/10.1186/s41065-021-00172-2). *Hereditas* 158, Article number: 7 (2021). **Arthropod Genomics thematic series**
 
 **Posters:**
