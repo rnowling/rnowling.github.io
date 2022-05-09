@@ -10,3 +10,6 @@ github_username:  rnowling
 
 # Build settings
 markdown: kramdown
+
+exclude:
+  - blog.html
