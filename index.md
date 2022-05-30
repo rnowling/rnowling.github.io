@@ -1,5 +1,6 @@
 ---
 layout: page
+title: About
 ---
 
 <center><img src="/images/photos/nowling.jpg" width="25%" height="25%" /></center>
