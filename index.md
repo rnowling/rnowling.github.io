@@ -7,6 +7,14 @@ Welcome to my web site.  My name is RJ Nowling.  I'm an assistant professor of c
 
 My research applies machine learning and statistics to genomic data.  Insects present multiple challenges in sequencing, assembly, and analysis that require the development of new tools and approaches.  I collaborate with groups at larger research universities and undergraduate students at my institution.  I aim to provide students with experiences through which they can assess research as a potential career path.  Through my collaborations, students are exposed to fields outside of computer science, the nature of interdisciplinary work, and research-intensive environments.
 
-<center><img src="/images/photos/nowling.jpg" width="25%" height="25%" /></center>
-
+  <div class="dummy-container">
+		<div id="mt-timeline" class="mt-timeline">
+			<div id="mt-body" class="mt-body">
+				<div class="loading-spinner"></div>
+			</div>
+		</div>
+	</div>
+	
+	<script src='mastodon-timeline.js'>
+	</script>
 
