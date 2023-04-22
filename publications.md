@@ -8,7 +8,7 @@ This page contains a list of selected publications.  For a full list, please see
 
 ## Conference and Journal Papers
 
-RJ Nowling, SH Keyser, AR Moran, JG Peters, and D Leskiewicz. Segmenting and Genotyping Large, Polymorphic Inversions. *Proceedings of the 2023 IEEE International Conference Electro Information Technology* (IEE EIT 2023). May 2023.
+RJ Nowling, SH Keyser, AR Moran, JG Peters, and D Leskiewicz. Segmenting and Genotyping Large, Polymorphic Inversions. *Proceedings of the 2023 IEEE International Conference Electro Information Technology* (IEEE EIT 2023). May 2023.
 
 F Labbé, M Abdeladhim, JP Abrudan, A Saori Araki, RN Araujo, P Arensburger, JB Benoit, et al. 2023. [Genomic Analysis of Two Phlebotomine Sand Fly Vectors of Leishmania from the New and Old World.](https://doi.org/10.1371/journal.pntd.0010862.) *PLoS Neglected Tropical Diseases 17 (4): e0010862.*
 
