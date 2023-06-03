@@ -50,4 +50,4 @@ not just develop them offline.  To meet this need, RJ developed the
 the MS in Machine Learning, as well a course in recommendation systems. In Spring 2023, RJ established the
 [MSOE Data-Intensive Systems Education (DISE) Project](https://msoe-dise-project.github.io/).  The DISE project aims to
 encourage profileration of similar courses at other universities by providing education, training, and materials for
-faculty.  RJ also recently joined [Memphis.dev](https://memphis.dev/) as a part-time developer advocate.
+faculty.  RJ recently joined [Memphis.dev](https://memphis.dev/) as a part-time developer advocate.
