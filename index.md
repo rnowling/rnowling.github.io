@@ -15,7 +15,7 @@ later changed labs and finished his Ph.D. with a focus on the application of dat
 
 <center><img src="/images/photos/nowling.jpg" width="25%" height="25%" /></center>
 
-After his Ph.D., RJ built on his academic training with four years of industry work.  From May 2014 to August 2016, RJ was a
+After his Ph.D., RJ expanded on his academic training with four years at leading tech companies.  From May 2014 to August 2016, RJ was a
 software engineer at
 [Red Hat, Inc.](https://www.redhat.com/) with a focus on open-source software for scalable data processing.  RJ was part of
 a group evaluating potential analytics stack using open-source software such as [Apache Spark](https://spark.apache.org/) and the
