@@ -8,7 +8,7 @@ This page contains a list of selected publications.  For a full list, please see
 
 ## Conference and Journal Papers
 
-RJ Nowling, K Njoya, JG Peters. [Prediction accuracy of regulatory elements from sequence varies by functional sequencing technique](https://www.frontiersin.org/articles/10.3389/fcimb.2023.1182567/full). *Frontiers in Cellular and Infection Microbiology.* 2023.
+RJ Nowling, K Njoya, JG Peters, MM Riehle. [Prediction accuracy of regulatory elements from sequence varies by functional sequencing technique](https://www.frontiersin.org/articles/10.3389/fcimb.2023.1182567/full). *Frontiers in Cellular and Infection Microbiology.* 2023.
 
 RJ Nowling, SH Keyser, AR Moran, JG Peters, and D Leskiewicz. [Segmenting and Genotyping Large, Polymorphic Inversions](https://ieeexplore.ieee.org/abstract/document/10187331). *Proceedings of the 2023 IEEE International Conference on Electro Information Technology* (IEEE EIT 2023). 2023.
 
