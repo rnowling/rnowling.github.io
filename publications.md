@@ -36,26 +36,6 @@ RJ Nowling and SJ Emrich. [Adjusted Likelihood-Ratio Test for Variants with Unkn
 
 RJ Nowling and SJ Emrich. [Stable Feature Ranking with Logistic Regression Ensembles](/publications/BIBM_2017.pdf). *Proceedings of the 2017 IEEE International Conference on Bioinformatics and Biomedicine* (IEEE BIBM 2017), October 2017.
 
+RJ Nowling and J Vyas. [A Domain-Driven, Generative Data Model for Big Pet Store](https://ieeexplore.ieee.org/abstract/document/7034765). 2014. *Proceedings of the IEEE Fourth International Conference on Big Data and Cloud Computing (IEEE BDCloud)*. 2014.
+
 RJ Nowling, JL Abrudan, DA Shoue, B Abdul-Wahid, M Wadsworth, G Stayback, FH Collins, MA McDowell, and JA Izaguirre. [Identification of novel arthropod vector G protein-coupled receptors](https://parasitesandvectors.biomedcentral.com/articles/10.1186/1756-3305-6-150). *Parasites & Vectors* 6:150. 2013.
-
-## Posters
-
-CR Beal, JG Peters, and RJ Nowling. Sequence Model Evaluation Framework for STARR-Seq Peak Calling. Poster presentation at the 12th Annual ACM International Conference on Bioinformatics, Computational Biology, and Health Informatics, August 2021, Virtual.  [Abstract](/publications/acm_bcb_2021_abstract.pdf). [Poster](/publications/ACMBCB_2021.pdf)
-
-M Aleck and RJ Nowling. Evaluation of Clustering Algorithms for Inferring Inversion Genotypes. Poster presentation at the 14th Great Lakes Bioinformatics conference (GLBIO), May 2021, Virtual. [Abstract](/publications/glbio_2021_abstract.pdf) [Poster](/publications/glbio_2021_poster.pdf)
-
-RJ Nowling, RR Geromel, and BS Halligan. Filtering STARR-Seq Peaks for Enhancers with Sequence Models. Poster presentation at the 11th Annual ACM International Conference on Bioinformatics, Computational Biology, and Health Informatics, September 2020, Virtual. [Abstract](/publications/acm_bcb_2020_enhancer_ssl_abstract.pdf) [Poster](/publications/ACMBCB_2020_enhancer_ssl.pdf)
-
-RJ Nowling, CR Beal, SJ Emrich, SK Behura, MS Halfon, and M Duman-Scheel. PeakMatcher: Matching Peaks Across Genome Assemblies. Poster presentation at the 11th Annual ACM International Conference on Bioinformatics, Computational Biology, and Health Informatics, September 2020, Virtual.  [GitHub](https://github.com/rnowling/peak-matcher) [Abstract](/publications/acm_bcb_2020_peak_matcher_abstract.pdf) [Poster](/publications/ACMBCB_2020_peakmatcher.pdf)
-
-M Aleck and RJ Nowling. [Exploring Mechanisms of Molecular Evolution and Their Representations in PCA](/publications/IEEE_COMPSAC_2019.pdf). Poster presentation at the IEEE 43rd Annual Computer Software and Applications Conference (COMPSAC), July 2019, Milwaukee, WI.
-
-KR Manke, SJ Emrich, and RJ Nowling. [Detecting and Localizing Inversions from SNPs](/publications/AGS_2019.pdf).  Poster presentation at the 12th Annual Arthropod Genomics Symposium, June 2019, Manhattan, KS.
-
-RJ Nowling, J Bukowy, SD McGarry, AS Nencka, J Urbain, A Lowman, M Hohenwalter, A Banjeree, K Iczkowski, and PS LaViolette. [Cascading Classifiers Improve Prostate Segmentation](/publications/ISMRM_2019_abstract.pdf). Poster presentation at the International Society for Magnetic Resonance in Medicine 27th Annual Meeting, May 2019, Montreal, Canada. 
-
-RJ Nowling, JL Abrudan, and SJ Emrich. [Population Genetics without the Population Labels](/publications/AGS_2018.pdf). Poster presentation at the 11th Annual Arthropod Genomics Symposium, June 2018, Urbana-Champaign, IL.
-
-RJ Nowling,  M Wadsworth, JL Abrudan, DA Shoue, B Abdul-Wahid, G Stayback, FH Collins, MA McDowell, and JA Izaguirre. [Identifying GPCRs in the Genome of the Sand Fly P. papatasi using Ensemble\*](/publications/AGS_2013.pdf). Poster presentation at the 7th Annual Arthropod Genomics Symposium, June 2013, Notre Dame, IN.
-
-RJ Nowling, JL Abrudan, DA Shoue, B Abdul-Wahid, M Wadsworth, G Stayback, FH Collins, MA McDowell, and JA Izaguirre. [Evaluation and Development of GPCR Classifiers for Vectors](/publications/Eck_Institute_Retreat_2013.pdf). Poster presentation at the Second Annual Eck Institute for Global Health Research Retreat, January 2013, Notre Dame, IN.
