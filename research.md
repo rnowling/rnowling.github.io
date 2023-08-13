@@ -4,7 +4,7 @@ title: Research
 permalink: /research/
 ---
 
-My research has falls in several disjoint areas.
+My research falls in several disjoint areas.
 
 ## Genomic Data Science
 A genome is the totality of an organism's DNA and effectively the "instructions" or software that control the development of
