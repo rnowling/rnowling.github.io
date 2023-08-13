@@ -24,7 +24,7 @@ RJ Nowling, KR Manke, and SJ Emrich. [Detecting Inversions with PCA in the Prese
 
 RJ Nowling and SJ Emrich. [Detecting Chromosomal Inversions from Dense SNPs by Combining PCA and Association Tests](https://dl.acm.org/citation.cfm?id=3233571). *Proceedings of the 9th ACM International Conference on Bioinformatics, Computational Biology and Health Informatics* (ACM-BCB 2018), August 2018. [Slides from the Talk](/publications/RNowling_ACMBCB2018_slides.pdf) [Paper](/publications/ACMBCB_2018.pdf)
 
-## Data-Intensive System
+## Data-Intensive Systems
 
 RJ Nowling and J Vyas. [A Domain-Driven, Generative Data Model for Big Pet Store](https://ieeexplore.ieee.org/abstract/document/7034765). 2014. *Proceedings of the IEEE Fourth International Conference on Big Data and Cloud Computing (IEEE BDCloud)*. 2014.
 
