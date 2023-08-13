@@ -8,9 +8,11 @@ This page contains a list of selected publications.  For a full list, please see
 
 ## Conference and Journal Papers
 
-RJ Nowling, SH Keyser, AR Moran, JG Peters, and D Leskiewicz. Segmenting and Genotyping Large, Polymorphic Inversions. *Proceedings of the 2023 IEEE International Conference on Electro Information Technology* (IEEE EIT 2023). May 2023.
+RJ Nowling, K Njoya, JG Peters. [Prediction accuracy of regulatory elements from sequence varies by functional sequencing technique](https://www.frontiersin.org/articles/10.3389/fcimb.2023.1182567/full). *Frontiers in Cellular and Infection Microbiology.* 2023.
 
-F Labbé, M Abdeladhim, JP Abrudan, A Saori Araki, RN Araujo, P Arensburger, JB Benoit, et al. 2023. [Genomic Analysis of Two Phlebotomine Sand Fly Vectors of Leishmania from the New and Old World.](https://doi.org/10.1371/journal.pntd.0010862.) *PLoS Neglected Tropical Diseases 17 (4): e0010862.*
+RJ Nowling, SH Keyser, AR Moran, JG Peters, and D Leskiewicz. [Segmenting and Genotyping Large, Polymorphic Inversions](https://ieeexplore.ieee.org/abstract/document/10187331). *Proceedings of the 2023 IEEE International Conference on Electro Information Technology* (IEEE EIT 2023). 2023.
+
+F Labbé, M Abdeladhim, JP Abrudan, A Saori Araki, RN Araujo, P Arensburger, JB Benoit, et al. [Genomic Analysis of Two Phlebotomine Sand Fly Vectors of Leishmania from the New and Old World.](https://doi.org/10.1371/journal.pntd.0010862.) *PLoS Neglected Tropical Diseases 17 (4): e0010862.* 2023.
 
 RJ Nowling, F Fallas-Moya, A Sadovnik, SJ Emrich, M Aleck, D Leskiewicz, and JG Peters.  [Fast, low-memory detection and localization of large, polymorphic inversions from SNPs](https://peerj.com/articles/12831/). *PeerJ*. 2022.
 
