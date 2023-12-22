@@ -26,7 +26,9 @@ RJ Nowling and SJ Emrich. [Detecting Chromosomal Inversions from Dense SNPs by C
 
 ## Data-Intensive Systems
 
-RJ Nowling and J Vyas. [A Domain-Driven, Generative Data Model for Big Pet Store](https://ieeexplore.ieee.org/abstract/document/7034765). 2014. *Proceedings of the IEEE Fourth International Conference on Big Data and Cloud Computing (IEEE BDCloud)*. 2014.
+Nowling, Ronald J. ["ML Production Systems Course at a Polytechnic PUI"](https://dl.acm.org/doi/10.5555/3636971.3636977). *Journal of Computing Sciences in Colleges*. 39(2):62-71. 2023.
+
+RJ Nowling and J Vyas. [A Domain-Driven, Generative Data Model for Big Pet Store](https://ieeexplore.ieee.org/abstract/document/7034765). *Proceedings of the IEEE Fourth International Conference on Big Data and Cloud Computing (IEEE BDCloud)*. 2014.
 
 ## Other
 
