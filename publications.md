@@ -6,7 +6,7 @@ permalink: /publications/
 
 This page contains a list of selected publications.  For a full list, please see my [Google Scholar profile page](https://scholar.google.com/citations?user=a80X8MUAAAAJ&hl=en).
 
-## Data-Intensive Systems
+## Data-Intensive Systems Education
 
 Nowling, Ronald J. Experience Report from a Graduate ML Production Systems Course. *Proceedings of the 2024 IEEE International Conference on Electro Information Technology* (IEEE EIT 2024). 2024.
 
