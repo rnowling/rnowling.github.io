@@ -6,6 +6,15 @@ permalink: /publications/
 
 This page contains a list of selected publications.  For a full list, please see my [Google Scholar profile page](https://scholar.google.com/citations?user=a80X8MUAAAAJ&hl=en).
 
+## Data-Intensive Systems
+
+Nowling, Ronald J. Experience Report from a Graduate ML Production Systems Course. *Proceedings of the 2024 IEEE International Conference on Electro Information Technology* (IEEE EIT 2024). 2024.
+
+Nowling, Ronald J. [ML Production Systems Course at a Polytechnic PUI](https://dl.acm.org/doi/10.5555/3636971.3636977). *Journal of Computing Sciences in Colleges*. 39(2):62-71. 2023.
+
+RJ Nowling and J Vyas. [A Domain-Driven, Generative Data Model for Big Pet Store](https://ieeexplore.ieee.org/abstract/document/7034765). *Proceedings of the IEEE Fourth International Conference on Big Data and Cloud Computing (IEEE BDCloud)*. 2014.
+
+
 ## Sequencing for Functional Genomics
 
 RJ Nowling, K Njoya, JG Peters, MM Riehle. [Prediction accuracy of regulatory elements from sequence varies by functional sequencing technique](https://www.frontiersin.org/articles/10.3389/fcimb.2023.1182567/full). *Frontiers in Cellular and Infection Microbiology.* 2023.
@@ -23,12 +32,6 @@ RJ Nowling, F Fallas-Moya, A Sadovnik, SJ Emrich, M Aleck, D Leskiewicz, and JG 
 RJ Nowling, KR Manke, and SJ Emrich. [Detecting Inversions with PCA in the Presence of Population Structure](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0240429). *PLoS One*. 2020.
 
 RJ Nowling and SJ Emrich. [Detecting Chromosomal Inversions from Dense SNPs by Combining PCA and Association Tests](https://dl.acm.org/citation.cfm?id=3233571). *Proceedings of the 9th ACM International Conference on Bioinformatics, Computational Biology and Health Informatics* (ACM-BCB 2018), August 2018. [Slides from the Talk](/publications/RNowling_ACMBCB2018_slides.pdf) [Paper](/publications/ACMBCB_2018.pdf)
-
-## Data-Intensive Systems
-
-Nowling, Ronald J. ["ML Production Systems Course at a Polytechnic PUI"](https://dl.acm.org/doi/10.5555/3636971.3636977). *Journal of Computing Sciences in Colleges*. 39(2):62-71. 2023.
-
-RJ Nowling and J Vyas. [A Domain-Driven, Generative Data Model for Big Pet Store](https://ieeexplore.ieee.org/abstract/document/7034765). *Proceedings of the IEEE Fourth International Conference on Big Data and Cloud Computing (IEEE BDCloud)*. 2014.
 
 ## Other
 
