@@ -8,7 +8,7 @@ This page contains a list of selected publications.  For a full list, please see
 
 ## Data-Intensive Systems Education
 
-Nowling, Ronald J. Experience Report from a Graduate ML Production Systems Course. *Proceedings of the 2024 IEEE International Conference on Electro Information Technology* (IEEE EIT 2024). 2024.
+Nowling, Ronald J. [Experience Report from a Graduate ML Production Systems Course](https://ieeexplore.ieee.org/abstract/document/10609876). *Proceedings of the 2024 IEEE International Conference on Electro Information Technology* (IEEE EIT 2024). 2024.
 
 Nowling, Ronald J. [ML Production Systems Course at a Polytechnic PUI](https://dl.acm.org/doi/10.5555/3636971.3636977). *Journal of Computing Sciences in Colleges*. 39(2):62-71. 2023.
 
