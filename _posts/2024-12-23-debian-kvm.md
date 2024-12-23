@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Notes on Creating Debian VMs"
+title:  "Notes on Creating Headless VMs with QEMU/KVM"
 date:   2024-12-23 12:13:19
 categories: "system administration"
 tags: []
