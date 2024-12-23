@@ -106,7 +106,7 @@ $ sudo virsh net-dhcp-leases default
 
 and SSH into the VM:
 
-```bash
+```
 $ ssh debian@192.168.122.175 
 The authenticity of host '192.168.122.175 (192.168.122.175)' can't be established.
 ED25519 key fingerprint is SHA256:Nc3Eiu9nxXF56YvdshEb5FDiXkHPV4Oq/hymCvxwuCE.
