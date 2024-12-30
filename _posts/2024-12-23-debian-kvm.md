@@ -23,21 +23,21 @@ $ sudo adduser rnowling libvirt
 At some point or another, I think I deleted the default network.  Here are some steps for recreating it:
 
 ```bash
-# virsh net-list --all
-# virsh net-define /usr/share/libvirt/networks/default.xml
+$ sudo virsh net-list --all
+$ sudo virsh net-define /usr/share/libvirt/networks/default.xml
 Network default defined from /usr/share/libvirt/networks/default.xml
-# virsh net-autostart default
+$ sudo virsh net-autostart default
 Network default marked as autostarted
-# virsh net-start default
+$ sudo virsh net-start default
 Network default started
-# virsh net-list --all
+$ sudo virsh net-list --all
 ```
 
 ## Prepare the Guest Image
 Download image:
 
 ```bash
-wget https://cloud.debian.org/images/cloud/bookworm/latest/debian-12-generic-amd64.qcow2
+$ wget https://cloud.debian.org/images/cloud/bookworm/latest/debian-12-generic-amd64.qcow2
 ```
 
 Create the DHCP settings config file called `50-dhcp.yaml`:
@@ -64,7 +64,7 @@ run ssh-keygen and restart sshd (fails the first time without system keys),
 and copy over the DHCP networking config details.
 
 ```bash
-$ virt-customize -a debian-12-generic-amd64-prepared.qcow2 \
+$ sudo virt-customize -a debian-12-generic-amd64-prepared.qcow2 \
                  --run-command "adduser debian -q" \
                  --run-command "adduser debian sudo" \
                  --ssh-inject debian:file:/home/rnowling/.ssh/id_ed25519.pub \
@@ -124,6 +124,12 @@ permitted by applicable law.
 Last login: Mon Dec 23 21:10:41 2024 from 192.168.122.1
 debian@localhost:~$
 ```
+
+## Update 12/30/2024: Arm64 Support
+I tested these instructions on arm64 using my newly-acquired [System75 Thelio Astra](https://rnowling.github.io/system/administration/2024/12/23/astra-first-impressions.html).
+Except for needing to use the `debian-12-genericcloud-arm64.qcow2` image, everything documented above worked without issue. I ran
+into a small hiccup when trying to remove the VM.  The VM seems to be created with a NVRam backing file, so deleting the VM
+requires passing the `--nvram` flag to `virsh undefine`.
 
 ## References
 I found the following references helpful when figuring out how to get this working.
