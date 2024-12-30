@@ -107,6 +107,12 @@ network:
       dhcp6: true
 ```
 
+and running 
+
+```bash
+$ sudo netplan generate
+```
+
 Note that I changed the adapter name pattern from `en*` to `enP3p5s0` since the Thelio Astra has 3 network adapters.
 With this change, the machine connects to the network on reboot automatically.
 
