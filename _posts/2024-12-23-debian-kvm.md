@@ -15,7 +15,7 @@ helped point in the right direction but didn't do exactly what I wanted.
 To install the various components:
 
 ```bash
-$ sudo apt install --no-install-recommends qemu-system libvirt-clients libvirt-daemon-system libguestfs-tools
+$ sudo apt install --no-install-recommends qemu-system libvirt-clients libvirt-daemon-system libguestfs-tools virtinst
 $ sudo adduser rnowling libvirt
 ```
 
