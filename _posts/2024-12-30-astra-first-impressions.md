@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "First Impressions of the System76 Thelio Astra"
-date:   2024-12-23 12:13:19
+date:   2024-12-30 15:13:19
 categories: "system administration"
 tags: []
 ---
@@ -14,7 +14,7 @@ Although the workstation comes with Ubuntu by default, I prefer to use Debian as
 I've recorded some notes on setting up the workstation here.
 
 ## Hardware
-I ordered by Astra with the Ampere Altra Max M128-30 128-core, 3.0 Ghz CPU, 512 GB RAM, a 4 GB NVMe M.2 SSD, and
+I ordered the Astra with the Ampere Altra Max M128-30 128-core @ 3.0 Ghz CPU, 512 GB RAM, a 4 GB NVMe M.2 SSD, and
 the 4 GB Nvidia A400 GPU.  According to the support team, the Astra model I recieved uses the
 [ASRock ALTRAD8UD2-1L2Q motherboard](https://www.asrockrack.com/general/productdetail.asp?Model=ALTRAD8UD2-1L2Q#Specifications).
 This is a change from the model mentioned in the [Phoronix review](https://www.phoronix.com/review/system76-thelio-astra).
@@ -68,7 +68,7 @@ Note to self: the normal user account created by Debian on install isn't part of
 added to the sudo group with:
 
 ```bash
-$ usermod -G sudo rnowling
+$ adduser rnowling sudo
 ```
 
 The sudo group, however, is already enabled in the `/etc/sudoers` config file.
@@ -111,6 +111,7 @@ and running
 
 ```bash
 $ sudo netplan generate
+$ sudo systemctl reload NetworkManager
 ```
 
 Note that I changed the adapter name pattern from `en*` to `enP3p5s0` since the Thelio Astra has 3 network adapters.
