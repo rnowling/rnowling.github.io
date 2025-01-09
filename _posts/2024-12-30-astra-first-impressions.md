@@ -118,3 +118,27 @@ Note that I changed the adapter name pattern from `en*` to `enP3p5s0` since the 
 With this change, the machine connects to the network on reboot automatically.
 
 Overall, a great machine so far!
+
+## Update 01-09-2024
+### GPUs Work in Other PCIe Slots
+I moved the GPU that came with the machine to PCIe slot 4 and had no issues whatsoever.  I can confirm that there is no
+longer a requirement for the GPU to be in a specific PCIe slot.
+
+### Setting Up the NVMe PCIe Expansion Card
+I was able to get the aforementioned ASUS Hyper M.2 NVMe PCIe card working with 4 NVMe drives.  It's important that you set
+the PCIe lane width to x4x4x4x4 in the UEFI setup.  To access this setting, you need:
+
+1. Press the DEL key when the System76 splash screen appears to access the UEFI setup
+1. Go to the Advanced tab
+1. Go to the Chipset Configuration option
+1. Select PCIE Link Width
+1. Change the width to x4x4x4x4
+1. Press F10 to save the settings and restart
+
+When configured correctly, you should see 5 NVMe drives when you go to the NVMe Configuration submenu on the Advanced tab.
+(The machine will need to be restarted first.)
+
+I was surprised to find that the widths for PCIe lanes 6 and 7 (the two lanes closest to the CPU) cannot be controlled separately.
+The width setting applies to both.  This is not true of PCIe lanes 4 and 5 which can be configured separately.  This has
+implications for what PCIe devices are placed in each slot, especially since some connectors on the motherboard make it
+difficult to use full-length PCIe cards in some of the slots.
