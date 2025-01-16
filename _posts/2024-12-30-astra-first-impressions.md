@@ -99,6 +99,7 @@ to create the config file `/etc/netplan/50-dhcp.yaml` with the following:
 ```yml
 network:
   version: 2
+  renderer: NetworkManager
   ethernets:
     all-en:
       match:
