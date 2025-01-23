@@ -146,7 +146,6 @@ difficult to use full-length PCIe cards in some of the slots.
 
 
 ## Update 01-22-2025
-### CUDA
 I wanted to be able to run molecular dynamics simulations on GPUs using [OpenMM](https://openmm.org/).  Nvidia
 doesn't provide a CUDA toolkit installer for Debian on ARM64, so I tried
 following the [Debian wiki instructions](https://wiki.debian.org/NvidiaGraphicsDrivers#CUDA) for installing CUDA
@@ -159,9 +158,14 @@ ARM64.  I ended up re-installing Ubuntu 24.04 LTS so that I could use the offici
 has been running very smoothly using the official Nvidia CUDA toolkit installer.  (Previously, I've been able to use
 the Ubuntu installer to setup the CUDA toolkit on Debian, but was not successful with that approach this time.)
 
-I ran into one caveat, however.  Neither Debian or Ubuntu had issues supporting the Nvidia A400 that came with the machine
-using the nouveau driver.  The kernel generated no console or X11 output when I installed an Nvidia RTX 4060 Ti or GTX
+I ran into one caveat, however.  Debian and Ubuntu supported the Nvidia A400 that came with the machine
+using the nouveau driver, but the kernel generated no console or X11 output when I installed an Nvidia RTX 4060 Ti or GTX
 1660 Super.  I had to pass the parameters `console=tty0 nomodeset` to the Linux kernel in GRUB.  With those parameters,
 I was able to install Ubuntu using the text installer that comes with the server addition.  During the installation,
 I selected the option to install the official Nvidia drivers.  With these drivers, I had no further issues with the console
 or X11.
+
+(I would have preferred to install two RTX 4060 Ti GPUs.  However, there was no way to physically fit both GPUs and M.2 card
+at the same time. A full-length card cannot fit into PCIe slot 4 because of connects on the motherboard. If I install the GPUs
+in PCIe slots 7 and 5, the double width cards block PCIe slots 6 and 4.  I ended up installing the RTX 4060 Ti in PCIe slot 7,
+the M.2 card in PCIe slot 5, and the GTX 1660 Super in PCIe slot 4.)
