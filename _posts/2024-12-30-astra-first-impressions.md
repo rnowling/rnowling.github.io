@@ -153,7 +153,7 @@ using the packages in the Debian repositories.  Unfortunately, the CUDA drivers 
 there seems to be an issue with cuFFT.  OpenMM couldn't load the library, and the CUDA sample code that depended on it
 wouldn't build.
 
-Nvidia now provides an official installer for Debian but only on amd64 but only supports RHEL, SuSE, and Ubuntu for
+Nvidia now provides an official installer for Debian but only on amd64 but only supports Red Hat RHEL, SUSE SLES, and Ubuntu for
 ARM64.  I ended up re-installing Ubuntu 24.04 LTS so that I could use the official Nvidia CUDA toolkit installer.  OpenMM
 has been running very smoothly using the official Nvidia CUDA toolkit installer.  (Previously, I've been able to use
 the Ubuntu installer to setup the CUDA toolkit on Debian, but was not successful with that approach this time.)
