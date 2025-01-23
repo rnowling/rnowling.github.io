@@ -120,7 +120,7 @@ With this change, the machine connects to the network on reboot automatically.
 
 Overall, a great machine so far!
 
-## Update 01-09-2024
+## Update 01-09-2025
 ### GPUs Work in Other PCIe Slots
 I moved the GPU that came with the machine to PCIe slot 4 and had no issues whatsoever.  I can confirm that there is no
 longer a requirement for the GPU to be in a specific PCIe slot.
@@ -143,3 +143,25 @@ I was surprised to find that the widths for PCIe lanes 6 and 7 (the two lanes cl
 The width setting applies to both.  This is not true of PCIe lanes 4 and 5 which can be configured separately.  This has
 implications for what PCIe devices are placed in each slot, especially since some connectors on the motherboard make it
 difficult to use full-length PCIe cards in some of the slots.
+
+
+## Update 01-22-2025
+### CUDA
+I wanted to be able to run molecular dynamics simulations on GPUs using [OpenMM](https://openmm.org/).  Nvidia
+doesn't provide a CUDA toolkit installer for Debian on ARM64, so I tried
+following the [Debian wiki instructions](https://wiki.debian.org/NvidiaGraphicsDrivers#CUDA) for installing CUDA
+using the packages in the Debian repositories.  Unfortunately, the CUDA drivers are not complete.  In particular,
+there seems to be an issue with cuFFT.  OpenMM couldn't load the library, and the CUDA sample code that depended on it
+wouldn't build.
+
+Nvidia now provides an official installer for Debian but only on amd64 but only supports RHEL, SuSE, and Ubuntu for
+ARM64.  I ended up re-installing Ubuntu 24.04 LTS so that I could use the official Nvidia CUDA toolkit installer.  OpenMM
+has been running very smoothly using the official Nvidia CUDA toolkit installer.  (Previously, I've been able to use
+the Ubuntu installer to setup the CUDA toolkit on Debian, but was not successful with that approach this time.)
+
+I ran into one caveat, however.  Neither Debian or Ubuntu had issues supporting the Nvidia A400 that came with the machine
+using the nouveau driver.  The kernel generated no console or X11 output when I installed an Nvidia RTX 4060 Ti or GTX
+1660 Super.  I had to pass the parameters `console=tty0 nomodeset` to the Linux kernel in GRUB.  With those parameters,
+I was able to install Ubuntu using the text installer that comes with the server addition.  During the installation,
+I selected the option to install the official Nvidia drivers.  With these drivers, I had no further issues with the console
+or X11.
