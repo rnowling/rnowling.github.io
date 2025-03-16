@@ -16,6 +16,8 @@ I've been an Associate Professor in the Electrical Engineering & Computer Scienc
 
 ## **Alumni**
 
+<center><img src="/images/photos/ags2023.jpg" width="75%" height="75%" /></center>
+
 ### Alex M. (Summer 2022 - Spring 2023)
 Alex evaluated deep learning models for characterizing genomic regions as inverted or not.
 Alex graduated with a B.S. in Computer Science in Spring 2023.
