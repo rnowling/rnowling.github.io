@@ -36,10 +36,10 @@ and [graduate certificate](https://catalog.msoe.edu/preview_program.php?catoid=3
 learning. RJ designed and teaches several graduate courses in data science, applied machine learning, and ML production systems
 and serves as the coordinator for the graduate certificate.
 
-Shortly after joining MSOE, RJ established a research group that applies machine learning and
+Shortly after joining MSOE, RJ established a [research group](/research/) that applies machine learning and
 data science to advance our understanding of genomics.  The group was funded by a
 [NSF CISE CRII](https://new.nsf.gov/funding/opportunities/computer-information-science-engineering-research) grant and
-startup funds from MSOE.  Over five years (Fall 2018 - Summer 2023), 15 undergraduate students participated in research. Through
+startup funds from MSOE.  Over five years (Fall 2018 - Summer 2023), 18 undergraduate students participated in research. Through
 collaborations with faculty at R1 universities, students were exposed to fields outside of computer science, the nature of
 interdisciplinary work, and research-intensive environments.  Four of the students have since pursued graduate studies.
 
