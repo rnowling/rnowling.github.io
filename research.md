@@ -8,6 +8,9 @@ Our research lies at the intersection of machine learning and genomics.  A genom
 
 We focus primarily on insect genomes.   Insect genomes present unique and interesting challenges for computational biologists.  More importantly, many insects vector diseases or are important to food security (either as pollinators or pests).  Through their saliva, mosquitoes such as *[Anopheles gambiae](https://en.wikipedia.org/wiki/Anopheles_gambiae)* and *[Aedes aegypti](https://en.wikipedia.org/wiki/Aedes_aegypti)* transmit the parasites and viruses that cause diseases such as [malaria](https://en.wikipedia.org/wiki/Malaria), [dengue fever](https://en.wikipedia.org/wiki/Dengue_fever), and [Zika](https://en.wikipedia.org/wiki/Zika_fever) are major threats to public health.  By partnering with biologists who study these insects, we can ensure that my work solves relevant problems and useful.
 
+This page contains a selected list of publications.  For a full list, please see my
+[Google Scholar profile page](https://scholar.google.com/citations?user=a80X8MUAAAAJ&hl=en).
+
 ## Sequencing for Regulatory Genomics
 In addition to genes, genomes contain regulatory elements that are involved in the mechanical process of gene expression.  Regulatory elements can be divided into [*trans*](https://en.wikipedia.org/wiki/Trans-regulatory_element)- and [*cis*](https://en.wikipedia.org/wiki/Cis-regulatory_element)-acting categories.  So-called DNA enrichment assays such as ChIP-Seq, ATAC-Seq, STARR-Seq, and FAIRE-Seq allow us to identify and characterize the activity of *cis*-regulatory elements such as promoters and enhancers.
 
@@ -63,3 +66,18 @@ As part of a project to develop novel insecticides, I worked on developing a cla
 **Posters:**
 * RJ Nowling,  M Wadsworth, JL Abrudan, DA Shoue, B Abdul-Wahid, G Stayback, FH Collins, MA McDowell, and JA Izaguirre. [Identifying GPCRs in the Genome of the Sand Fly *P. papatasi* using Ensemble\*](/publications/AGS_2013.pdf). Poster presentation at the 7th Annual Arthropod Genomics Symposium, June 2013, Notre Dame, IN.
 * RJ Nowling, JL Abrudan, DA Shoue, B Abdul-Wahid, M Wadsworth, G Stayback, FH Collins, MA McDowell, and JA Izaguirre. [Evaluation and Development of GPCR Classifiers for Vectors](/publications/Eck_Institute_Retreat_2013.pdf). Poster presentation at the Second Annual Eck Institute for Global Health Research Retreat, January 2013, Notre Dame, IN.
+
+## Software
+
+Our lab develops software tools for use in developing and distributing our methods.  Our goals including releasing all of our software under a liberal open-source license such as the [Apache License, v2.0](https://www.apache.org/licenses/LICENSE-2.0), easy to use, and accompanied by documentation.
+
+### Asaph
+Asaph is a software package for detecting, localizing, and genotyping large polymorphic inversions from SNP data.
+
+GitHub: [https://github.com/nowling-lab/asaph](https://github.com/nowling-lab/asaph)
+
+
+### PeakMatcher
+PeakMatcher is a simple tool we developed to match peaks from DNA enrichment assays across genome assemblies to aid in validation.  As genome assemblies are improved through new sequencing methods, DNA enrichment assay data need to be re-analyzed using the new assemblies.  PeakMatcher provides scripts for comparing called peaks on the same genome (e.g., to validate pipeline parameters or compare agreement across different assays) or different genomes using the raw reads (e.g., to validate that peaks are not lost with the new genome assembly or identify new peaks for analysis).
+
+GitHub: [https://github.com/nowling/peak-matcher](https://github.com/rnowling-lab/peak-matcher)
