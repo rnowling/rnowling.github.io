@@ -27,26 +27,24 @@ He was part of a team that developed and maintained a recommendation system to e
 RJ gained experience with ML production systems and what would later come to be called [MLOps](https://en.wikipedia.org/wiki/MLOps).
 
 RJ joined the faculty of MSOE in Fall 2018.  MSOE is a primarily-undergraduate polytechnic offering students a challenging academic
-environment with small classes that
-emphasize hands-on learning.  Somewhat uniquely, courses in data science and machine learning are required of all Computer
-Science majors at MSOE.  RJ has been intimately involved in designing and teaching courses in data science, machine learning,
-and algorithms, which provide opportunities to bring his research and industry experience into the classroom. RJ is also
-part of a team that recently established a [Master's](https://www.msoe.edu/academics/graduate-degrees/m-s-in-machine-learning/)
-and [graduate certificate](https://catalog.msoe.edu/preview_program.php?catoid=30&poid=1698&returnto=893) programs in machine
-learning. RJ designed and teaches several graduate courses in data science, applied machine learning, and ML production systems
-and serves as the coordinator for the graduate certificate.
+environment with small classes that emphasize hands-on learning and high faculy-student engagement.  Somewhat uniquely, Computer
+Science majors at MSOE are require to take courses in data science and machine learning.  RJ has been intimately involved in
+designing and teaching courses in data science, machine learning, and algorithms, which provide opportunities to bring his
+research and industry experience into the classroom.
 
 Shortly after joining MSOE, RJ established a [research group](/research/) that applies machine learning and
-data science to advance our understanding of genomics.  The group was funded by a
+data science to advance our understanding of genomics.  The group received funding from a
 [NSF CISE CRII](https://new.nsf.gov/funding/opportunities/computer-information-science-engineering-research) grant and
-startup funds from MSOE.  Over five years (Fall 2018 - Summer 2023), 18 undergraduate students participated in research. Through
-collaborations with faculty at R1 universities, students were exposed to fields outside of computer science, the nature of
+startup funds from MSOE.  Since Fall 2018, more than 15 undergraduate students have participated in the group. Through
+collaborations with faculty at R1 universities, students are exposed to fields outside of computer science, the nature of
 interdisciplinary work, and research-intensive environments.  Four of the students have since pursued graduate studies.
 
-RJ recently expanded the focus of his research activities to data-intensive systems, especially those involving machine
+RJ is part of a team that recently established a [Master's](https://www.msoe.edu/academics/graduate-degrees/m-s-in-machine-learning/)
+and [graduate certificate](https://catalog.msoe.edu/preview_program.php?catoid=30&poid=1698&returnto=893) programs in machine
+learning. RJ recently expanded the focus of his research activities to data-intensive systems, especially those involving machine
 learning models.  This shift was driven by the recognition that students need to know how to put ML models into production,
-not just develop them offline.  To meet this need, RJ developed courses such as 
+not just develop them offline.  To meet this need, RJ developed and regularly teaches courses such as 
 ML Production Systems, Recommendation Systems, and Distributed Storage Systems. In Spring 2023, RJ established the
-[MSOE Data-Intensive Systems Education (DISE) Project](/dise-project/).  The DISE project aims to
-encourage profileration of similar courses at other universities by providing education, training, and materials for
-faculty.
+[MSOE Data-Intensive Systems Education (DISE) Project](/dise-project/).  The MSOE DISE project aims to
+encourage profileration of similar courses at other universities by providing course materials and example system implementations
+under an open-source license.
