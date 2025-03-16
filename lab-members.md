@@ -4,19 +4,18 @@ title: Lab Members
 permalink: /members
 ---
 
+<center><img src="/images/photos/ags2023.jpg" width="75%" height="75%" /></center>
+
 ### RJ Nowling
 
-<img src="/images/photos/nowling.jpg" width="25%" height="25%" />
-
-Email: nowling@msoe.edu<br />[CV](/static/rnowling_resume.pdf)
-
-I've been an Associate Professor in the Electrical Engineering & Computer Science department of the [Milwaukee School of Engineering](https://www.msoe.edu) since August 2018.  From 2014 to 2018, I worked on scalable machine learning systems at [AdRoll](http://www.adroll.com/) and [Red Hat](http://www.redhat.com/). Before then, I received a Ph.D. in [Computer Science & Engineering](http://cse.nd.edu/) from the [University of Notre Dame](http://www.nd.edu) and a B.S. in Computer Science and Mathematics from [Eckerd College](http://www.eckerd.edu).  My research over the last few years has employed statistics and machine learning to study the genomic data from insect vectors.
+I'm an Associate Professor in the Computer Science and Software Engineering department of the
+[Milwaukee School of Engineering](https://www.msoe.edu).
+I earned a Ph.D. in [Computer Science & Engineering](http://cse.nd.edu/) from the [University of Notre Dame](http://www.nd.edu) and a B.S. in Computer Science and Mathematics from [Eckerd College](http://www.eckerd.edu).
+My research employs statistics and machine learning to study the genomic data from insect vectors.
 
 ## **Current Students**
 
 ## **Alumni**
-
-<center><img src="/images/photos/ags2023.jpg" width="75%" height="75%" /></center>
 
 ### Alex M. (Summer 2022 - Spring 2023)
 Alex evaluated deep learning models for characterizing genomic regions as inverted or not.
