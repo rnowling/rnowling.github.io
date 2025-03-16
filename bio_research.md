@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Bio Research
-permalink: /bio_research/
+permalink: /bio-research/
 ---
 
 Our research lies at the intersection of machine learning and genomics.  A genome is the totality of an organism's DNA and effectively the "instructions" or software that control the development of an organism.  One of the central goals of biology is to link changes in physical characteristics (phenotypes) of organisms to causative changes in the DNA.  Genomic data, much like compiled software, are not easy for humans to interpret directly.  Just as a decompiler can help us reverse engineer compiled software, machine learning can be used to identify, characterize, and annotate features of genomes and make analysis by humans easier.  We aim to aid biologists in uncovering new knowledge and insights into the function of genomes by developing new methods that draw on machine learning, data science, and big data techniques.
