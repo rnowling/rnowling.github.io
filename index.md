@@ -36,18 +36,17 @@ and [graduate certificate](https://catalog.msoe.edu/preview_program.php?catoid=3
 learning. RJ designed and teaches several graduate courses in data science, applied machine learning, and ML production systems
 and serves as the coordinator for the graduate certificate.
 
-Shortly after joining MSOE, RJ established a [research group](https://nowling-lab.github.io/) that applies machine learning and
+Shortly after joining MSOE, RJ established a research group that applies machine learning and
 data science to advance our understanding of genomics.  The group was funded by a
 [NSF CISE CRII](https://new.nsf.gov/funding/opportunities/computer-information-science-engineering-research) grant and
 startup funds from MSOE.  Over five years (Fall 2018 - Summer 2023), 15 undergraduate students participated in research. Through
 collaborations with faculty at R1 universities, students were exposed to fields outside of computer science, the nature of
 interdisciplinary work, and research-intensive environments.  Four of the students have since pursued graduate studies.
 
-RJ recently shifted the focus of his scholarly activities to data-intensive systems, especially those involving machine
+RJ recently expanded the focus of his research activities to data-intensive systems, especially those involving machine
 learning models.  This shift was driven by the recognition that students need to know how to put ML models into production,
-not just develop them offline.  To meet this need, RJ developed the
-[ML Production Systems](https://catalog.msoe.edu/preview_course.php?catoid=36&coid=41211&print) course, which is required for
-the MS in Machine Learning, as well a course in recommendation systems. In Spring 2023, RJ established the
-[MSOE Data-Intensive Systems Education (DISE) Project](https://msoe-dise-project.github.io/).  The DISE project aims to
+not just develop them offline.  To meet this need, RJ developed courses such as 
+ML Production Systems, Recommendation Systems, and Distributed Storage Systems. In Spring 2023, RJ established the
+[MSOE Data-Intensive Systems Education (DISE) Project](/dise-project/).  The DISE project aims to
 encourage profileration of similar courses at other universities by providing education, training, and materials for
-faculty.  RJ recently joined [Memphis.dev](https://memphis.dev/) as a part-time developer advocate.
+faculty.
