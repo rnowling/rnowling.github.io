@@ -80,3 +80,6 @@ Sam evaluated techniques for analyzing clusters of genomic regions to identify i
 
 ### Sumedha S. (Fall 2022 - Spring 2023)
 Sumedha created a dashboard for integrating multi-omics data and several data analyses related to enhancers.
+
+### Sydney D. (Summer 2024)
+Sydney, a Psychology major at Alverno College, spent the summer learning Python.
