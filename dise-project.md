@@ -18,10 +18,10 @@ The [MSOE DISE GitHub](https://github.com/msoe-dise-project) organization contai
 example software.
 
 ## Publications
-* Nowling, Ronald J. 2025. Experience Report from a Distributed Database Internals Course. *Proceedings of the 2025 ACM Southeast Conference (ACMSE 2025)*. 2025.
-* Nowling, Ronald J. [Experience Report from a Graduate ML Production Systems Course](https://ieeexplore.ieee.org/abstract/document/10609876). *Proceedings of the 2024 IEEE International Conference on Electro Information Technology (IEEE EIT 2024)*. 2024.
-* Nowling, Ronald J. [ML Production Systems Course at a Polytechnic PUI](https://dl.acm.org/doi/10.5555/3636971.3636977). *Journal of Computing Sciences in Colleges*. 39(2):62-71. 2023.
-* Nowling, Ronald J. and Vyas, Jay. [A Domain-Driven, Generative Data Model for Big Pet Store](https://ieeexplore.ieee.org/abstract/document/7034765). *Proceedings of the IEEE Fourth International Conference on Big Data and Cloud Computing (IEEE BDCloud)*. 2014.
+* RJ Nowling. Experience Report from a Distributed Database Internals Course. *Proceedings of the 2025 ACM Southeast Conference (ACMSE 2025)*. 2025.
+* RJ Nowling. [Experience Report from a Graduate ML Production Systems Course](https://ieeexplore.ieee.org/abstract/document/10609876). *Proceedings of the 2024 IEEE International Conference on Electro Information Technology (IEEE EIT 2024)*. 2024.
+* RJ Nowling. [ML Production Systems Course at a Polytechnic PUI](https://dl.acm.org/doi/10.5555/3636971.3636977). *Journal of Computing Sciences in Colleges*. 39(2):62-71. 2023.
+* RJ Nowling and J Vyas. [A Domain-Driven, Generative Data Model for Big Pet Store](https://ieeexplore.ieee.org/abstract/document/7034765). *Proceedings of the IEEE Fourth International Conference on Big Data and Cloud Computing (IEEE BDCloud)*. 2014.
 
 ## Course Materials
 
