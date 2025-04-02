@@ -63,13 +63,13 @@ figcaption {
  */
 ul, ol {
     margin-left: $spacing-unit;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 li {
     > ul,
     > ol {
-         margin-bottom: 30px;
+         margin-bottom: 20px;
     }
 }
 
