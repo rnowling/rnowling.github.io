@@ -19,7 +19,7 @@ of MSOE's [Rosie GPU cluster](https://msoe.dev/#/), a relatively unique resource
 
 **Papers:**
 
-* RJ Nowling. Microsecond Molecular Dynamics Simulations of a Alpha-Bungarotoxin Peptide Ligand. *Proceedings of the 2025 IEEE International Conference on Electro/Information Technology (IEEE EIT 2025)*. 2025.
+* RJ Nowling. Microsecond Molecular Dynamics Simulations of an Alpha-Bungarotoxin Peptide Ligand. *Proceedings of the 2025 IEEE International Conference on Electro/Information Technology (IEEE EIT 2025)*. 2025.
 
 ## Sequencing for Regulatory Genomics
 In addition to genes, genomes contain regulatory elements that are involved in the mechanical process of gene expression.  Regulatory elements can be divided into [*trans*](https://en.wikipedia.org/wiki/Trans-regulatory_element)- and [*cis*](https://en.wikipedia.org/wiki/Cis-regulatory_element)-acting categories.  So-called DNA enrichment assays such as ChIP-Seq, ATAC-Seq, STARR-Seq, and FAIRE-Seq allow us to identify and characterize the activity of *cis*-regulatory elements such as promoters and enhancers.
