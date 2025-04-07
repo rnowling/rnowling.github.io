@@ -14,7 +14,7 @@ Although the workstation comes with Ubuntu by default, I prefer to use Debian as
 I've recorded some notes on setting up the workstation here.
 
 ## Hardware
-I ordered the Astra with the Ampere Altra Max M128-30 128-core @ 3.0 Ghz CPU, 512 GB RAM, a 4 GB NVMe M.2 SSD, and
+I ordered the Astra with the Ampere Altra Max M128-30 128-core @ 3.0 Ghz CPU, 512 GB RAM, a 4 TB NVMe M.2 SSD, and
 the 4 GB Nvidia A400 GPU.  According to the support team, the Astra model I recieved uses the
 [ASRock ALTRAD8UD2-1L2Q motherboard](https://www.asrockrack.com/general/productdetail.asp?Model=ALTRAD8UD2-1L2Q#Specifications).
 This is a change from the model mentioned in the [Phoronix review](https://www.phoronix.com/review/system76-thelio-astra).
@@ -136,14 +136,13 @@ the PCIe lane width to x4x4x4x4 in the UEFI setup.  To access this setting, you 
 1. Change the width to x4x4x4x4
 1. Press F10 to save the settings and restart
 
-When configured correctly, you should see 5 NVMe drives when you go to the NVMe Configuration submenu on the Advanced tab.
+When configured correctly, you should see 4 NVMe drives when you go to the NVMe Configuration submenu on the Advanced tab.
 (The machine will need to be restarted first.)
 
 I was surprised to find that the widths for PCIe lanes 6 and 7 (the two lanes closest to the CPU) cannot be controlled separately.
 The width setting applies to both.  This is not true of PCIe lanes 4 and 5 which can be configured separately.  This has
 implications for what PCIe devices are placed in each slot, especially since some connectors on the motherboard make it
 difficult to use full-length PCIe cards in some of the slots.
-
 
 ## Update 01-22-2025
 I wanted to be able to run molecular dynamics simulations on GPUs using [OpenMM](https://openmm.org/).  Nvidia
