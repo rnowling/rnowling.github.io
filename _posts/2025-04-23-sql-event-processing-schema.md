@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "SQL Schema for DurableEvent Processing"
+title:  "SQL Schema for Durable Event Processing"
 date:   2025-04-23 01:13:19
 categories: "distributed-systems"
 tags: ["dise-project"]
