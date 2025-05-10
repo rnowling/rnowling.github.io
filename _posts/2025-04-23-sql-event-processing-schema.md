@@ -37,8 +37,8 @@ After considering multiple solutions, I came up with the following approach.
    the identifier.
 1. For each consumer:
    1. A table that tracks the processing status of each event by that consumer.  The table's columns include the event identifier,
-      the event timestamp, and a boolean indicating whether the event has been processed.  The table will have an index on the
-      date and status.
+      the event timestamp, the received timestamp, and a processed timestamp with a NULL meaning the event hasn't been processed
+      (successfully).  The table will have an index on the received and processed timestamp.
    1. A trigger that inserts a record into the events processed states table whenever a new event inserted into the raw events table.
 
 The consumer can process a single or batch of unprocessed events by:
@@ -46,11 +46,11 @@ The consumer can process a single or batch of unprocessed events by:
 1. Beginning a transaction
 1. Identifying unprocessed event ids with:
    ```sql
-   SELECT event_id FROM event-processing-states-consumerABC
+   SELECT event_id FROM event_processing_states_consumerABC
    FOR UPDATE SKIP LOCKED
-   WHERE event_date >= INTERVAL_BEGIN
-     AND event_date <= INTERVAL_END
-     AND NOT event_processed
+   WHERE received_time >= INTERVAL_BEGIN
+     AND received_time < INTERVAL_END
+     AND processing_time is NULL
    ORDER BY event_date DESC
    LIMIT BATCH_SIZE;
    ```
@@ -58,8 +58,8 @@ The consumer can process a single or batch of unprocessed events by:
    1. Process the event
    1. Update the event's status:
       ```sql
-      UPDATE event-processing-states-consumerABC
-         SET event_processed = true
+      UPDATE event_processing_states_consumerABC
+         SET processing_time = current_timestamp()
        WHERE event_id = ID;
       ```
 1. Committing the transaction
