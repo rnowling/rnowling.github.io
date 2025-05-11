@@ -83,7 +83,7 @@ The consumer can process a single or batch of unprocessed events by:
    1. Update the event's status:
       ```sql
       UPDATE event_processing_states_consumerABC
-         SET processing_time = current_timestamp()
+         SET processing_time = current_timestamp
        WHERE event_id = ID;
       ```
 1. Committing the transaction
