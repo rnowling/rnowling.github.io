@@ -31,15 +31,39 @@ I had a two additional requirements. I didn't want the producer to be aware of t
 over time.  This requirement ruled out a solution such as having the producer write events to a separate table for each consumer. My other
 requirement was that the insertion and retrieval of events was efficient in terms of algorithmic complexity.
 
-After considering multiple solutions, I came up with the following approach.
+After considering multiple solutions, I came up with the following approach:
 
-1. A single raw events table that contains a unique identifer, timestamp, and JSON payload for each event.  The table is indexed by the
+1. A single raw events table that contains a unique identifer and JSON payload for each event.  The table is indexed by the
    the identifier.
-1. For each consumer:
+1. For each consumer, we create:
    1. A table that tracks the processing status of each event by that consumer.  The table's columns include the event identifier,
       the event timestamp, the received timestamp, and a processed timestamp with a NULL meaning the event hasn't been processed
-      (successfully).  The table will have an index on the received and processed timestamp.
+      (successfully).  The table will have an index on the received and processed timestamps.
+
+	  ```sql
+      CREATE TABLE events_processing_states_consumerABC (
+             id integer UNIQUE NOT NULL,
+             received_time TIMESTAMP NOT NULL,
+             processed_time TIMESTAMP);
+      ```
    1. A trigger that inserts a record into the events processed states table whenever a new event inserted into the raw events table.
+
+      ```sql
+      CREATE OR REPLACE FUNCTION create_processing_status_consumerABC() RETURNS TRIGGER AS
+      $BODY$
+      BEGIN
+             INSERT INTO events_processing_states_consumerABC (id, received_time)
+             VALUES (new.id, current_timestamp);
+             RETURN new;
+      END
+      $BODY$
+      language plpgsql;
+
+      CREATE OR REPLACE TRIGGER insert_processing_status_consumerABC
+      AFTER INSERT ON event_table
+      FOR EACH ROW
+      EXECUTE FUNCTION create_processing_status_consumerABC();
+      ```
 
 The consumer can process a single or batch of unprocessed events by:
 
@@ -63,3 +87,10 @@ The consumer can process a single or batch of unprocessed events by:
        WHERE event_id = ID;
       ```
 1. Committing the transaction
+
+I ran into one "gotcha."  The pipeline inserting the data were generating timestamps using the `American/Chicago` timezone,
+while the database used the `UTC` timezone.  This lead to some processing delays.  I needed to adjust everything to use
+`UTC`.
+
+It should also be noted that if a status table is created after events are in the events table, the status table will
+need to be backfilled.
