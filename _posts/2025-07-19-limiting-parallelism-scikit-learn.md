@@ -6,12 +6,6 @@ categories: "parallelism"
 tags: []
 ---
 
-Scikit-learn uses three levels of [parallelism](https://scikit-learn.org/stable/computing/parallelism.html) by default:
-
-* Multiple processes with joblib
-* Threads with OpenMP
-* Threads in the BLAS routines used by Numpy and Scipy 
-
 I've recently been running into issues with [KMeans clustering](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html)
 on my [System76 Thelio Astra](https://system76.com/desktops/thelio-astra-a1-n1/configure) workstation with 128 cores. Primarily, the
 Python interpreter would segfault.  Although the Jupyter web interface didn't provide any hints, the Jupyter notebook console output
@@ -22,6 +16,12 @@ OpenBLAS warning: precompiled NUM_THREADS exceeded, adding auxiliary array for t
 To avoid this warning, please rebuild your copy of OpenBLAS with a larger NUM_THREADS setting
 or set the environment variable OPENBLAS_NUM_THREADS to 64 or lower
 ```
+
+Scikit-learn uses three levels of [parallelism](https://scikit-learn.org/stable/computing/parallelism.html) by default:
+
+* Multiple processes with joblib
+* Threads with OpenMP
+* Threads in the BLAS routines used by Numpy and Scipy
 
 The KMeans class used to have a parameter `n_jobs` that would allow the user to set the number of processes launched.  This parameter
 was deprecated in version 0.23 and removed in version 0.25. A new [parallelization scheme](https://github.com/scikit-learn/scikit-learn/pull/11950)
@@ -56,13 +56,13 @@ describe how to use the functions of the threadpoolctl library with a little mor
    ```python
    from threadpoolctl import threadpool_info
    from pprint import pprint
-   
+
    pprint(threadpool_info())
    ```
 
    which will output something like:
 
-   ```json
+   ```
    [{'architecture': 'neoversen1',
      'filepath': '/home/rnowling/openmm-venv/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-0f683016.so',
      'internal_api': 'openblas',
@@ -90,7 +90,7 @@ describe how to use the functions of the threadpoolctl library with a little mor
 
    ```python
    from threadpoolctl import threadpool_limits
-   
+
    with threadpool_limits(limits=8, user_api="openmp"):
        with threadpool_limits(limits=4, user_api="blas"):
            ...
