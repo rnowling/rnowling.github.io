@@ -3,7 +3,7 @@ layout: post
 title:  "Limiting Parallelism in scikit-learn"
 date:   2025-07-19 15:13:19
 categories: "parallelism"
-tags: []
+tags: ["arm64", "ampere", "system76"]
 ---
 
 I've recently been running into issues with [KMeans clustering](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html)
@@ -17,18 +17,6 @@ To avoid this warning, please rebuild your copy of OpenBLAS with a larger NUM_TH
 or set the environment variable OPENBLAS_NUM_THREADS to 64 or lower
 ```
 
-Scikit-learn uses three levels of [parallelism](https://scikit-learn.org/stable/computing/parallelism.html) by default:
-
-* Multiple processes with joblib
-* Threads with OpenMP
-* Threads in the BLAS routines used by Numpy and Scipy
-
-The KMeans class used to have a parameter `n_jobs` that would allow the user to set the number of processes launched.  This parameter
-was deprecated in version 0.23 and removed in version 0.25. A new [parallelization scheme](https://github.com/scikit-learn/scikit-learn/pull/11950)
-using OpenMP was implemented to provide finer-grained parallelism and improve performance. In effect, the total number of threads may be
-as high as `OMP_NUM_THREADS * OPENBLAS_NUM_THREADS`. By default, the new KMeans parallelization process will use one OpenMP thread per
-core. Each OpenMP thread may use Numpy or Scipy routines that use a BLAS library like OpenBLAS that in turns spawns its own threads.
-
 When I converted the notebook into a standalone script, the Python interpreter output the following error message before crashing:
 
 ```
@@ -36,11 +24,18 @@ double free or corruption (out)
 Aborted (core dumped)
 ```
 
-I was looking for a way to reduce the number of OpenBLAS threads.  The `OPENBLAS_NUM_THREADS` and `OMP_NUM_THREADS` environmental
+The KMeans class used to have a parameter `n_jobs` that would allow the user to set the number of processes launched.  This parameter
+was deprecated in version 0.23 and removed in version 0.25. A new [parallelization scheme](https://github.com/scikit-learn/scikit-learn/pull/11950)
+using OpenMP was implemented to provide finer-grained parallelism and improve performance. In effect, the total number of threads may be
+as high as `OMP_NUM_THREADS * OPENBLAS_NUM_THREADS`. By default, the new KMeans parallelization process will use one OpenMP thread per
+core. Each OpenMP thread may use Numpy or Scipy routines that use a BLAS library like OpenBLAS that in turns spawns its own threads.
+
+
+I needed another way to limit the number of OpenMP and OpenBLAS threads.  The `OPENBLAS_NUM_THREADS` and `OMP_NUM_THREADS` environmental
 variables are one mechanism but not straightforward to use with Jupyter notebooks and set separately for each notebook. The scikit-learn
 documentation suggests using the [`threadpoolctl` library](https://github.com/joblib/threadpoolctl) to control
-the number of parallel units at each level. Using threadpoolctl, I was not only able to reduce the number of OpenBLAS threads to
-avoid the over-allocation but workaround the interpreter crashes.
+the number of parallel units at each level. Using threadpoolctl, I'm able to set limits for individual blocks of code within the same
+program.
 
 Unfortunately, neither the scikit-learn or threadpoolctl documentation are particularly clear on how to use it. I've attempted to
 describe how to use the functions of the threadpoolctl library with a little more context.
@@ -86,7 +81,7 @@ describe how to use the functions of the threadpoolctl library with a little mor
      'user_api': 'blas',
      'version': '0.3.28'}]
    ```
-3. Use threadpoolctl's context managers to limit the number of threads at each level:
+3. Use threadpoolctl's context managers to limit the number of threads at each level for a block of code:
 
    ```python
    from threadpoolctl import threadpool_limits
@@ -98,7 +93,7 @@ describe how to use the functions of the threadpoolctl library with a little mor
 
    This code snippet will limit OpenMP to spawning 8 threads and OpenBLAS to spawning 4 threads.
 
-The `threadpool_limits` context manager parameters are interpreted as follows:
+The `threadpool_limits` context manager takes two parameters.  They are interpreted as follows:
 
   * `limits`: The maximum number of parallel execution units (e.g., threads)
   * `user_api`: The name of a library type given in the `user_api` field of the discovery output.
