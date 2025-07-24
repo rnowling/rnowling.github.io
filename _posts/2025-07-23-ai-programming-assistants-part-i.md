@@ -8,8 +8,8 @@ tags: ["education", "ai", "llm", "cs-education"]
 
 AI-assisted software development seems to be taking the world by storm.  One of my goals as an educator is to ensure that
 my classes (and our curriculum as a whole) is preparing students so that they are well-positioned to succeed in
-interviews, internships, and ultimately, in full-time positions.  So... I needed to figure out how to gain experience
-with AI programming assistants, evaluate their capabilities, incorporate their use into my classes, and
+interviews, internships, and ultimately, in full-time positions.  So... I need to figure out how to use
+AI programming assistants, evaluate their capabilities, incorporate their use into my classes, and
 scaffold the learning process for students.
 
 I'm facing a mental stumbling block, though.  At this point, I'm so attuned to thinking directly in code that expressing
