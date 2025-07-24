@@ -57,9 +57,9 @@ I gave Google Gemini 2.5 Pro the following prompt:
 Gemini identified the type of game I was asking it to create, which was a nice validation of my description:
 
 > Of course. Here is the Python code for a text-based word guessing game.
-
-  This script uses the random module to select a word from a predefined list. It then prompts the user to guess letters
-  until they either reveal the word or make three incorrect guesses.
+>
+>  This script uses the random module to select a word from a predefined list. It then prompts the user to guess letters
+>  until they either reveal the word or make three incorrect guesses.
 
 
 and provided the following generated code:
