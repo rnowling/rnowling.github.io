@@ -47,12 +47,11 @@ I gave Google Gemini 2.5 Pro the following prompt:
 
 
 > Please generate code for a text-based game in Python. On start, the game should
-  randomly pick a word from a dictionary. The word’s letters will initially be
-  hidden by printing a star for each letter. The user will attempt to guess letters
-  that might be in the word. On each guess, the user will enter a letter. If the letter is in the word, the stars at all
-  matching positions will be replaced with the letter. The user wins when they have correctly guessed all of the letters.
-  Users are allowed three incorrect guesses. If they guess incorrectly three times before the word is revealed, they lose.
-
+>  randomly pick a word from a dictionary. The word’s letters will initially be
+> hidden by printing a star for each letter. The user will attempt to guess letters
+>  that might be in the word. On each guess, the user will enter a letter. If the letter is in the word, the stars at all
+> matching positions will be replaced with the letter. The user wins when they have correctly guessed all of the letters.
+> Users are allowed three incorrect guesses. If they guess incorrectly three times before the word is revealed, they lose.
 
 Gemini identified the type of game I was asking it to create, which was a nice validation of my description:
 
@@ -61,9 +60,7 @@ Gemini identified the type of game I was asking it to create, which was a nice v
 >  This script uses the random module to select a word from a predefined list. It then prompts the user to guess letters
 >  until they either reveal the word or make three incorrect guesses.
 
-
 and provided the following generated code:
-
 
 ```python
 import random
@@ -150,21 +147,18 @@ The "+" symbol on the Gemini prompt window displays a menu with several options.
 and upload files.  I used this functionality to attach a file containing the Python script above.  I provided the
 following prompt:
 
-```
-I've attached a Python script that implements a word-guessing game.  The game only allows 3 incorrect guesses.
-The words are long, however, so this makes the game more difficult to win than I want.  Please modify the program to
-allow 5 incorrect guesses and explain what you changed.
-```
+> I've attached a Python script that implements a word-guessing game.  The game only allows 3 incorrect guesses.
+> The words are long, however, so this makes the game more difficult to win than I want.  Please modify the program to
+> allow 5 incorrect guesses and explain what you changed.
 
 Gemini provided a nice description of the specific change in its response:
 
-```
-Of course. I've updated the script to allow for 5 incorrect guesses.
 
-The change was made on line 20. I modified the max_incorrect_guesses variable, which controls the number of wrong
-guesses a player can make before the game ends. By changing its value from 3 to 5, the player now has more opportunities
-to guess the word.
-```
+> Of course. I've updated the script to allow for 5 incorrect guesses.
+>
+> The change was made on line 20. I modified the max_incorrect_guesses variable, which controls the number of wrong
+> guesses a player can make before the game ends. By changing its value from 3 to 5, the player now has more opportunities
+> to guess the word.
 
 I used diff to verify what was changed:
 
