@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "AI-Assisted Software Development with LLMs: Part II"
-date:   2025-07-23 15:13:19
+date:   2025-07-24 10:13:19
 categories: "software-engineering"
 tags: ["education", "ai", "llm", "cs-education"]
 ---
