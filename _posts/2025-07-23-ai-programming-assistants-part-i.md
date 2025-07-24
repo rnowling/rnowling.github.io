@@ -45,22 +45,22 @@ wouldn't have to describe the rules, mechanics, or functional requirements.  I w
 ## Creating A Word-Guessing Game
 I gave Google Gemini 2.5 Pro the following prompt:
 
-```
-Please generate code for a text-based game in Python. On start, the game should randomly pick a word from a dictionary.
-The word’s letters will initially be hidden by printing a star for each letter. The user will attempt to guess letters
-that might be in the word. On each guess, the user will enter a letter. If the letter is in the word, the stars at all
-matching positions will be replaced with the letter. The user wins when they have correctly guessed all of the letters.
-Users are allowed three incorrect guesses. If they guess incorrectly three times before the word is revealed, they lose.
-```
+
+> Please generate code for a text-based game in Python. On start, the game should
+  randomly pick a word from a dictionary. The word’s letters will initially be
+  hidden by printing a star for each letter. The user will attempt to guess letters
+  that might be in the word. On each guess, the user will enter a letter. If the letter is in the word, the stars at all
+  matching positions will be replaced with the letter. The user wins when they have correctly guessed all of the letters.
+  Users are allowed three incorrect guesses. If they guess incorrectly three times before the word is revealed, they lose.
+
 
 Gemini identified the type of game I was asking it to create, which was a nice validation of my description:
 
-```
-Of course. Here is the Python code for a text-based word guessing game.
+> Of course. Here is the Python code for a text-based word guessing game.
 
-This script uses the random module to select a word from a predefined list. It then prompts the user to guess letters
-until they either reveal the word or make three incorrect guesses.
-```
+  This script uses the random module to select a word from a predefined list. It then prompts the user to guess letters
+  until they either reveal the word or make three incorrect guesses.
+
 
 and provided the following generated code:
 
