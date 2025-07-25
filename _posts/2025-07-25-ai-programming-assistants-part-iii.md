@@ -339,7 +339,7 @@ up and would recharge their internal battery.  I used the following prompt:
 Gemini understood what I was asking and happily implemented it.  My character is still dying without a means to repair itself
 but at least it lives a little longer.
 
-![](/images/roguelike/v4_terminal.png)
+![](/images/roguelike/v5_terminal.png)
 
 ```python
 import os
