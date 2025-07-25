@@ -7,8 +7,8 @@ tags: ["education", "ai", "llm", "cs-education"]
 ---
 
 (This post is a continuation of a series I started previously.  See parts I and II
-["here"](/software-engineering/2025/07/23/ai-programming-assistants-part-i.html) and 
-["here"](/software-engineering/2025/07/24/ai-programming-assistants-part-ii.html).)
+[here](/software-engineering/2025/07/23/ai-programming-assistants-part-i.html) and 
+[here](/software-engineering/2025/07/24/ai-programming-assistants-part-ii.html).)
 
 At the end of the last blog post, I had a good start on a simple text-based
 role-playing game.  The player could move a character around an empty
@@ -20,7 +20,7 @@ have Gemini add rooms and hallways, objects the character can pick up, and
 give the player an "energy" attribute that goes down over time.
 
 ## Creating a More Sophisticated Map
-Starting with the last version of the script from [part ii](/software-engineering/2025/07/24/ai-programming-assistants-part-ii.html),
+Starting with the last version of the script from [part II](/software-engineering/2025/07/24/ai-programming-assistants-part-ii.html),
 I prompted Gemini to add rooms and hallways to the map:
 
 > Please divide the map into rooms. Each room should have 1 or 2 entryways. The rooms should be connected by hallways.
