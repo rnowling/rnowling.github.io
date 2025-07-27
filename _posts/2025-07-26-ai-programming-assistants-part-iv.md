@@ -9,7 +9,7 @@ tags: ["education", "ai", "llm", "cs-education"]
 (This post is a continuation of a series I started previously.  See parts I, II, and III
 [here](/software-engineering/2025/07/23/ai-programming-assistants-part-i.html), 
 [here](/software-engineering/2025/07/24/ai-programming-assistants-part-ii.html), and
-[here](/software-engineering/2025/07/23/ai-programming-assistants-part-iii.html).)
+[here](/software-engineering/2025/07/25/ai-programming-assistants-part-iii.html).)
 
 I wanted to reach a reasonable point at which to stop developing the game.  I wanted to
 leave students with something intriguing and complete enough that it captures their interest
