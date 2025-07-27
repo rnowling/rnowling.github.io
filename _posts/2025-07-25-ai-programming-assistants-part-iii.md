@@ -31,151 +31,6 @@ Every time you run the game, you get a different map.  Pretty neat! Here's a scr
 
 ![](/images/roguelike/v3_terminal.png)
 
-and here's the script:
-
-```python
-import os
-import random
-
-# --- Game Class for Rectangular Rooms ---
-class Rect:
-    def __init__(self, x, y, w, h):
-        self.x1 = x
-        self.y1 = y
-        self.x2 = x + w
-        self.y2 = y + h
-
-    def center(self):
-        """Returns the center coordinate of the room."""
-        center_x = (self.x1 + self.x2) // 2
-        center_y = (self.y1 + self.y2) // 2
-        return (center_x, center_y)
-
-    def intersects(self, other):
-        """Returns true if this rectangle intersects with another one."""
-        return (self.x1 <= other.x2 and self.x2 >= other.x1 and
-                self.y1 <= other.y2 and self.y2 >= other.y1)
-
-# --- Dungeon Generation ---
-def generate_dungeon(map_width, map_height, max_rooms, min_room_size, max_room_size):
-    """Generates a new dungeon map."""
-    # 1. Fill the whole map with wall tiles
-    game_map = [['#' for _ in range(map_width)] for _ in range(map_height)]
-    
-    rooms = []
-    player_start_pos = (0, 0)
-
-    for _ in range(max_rooms):
-        w = random.randint(min_room_size, max_room_size)
-        h = random.randint(min_room_size, max_room_size)
-        # Prevent rooms from touching the map edge
-        x = random.randint(1, map_width - w - 2)
-        y = random.randint(1, map_height - h - 2)
-
-        new_room = Rect(x, y, w, h)
-
-        # Check if the new room intersects with any existing rooms
-        if any(new_room.intersects(other_room) for other_room in rooms):
-            continue
-
-        # --- Carve out the room ---
-        for ry in range(new_room.y1, new_room.y2):
-            for rx in range(new_room.x1, new_room.x2):
-                game_map[ry][rx] = '.'
-
-        (new_x, new_y) = new_room.center()
-
-        if not rooms:
-            # This is the first room, place the player here
-            player_start_pos = (new_x, new_y)
-        else:
-            # --- Carve hallways to connect to the previous room ---
-            (prev_x, prev_y) = rooms[-1].center()
-
-            # Randomly decide to start with a horizontal or vertical tunnel
-            if random.randint(0, 1) == 1:
-                # Horizontal first, then vertical
-                for hx in range(min(prev_x, new_x), max(prev_x, new_x) + 1):
-                    game_map[prev_y][hx] = '.'
-                for vy in range(min(prev_y, new_y), max(prev_y, new_y) + 1):
-                    game_map[vy][new_x] = '.'
-            else:
-                # Vertical first, then horizontal
-                for vy in range(min(prev_y, new_y), max(prev_y, new_y) + 1):
-                    game_map[vy][prev_x] = '.'
-                for hx in range(min(prev_x, new_x), max(prev_x, new_x) + 1):
-                    game_map[new_y][hx] = '.'
-        
-        rooms.append(new_room)
-
-    return game_map, player_start_pos
-
-
-# --- Game Settings ---
-MAP_WIDTH = 100
-MAP_HEIGHT = 40
-VIEW_WIDTH = 80
-VIEW_HEIGHT = 25
-
-# --- Dungeon Settings ---
-MAX_ROOMS = 15
-MIN_ROOM_SIZE = 6
-MAX_ROOM_SIZE = 10
-
-# --- Generate the Map ---
-game_map, (player_x, player_y) = generate_dungeon(
-    MAP_WIDTH, MAP_HEIGHT, MAX_ROOMS, MIN_ROOM_SIZE, MAX_ROOM_SIZE
-)
-
-# --- Main Game Loop ---
-while True:
-    # --- Camera Logic ---
-    camera_x = player_x - (VIEW_WIDTH // 2)
-    camera_y = player_y - (VIEW_HEIGHT // 2)
-    camera_x = max(0, min(camera_x, MAP_WIDTH - VIEW_WIDTH))
-    camera_y = max(0, min(camera_y, MAP_HEIGHT - VIEW_HEIGHT))
-
-    # --- Drawing Logic ---
-    os.system('cls' if os.name == 'nt' else 'clear')
-    print("--- Roguelike Dungeon ---")
-    print(f"Player Position: ({player_x}, {player_y}) | Use w/a/s/d to move, 'q' to quit.")
-    
-    for screen_y in range(VIEW_HEIGHT):
-        row = []
-        for screen_x in range(VIEW_WIDTH):
-            map_x = camera_x + screen_x
-            map_y = camera_y + screen_y
-
-            if map_x == player_x and map_y == player_y:
-                row.append('@')
-            else:
-                row.append(game_map[map_y][map_x])
-        print(''.join(row))
-
-    # --- Handle Player Input & Movement ---
-    move = input("Your move: ").lower()
-
-    if move == 'q':
-        break
-
-    next_x, next_y = player_x, player_y
-    if move == 'w':
-        next_y -= 1
-    elif move == 's':
-        next_y += 1
-    elif move == 'a':
-        next_x -= 1
-    elif move == 'd':
-        next_x += 1
-
-    # --- Collision Detection ---
-    # Check if the destination tile is a wall
-    if game_map[next_y][next_x] != '#':
-        player_x, player_y = next_x, next_y
-
-# --- Runs after the loop breaks ---
-print("\nThanks for playing! Goodbye. 👋\n")
-```
 
 ## Adding a Depleting Energy Level
 Exploring the map is fun but there isn't much of a challenge.  Games usually have you find keys to unlock doors, solve puzzles,
@@ -190,146 +45,6 @@ message indicating when I lost the game.
 
 ![](/images/roguelike/v4_terminal.png)
 
-```python
-import os
-import random
-
-# --- Game Class for Rectangular Rooms ---
-class Rect:
-    def __init__(self, x, y, w, h):
-        self.x1 = x
-        self.y1 = y
-        self.x2 = x + w
-        self.y2 = y + h
-
-    def center(self):
-        """Returns the center coordinate of the room."""
-        center_x = (self.x1 + self.x2) // 2
-        center_y = (self.y1 + self.y2) // 2
-        return (center_x, center_y)
-
-    def intersects(self, other):
-        """Returns true if this rectangle intersects with another one."""
-        return (self.x1 <= other.x2 and self.x2 >= other.x1 and
-                self.y1 <= other.y2 and self.y2 >= other.y1)
-
-# --- Dungeon Generation ---
-def generate_dungeon(map_width, map_height, max_rooms, min_room_size, max_room_size):
-    """Generates a new dungeon map."""
-    game_map = [['#' for _ in range(map_width)] for _ in range(map_height)]
-    rooms = []
-    player_start_pos = (0, 0)
-
-    for _ in range(max_rooms):
-        w = random.randint(min_room_size, max_room_size)
-        h = random.randint(min_room_size, max_room_size)
-        x = random.randint(1, map_width - w - 2)
-        y = random.randint(1, map_height - h - 2)
-        new_room = Rect(x, y, w, h)
-
-        if any(new_room.intersects(other_room) for other_room in rooms):
-            continue
-
-        for ry in range(new_room.y1, new_room.y2):
-            for rx in range(new_room.x1, new_room.x2):
-                game_map[ry][rx] = '.'
-
-        (new_x, new_y) = new_room.center()
-
-        if not rooms:
-            player_start_pos = (new_x, new_y)
-        else:
-            (prev_x, prev_y) = rooms[-1].center()
-            if random.randint(0, 1) == 1:
-                for hx in range(min(prev_x, new_x), max(prev_x, new_x) + 1):
-                    game_map[prev_y][hx] = '.'
-                for vy in range(min(prev_y, new_y), max(prev_y, new_y) + 1):
-                    game_map[vy][new_x] = '.'
-            else:
-                for vy in range(min(prev_y, new_y), max(prev_y, new_y) + 1):
-                    game_map[vy][prev_x] = '.'
-                for hx in range(min(prev_x, new_x), max(prev_x, new_x) + 1):
-                    game_map[new_y][hx] = '.'
-        
-        rooms.append(new_room)
-    return game_map, player_start_pos
-
-# --- Game Settings ---
-MAP_WIDTH = 100
-MAP_HEIGHT = 40
-VIEW_WIDTH = 80
-VIEW_HEIGHT = 25
-MAX_ROOMS = 15
-MIN_ROOM_SIZE = 6
-MAX_ROOM_SIZE = 10
-
-# --- Initialize Game ---
-game_map, (player_x, player_y) = generate_dungeon(
-    MAP_WIDTH, MAP_HEIGHT, MAX_ROOMS, MIN_ROOM_SIZE, MAX_ROOM_SIZE
-)
-# Initialize player energy
-MAX_ENERGY = 100
-player_energy = MAX_ENERGY
-
-# --- Main Game Loop ---
-while True:
-    # --- Drawing Logic ---
-    os.system('cls' if os.name == 'nt' else 'clear')
-    
-    # Calculate camera position
-    camera_x = max(0, min(player_x - (VIEW_WIDTH // 2), MAP_WIDTH - VIEW_WIDTH))
-    camera_y = max(0, min(player_y - (VIEW_HEIGHT // 2), MAP_HEIGHT - VIEW_HEIGHT))
-
-    # Display game title and player stats
-    print("--- Roguelike Dungeon ---")
-    status_line = f"Position: ({player_x}, {player_y}) | Energy: {player_energy}/{MAX_ENERGY}"
-    print(status_line)
-    
-    # Draw the map
-    for screen_y in range(VIEW_HEIGHT):
-        row = []
-        for screen_x in range(VIEW_WIDTH):
-            map_x, map_y = camera_x + screen_x, camera_y + screen_y
-            if map_x == player_x and map_y == player_y:
-                row.append('@')
-            else:
-                row.append(game_map[map_y][map_x])
-        print(''.join(row))
-
-    # --- Game Over Check ---
-    if player_energy <= 0:
-        print("\nYou ran out of energy! Game Over. 💀")
-        break
-
-    # --- Handle Player Input ---
-    prompt = "Your move (w/a/s/d) or 'q' to quit: "
-    move = input(prompt).lower()
-
-    if move == 'q':
-        break
-    
-    # A turn passes if the player attempts to move
-    if move in ['w', 'a', 's', 'd']:
-        player_energy -= 1 # Decrease energy by 1 each turn
-
-        next_x, next_y = player_x, player_y
-        if move == 'w':
-            next_y -= 1
-        elif move == 's':
-            next_y += 1
-        elif move == 'a':
-            next_x -= 1
-        elif move == 'd':
-            next_x += 1
-
-        # --- Collision Detection ---
-        if game_map[next_y][next_x] != '#':
-            player_x, player_y = next_x, next_y
-
-# --- Runs after the loop breaks ---
-print("\nThanks for playing! Goodbye. 👋\n")
-```
-
 ## Batteries for Restoring Energy
 To make it at least feasible for the robot to repair itself, I decided to add battery objects that the character could pick
 up and would recharge their internal battery.  I used the following prompt:
@@ -338,6 +53,29 @@ up and would recharge their internal battery.  I used the following prompt:
 
 Gemini understood what I was asking and happily implemented it.  My character is still dying without a means to repair itself
 but at least it lives a little longer.
+
+## Reflections and Next Steps
+I continue to be very impressed with Gemini so far.  My first prompt (adding rooms and hallways) was pretty basic.  Gemini was able to
+infer that the map would need walls and that collision detection will be needed so that character can't walk through them.  I didn't think
+Gemini would get that right the first time -- I thought I would have to expand the prompt with more details.  Secondly, I didn't expect
+Gemini to implement a process for procedurally generating the maps -- I assumed it would create a single map and store it as data in
+the program.
+
+Gemini performed similar feats for the two other prompts.  Although I made the prompts more descriptive, there were details that I forgot
+to mention that Gemini ended up inferring.  For example, when the player loses, the game prints a message.  I didn't tell Gemini to do
+that, but it is logical that I would expect the game to do that.  Gemini inferred the intention and implemented it.
+
+I have two more elements to add to the game.  I want to add part objects that the character can pick up.  If the character gets all of
+the parts, it can repair itself and its energy level will hold steady.  Secondly, I want to add an introductory screen with a story
+that gives background and context for the game.  Expect to see the results in my next blog post.
+
+I plan to finish the blog post with thoughts on how I would turn these into an assignment for students.  After running the initial
+prompts, the students should be more comfortable coming up with their own.  The assignment will need to detail how students can
+checkpoint the game so they can backtrack if things go poorly.  Armed with that knowledge, students should have a wide space of
+ways to expand the game and hopefully develop some skills and confidence in programming with an AI assistant.
+
+## Appendix
+Here's the code for the script after the changes described above were made:
 
 ![](/images/roguelike/v5_terminal.png)
 
@@ -473,23 +211,3 @@ while True:
 
 print("\nThanks for playing! Goodbye. 👋\n")
 ```
-
-## Reflections and Next Steps
-I continue to be very impressed with Gemini so far.  My first prompt (adding rooms and hallways) was pretty basic.  Gemini was able to
-infer that the map would need walls and that collision detection will be needed so that character can't walk through them.  I didn't think
-Gemini would get that right the first time -- I thought I would have to expand the prompt with more details.  Secondly, I didn't expect
-Gemini to implement a process for procedurally generating the maps -- I assumed it would create a single map and store it as data in
-the program.
-
-Gemini performed similar feats for the two other prompts.  Although I made the prompts more descriptive, there were details that I forgot
-to mention that Gemini ended up inferring.  For example, when the player loses, the game prints a message.  I didn't tell Gemini to do
-that, but it is logical that I would expect the game to do that.  Gemini inferred the intention and implemented it.
-
-I have two more elements to add to the game.  I want to add part objects that the character can pick up.  If the character gets all of
-the parts, it can repair itself and its energy level will hold steady.  Secondly, I want to add an introductory screen with a story
-that gives background and context for the game.  Expect to see the results in my next blog post.
-
-I plan to finish the blog post with thoughts on how I would turn these into an assignment for students.  After running the initial
-prompts, the students should be more comfortable coming up with their own.  The assignment will need to detail how students can
-checkpoint the game so they can backtrack if things go poorly.  Armed with that knowledge, students should have a wide space of
-ways to expand the game and hopefully develop some skills and confidence in programming with an AI assistant.
