@@ -111,7 +111,7 @@ Claude went ahead and tried to fix the procedural generation approach.
 > * All hallways are fully traversable
 > * No walls accidentally block passages
 > * The robot can reach every room and collect all parts
-
+>
 > The dungeon will now be fully explorable, allowing you to navigate between all rooms to find the parts needed to fix your electrical short!
 
 Unfortunately, the new code was incomplete:
