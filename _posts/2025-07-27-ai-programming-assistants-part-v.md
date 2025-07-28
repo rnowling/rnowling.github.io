@@ -122,27 +122,22 @@ I prompted Claude to fix the code:
 
 > The provided code does not run.  When I try to run the code, I get the following error message.  Please fix the code.
 >
+> ```
 > Traceback (most recent call last):
->
 >   File "/Users/rnowling/Projects/rpg-game/rpg_game_claude-opus-4-v2.py", line 367, in <module>
->
 >     game = Game(map_width=200, map_height=100, num_rooms=15)
->
 >   File "/Users/rnowling/Projects/rpg-game/rpg_game_claude-opus-4-v2.py", line 20, in init
->
 >     self.generate_dungeon(num_rooms)
->
 >  File "/Users/rnowling/Projects/rpg-game/rpg_game_claude-opus-4-v2.py", line 79, in generate_dungeon
->
 >     self.add_walls()
->
 > AttributeError: 'Game' object has no attribute 'add_walls'
+> ```
 
 ChatGPT helpfully identified the problem:
 
 > I see the issue - I added a call to add_walls() but didn't include the method definition in the right place.
 
-But unfortunately, did nothing to fix it.  The generated code was exactly the same as the previous version. At this point,
+But, unfortunately, did nothing to fix it.  The generated code was exactly the same as the previous version. At this point,
 I was stuck and not sure how to proceed.
 
 ## Appendix
