@@ -123,12 +123,19 @@ I prompted Claude to fix the code:
 > The provided code does not run.  When I try to run the code, I get the following error message.  Please fix the code.
 >
 > Traceback (most recent call last):
+>
 >   File "/Users/rnowling/Projects/rpg-game/rpg_game_claude-opus-4-v2.py", line 367, in <module>
+>
 >     game = Game(map_width=200, map_height=100, num_rooms=15)
+>
 >   File "/Users/rnowling/Projects/rpg-game/rpg_game_claude-opus-4-v2.py", line 20, in init
+>
 >     self.generate_dungeon(num_rooms)
+>
 >  File "/Users/rnowling/Projects/rpg-game/rpg_game_claude-opus-4-v2.py", line 79, in generate_dungeon
+>
 >     self.add_walls()
+>
 > AttributeError: 'Game' object has no attribute 'add_walls'
 
 ChatGPT helpfully identified the problem:
