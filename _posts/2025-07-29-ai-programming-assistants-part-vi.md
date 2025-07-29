@@ -78,7 +78,7 @@ The installation failed because `setuptools` was missing. Rather than failing, c
 
 Once the command was fixed, claude was successfully completed the installation:
 
-![](/images/claude-asaph/install-asaph-quote-successful.png)
+![](/images/claude-asaph/install-asaph-successful.png)
 
 After overcoming that bump, claude re-tried the installation and offered to update its installation instructions:
 
