@@ -17,7 +17,7 @@ I wanted to starting exploring the use of AI-assisted programming for a larger a
 complex project.  I tend to write a large number of single-file Python scripts and 
 Jupyter notebooks these days rather than working on traditional software projects.
 But, I do have one long-running software project that was developed as a set of command-line
-tools supported by a common library: [Asaph](), a bioinformatics tool
+tools supported by a common library: [Asaph](https://github.com/nowling-lab/asaph), a bioinformatics tool
 I developed for identifying and characterizing large chromosomal inversions using population
 genetics variant data.  It's a relatively small code base at ~3,500 lines of code, but it has
 structure to it, some user tutorials, a test suite, etc. I haven't actively worked the project for the last couple of
