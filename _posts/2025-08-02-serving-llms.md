@@ -110,9 +110,9 @@ This can reduce processing time and costs. I need to look into that further in t
 ## Reflections
 I'm really happy to see this progress. I'm slowly starting to understand the practical details. As an academic, I'm used
 to reading papers about the algorithms but that is rarely sufficient to use these tools in practice. (Hmm... sounds like
-there is need for a class on this. :) ).  Fortunately, most if it isn't difficult conceptually -- just not well documented.
+there is need for a class on this. :) ).  Fortunately, most of it isn't difficult conceptually -- just not well documented.
 Once I started wrapping my head around some of the patterns, I understood them relatively quickly. That said, I greatly
-appreciate the help from Jan and Daniel -- their help allowed me to make much faster progress.
+appreciate the help from Jan and Daniel -- their help allowed me to make progress much.
 
 On the serving side, I need to better understand how batching works.  In theory, batching should allow the LLM server
 to handle a batch of prompts at once to increase overall throughput.  I'm not sure if that means multiple prompts
