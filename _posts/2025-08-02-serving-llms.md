@@ -171,7 +171,8 @@ PROMPTS = [
 
 def run_query(client, messages):
     response = client.chat.completions.create(
-        model=args.model,
+    	# this parameter is ignored by llama-server
+        model="placeholder",
         messages=messages)
 
     print(response.choices[0]["message"]["content"])
@@ -181,11 +182,6 @@ def run_query(client, messages):
 
 def parseargs():
     parser = argparse.ArgumentParser()
-
-    parser.add_argument("--model",
-                        type=str,
-                        required=True,
-                        choices=["llama-3.1-8b-instruct", "llama-3.2-3b-instruct"])
 
     parser.add_argument("--host",
                         type=str,
