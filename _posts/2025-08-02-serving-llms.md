@@ -64,7 +64,7 @@ like is:
   the benefits of using more threads.  For example, I got better generation performance with llama-3.2:3b-instruct with 16 threads
   than 128 threads.  (Although it is quite fun to see all 128 cores being used.  :) )
 
-## Llama-api-python
+## Connecting to the REST Service
 The Python [llama-api-client](https://github.com/meta-llama/llama-api-python) provides an API for generating the REST calls.
 I used it to implement a script to run the series of prompts for creating and modifying the roguelike game from previous posts
 (see below). The API isn't particularly well documented (is it documented at all?), so I spent a little time splunking through
@@ -106,6 +106,29 @@ from the ollama-python library helpful for figuring this out.)
 It should be noted that the generation time grows as the conversation becomes longer. I've read here and there about
 a strategy in which you summarize chat histories periodically and send the summaries instead of the original messages.
 This can reduce processing time and costs. I need to look into that further in the future.
+
+## Making REST Requests
+I used a single method on the client object to send the prompts (and chat histories) and recieve a response:
+
+```python
+response = client.chat.completions.create(
+           model=args.model,
+           messages=messages)
+
+return response.choices[0]["message"]
+```
+
+This method takes two arguments:
+
+* `model`: This parameter is confusing.  A single llama-server instance can only serve a single model at a time.
+  Regardless of what it is passed through the model parameter in the REST request, the request is served using
+  the model defined when starting the llama-server instance.
+* `messages`: A list of dicts of the messages in the format above.
+
+I didn't look too closely at the response object.  It has a parameter `choices` which is a list of responses. I am
+guessing that there will be multiple entries in when asking the model to generate options as output. That's a to do
+item to explore in the future.  For now, I was able to access the response message using the `message` key in the
+dict stored in the first entry in the choices list.
 
 ## Reflections
 I'm really happy to see this progress. I'm slowly starting to understand the practical details. As an academic, I'm used
