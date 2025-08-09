@@ -69,12 +69,13 @@ a single word to make parsing the output easier:
 I evaluated the classification task using the [trec07p](https://plg.uwaterloo.ca/~gvcormac/treccorpus07/about.html) data set and
 aforementioned Llama 3.1 8B Instruct model.
 
-And... it worked. Well, sort of.  It achieved an accuracy of 95%.  (My original logistic regression model achieved an accuracy >99%.)
+And... it worked. 6.5% of the emails couldn't be classified, but the model achieved an accuracy of 86% on the rest.  My original
+logistic regression model achieved an accuracy >99% but used 3/4 of the emails for training.
 
-I was genuinely surprised.  There are a lot of things that need to align.  The LLM needs to understand the desired task.  It needs to
-understand what is meant by "spam."  I would have at a loss to come up with a given definition for spam if I had to define it. It needs
-to respect the restriction on the output.  And lastly, it needs a way to evaluate its own confidence and fall back to the "unsure"
-prediction if its not.
+I was genuinely surprised.  There are a lot of things that need to align for this to work.  The LLM needs to understand the desired
+task.  It needs to understand what is meant by "spam."  I would have at a loss to come up with a given definition for spam if I had
+to define it. It needs to respect the restriction on the output.  And lastly, it needs a way to evaluate its own confidence and fall
+back to the "unsure" prediction if its not.
 
 In terms of computationally efficiency, it was a disaster.  While the logistic regression model can train on and classify the emails
 on a single CPU in less than an hour, it took ~12 hours to classify 1/5 of the emails with the LLM running on 32 cores.  Now, there
