@@ -19,21 +19,18 @@ with a [zero-shot learning](https://en.wikipedia.org/wiki/Zero-shot_learning) ap
 It turns that using prompting a LLM to classify input is more straightforward than I assumed.  You write a prompt telling the LLM to
 classify the appended text into one of several explicitly listed categories.  We can see this in PromptLayer's example prompt:
 
-```
-You are a general-purpose AI that helps people with questions.
-
-Given a question, your job is to categorize it into one of three categories:
-1. self: For questions about yourself, such as "What is your name?"
-2. news: For news-specific questions, like "What's going on with the election?"
-3. general: For all other questions.
-Your response should be one word only.
-```
+> You are a general-purpose AI that helps people with questions.
+> 
+> Given a question, your job is to categorize it into one of three categories:
+> 1. self: For questions about yourself, such as "What is your name?"
+> 2. news: For news-specific questions, like "What's going on with the election?"
+> 3. general: For all other questions.
+> Your response should be one word only.
 
 and prompt template in the AWS LLM-assisted prompt router:
 
-```
-Classify the following question as either 'history' or 'math'. If unsure, classify as 'unsure':\n{question}\nClassification:
-```
+> Classify the following question as either 'history' or 'math'. If unsure,
+> classify as 'unsure':\n{question}\nClassification:
 
 There are a few features of this prompts:
 
@@ -46,16 +43,15 @@ There are a few features of this prompts:
 
 I wrote the following prompt template based on these examples:
 
-```
-Classify the following email as 'spam' or 'not spam'. If unsure, classify as 'unsure':\n{email_body}\nClassification:
-```
+> Classify the following email as 'spam' or 'not spam'. If unsure, classify
+> as 'unsure':\n{email_body}\nClassification:
 
 In my testing, the LLM returned a full sentence (e.g., "I would classify this email as 'spam'.").  I added an instruction to return
 a single word to make parsing the output easier:
 
-```
-Classify the following email as 'spam' or 'not spam'. If unsure, classify as 'unsure'. In the response, only use the phrases 'spam', 'not spam', or 'unsure'.\n{email_body}\nClassification:
-```
+> Classify the following email as 'spam' or 'not spam'. If unsure, classify
+> as 'unsure'. In the response, only use the phrases 'spam', 'not spam', or
+> 'unsure'.\n{email_body}\nClassification:
 
 ## It Works, Sort Of
 I evaluated the classification task using the [trec07p](https://plg.uwaterloo.ca/~gvcormac/treccorpus07/about.html) data set and
