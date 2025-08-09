@@ -30,7 +30,11 @@ classify the appended text into one of several explicitly listed categories.  We
 and prompt template in the AWS LLM-assisted prompt router:
 
 > Classify the following question as either 'history' or 'math'. If unsure,
-> classify as 'unsure':\n{question}\nClassification:
+> classify as 'unsure':
+>
+> {question}
+> 
+> Classification:
 
 There are a few features of this prompts:
 
@@ -44,14 +48,22 @@ There are a few features of this prompts:
 I wrote the following prompt template based on these examples:
 
 > Classify the following email as 'spam' or 'not spam'. If unsure, classify
-> as 'unsure':\n{email_body}\nClassification:
+> as 'unsure':
+>
+> {email_body}
+>
+> Classification:
 
 In my testing, the LLM returned a full sentence (e.g., "I would classify this email as 'spam'.").  I added an instruction to return
 a single word to make parsing the output easier:
 
 > Classify the following email as 'spam' or 'not spam'. If unsure, classify
 > as 'unsure'. In the response, only use the phrases 'spam', 'not spam', or
-> 'unsure'.\n{email_body}\nClassification:
+> 'unsure'.
+>
+> {email_body}
+>
+> Classification:
 
 ## It Works, Sort Of
 I evaluated the classification task using the [trec07p](https://plg.uwaterloo.ca/~gvcormac/treccorpus07/about.html) data set and
