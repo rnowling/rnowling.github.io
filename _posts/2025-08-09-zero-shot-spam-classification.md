@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Zero-Shot Spam Classifications with LLMs"
+title:  "Zero-Shot Spam Classification with LLMs"
 date:   2025-08-09 10:13:19
-categories: "software-engineering"
-tags: ["education", "ai", "llm", "cs-education", "ampere"]
+categories: "machine-learning"
+tags: ["spam", "ai", "llm"]
 ---
 
 I tend to be a "bottom up" learner.  I've been looking for examples of concrete tasks I can apply LLMs to.  I recently learned about
