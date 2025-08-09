@@ -65,7 +65,7 @@ a single word to make parsing the output easier:
 >
 > Classification:
 
-## It Works, Sort Of
+## It Works!
 I evaluated the classification task using the [trec07p](https://plg.uwaterloo.ca/~gvcormac/treccorpus07/about.html) data set and
 aforementioned Llama 3.1 8B Instruct model.
 
