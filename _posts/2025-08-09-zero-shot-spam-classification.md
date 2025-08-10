@@ -73,7 +73,7 @@ I still had some issues with the model returning noisy responses, so I switched 
 >
 > {email_body}
 
-I use [pydantic]() to create a JSON schema and parse the output:
+I used [pydantic](https://docs.pydantic.dev/latest/) to create a JSON schema and parse the output:
 
 ```python
 class ClassificationResult(BaseModel):
@@ -88,6 +88,8 @@ response = client.chat(
 
 pred_label = ClassificationResult.model_validate_json(response.message.content).predicted_label
 ```
+
+Th JSON output definitely helped, but unfortunately, JSON doesn't have an enum type, so it wasn't perfect.
 
 ## It Works!  Sort of.
 I evaluated the classification task using the [trec07p](https://plg.uwaterloo.ca/~gvcormac/treccorpus07/about.html) data set and
