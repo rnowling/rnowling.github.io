@@ -13,7 +13,7 @@ and [blog post from PromptLayer](https://medium.com/promptlayer/prompt-routers-a
 I looked at [spam classification](https://rnowling.github.io/data/science/2016/09/04/comparing-lr-regularization-and-optimizers.html) using
 logistic regression with a bag-of-words model.  I thought I would try using an LLM for spam classification and see what happens. I started
 with a [zero-shot learning](https://en.wikipedia.org/wiki/Zero-shot_learning) approach in which I used an existing LLM
-(in this case, [Llama 3.1 8B Instruct](https://www.llama.com/models/llama-3/)) without training data for the specific task. 
+(in this case, [Llama 3.2 3B Instruct](https://www.llama.com/models/llama-3/)) without training data for the specific task. 
 
 ## Prompt Engineering
 It turns that using prompting a LLM to classify input is more straightforward than I assumed.  You write a prompt telling the LLM to
@@ -67,7 +67,7 @@ a single word to make parsing the output easier:
 
 ## It Works!
 I evaluated the classification task using the [trec07p](https://plg.uwaterloo.ca/~gvcormac/treccorpus07/about.html) data set and
-aforementioned Llama 3.1 8B Instruct model.
+aforementioned Llama 3.2 3B Instruct model.
 
 And... it worked. 6.5% of the emails couldn't be classified, but the model achieved an accuracy of 86% on the rest.  My original
 logistic regression model achieved an accuracy >99% but used 3/4 of the emails for training.
@@ -78,11 +78,11 @@ to define it. It needs to respect the restriction on the output.  And lastly, it
 back to the "unsure" prediction if its not.
 
 In terms of computationally efficiency, it was a disaster.  While the logistic regression model can train on and classify the emails
-on a single CPU in less than an hour, it took ~12 hours to classify 1/5 of the emails with the LLM running on 32 cores.  Now, there
-is a lot of room for optimization in my implementation.  For example, I am using the llama.cpp server and a Python client that does
-the prompting via REST.  There is overhead to the REST calls.  Further, I'm not using any form of batching (pipelining). Regardless
+on a single CPU in less than an hour, it took an hour to classify 1/5 of the emails with the LLM running on an Nvidia GeForce 4060 Ti GPU.
+Now, there is a lot of room for optimization in my implementation.  For example, I am using the ollama server and a Python client that
+does the prompting via REST.  There is overhead to the REST calls.  Regardless
 of those details, however, the logistic regression model only needs to compute a single dot product between two vectors of ~100k values
-per email, while the LLM needs to evaluate perform arithmetic on 8-billion parameters.
+per email, while the LLM needs to evaluate perform arithmetic on 3-billion parameters.
 
 ## Approaches for Improvements
 There are a few ways to improve the accuracy of the LLM classifier:
