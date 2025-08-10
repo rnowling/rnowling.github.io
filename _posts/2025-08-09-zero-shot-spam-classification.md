@@ -65,23 +65,54 @@ a single word to make parsing the output easier:
 >
 > Classification:
 
-## It Works!
+I still had some issues with the model returning noisy responses, so I switched to using JSON output:
+
+> Classify the following email as 'spam' or 'not spam'. If unsure, classify
+> as 'unsure'. In the response, only use the phrases 'spam', 'not spam', or
+> 'unsure'. Return the predicted label in JSON format.
+>
+> {email_body}
+
+I use [pydantic]() to create a JSON schema and parse the output:
+
+```python
+class ClassificationResult(BaseModel):
+    predicted_label: str
+
+json_schema = ClassificationResult.model_json_schema()
+
+response = client.chat(
+            model="llama3.2:3b",
+            messages = [message],
+            format=json_schema)
+
+pred_label = ClassificationResult.model_validate_json(response.message.content).predicted_label
+```
+
+## It Works!  Sort of.
 I evaluated the classification task using the [trec07p](https://plg.uwaterloo.ca/~gvcormac/treccorpus07/about.html) data set and
 aforementioned Llama 3.2 3B Instruct model.
 
-And... it worked. 6.5% of the emails couldn't be classified, but the model achieved an accuracy of 86% on the rest.  My original
-logistic regression model achieved an accuracy >99% but used 3/4 of the emails for training.
+And... it worked. 14.1% of the emails couldn't be classified.  The model returned "unsure" in some of those cases but there were
+also cases where it didn't follow instructions and returned a bunch of generated text.  This is one aspect of LLMs that concerns me
+-- how do we constrain the output as desired?  Maybe there are additional ways to improve the prompts? Maybe if the output doesn't
+match the desired format, I need to direct the request to a more powerful model?  I'm not really sure how to make this reliable.
+
+For the emails with clear "spam" or "not spam" outputs, the model achieved an accuracy of 86%.  This was not competitive with the >99%
+accuracy of my original logistic regression model but that model also used 3/4 of the data for training.  For a zero-shot approach,
+that's not half bad.  A bit further down, I discuss an idea for using zero-shot learning to bootstrap an initial data set for human
+curation -- an 86% accuracy would be sufficient for doing that.
 
 I was genuinely surprised.  There are a lot of things that need to align for this to work.  The LLM needs to understand the desired
-task.  It needs to understand what is meant by "spam."  I would have at a loss to come up with a given definition for spam if I had
+task.  It needs to understand what is meant by "spam."  I would be a loss to come up with a good definition for spam if I had
 to define it. It needs to respect the restriction on the output.  And lastly, it needs a way to evaluate its own confidence and fall
 back to the "unsure" prediction if its not.
 
 In terms of computationally efficiency, it was a disaster.  While the logistic regression model can train on and classify the emails
 on a single CPU in less than an hour, it took an hour to classify 1/5 of the emails with the LLM running on an Nvidia GeForce 4060 Ti GPU.
 Now, there is a lot of room for optimization in my implementation.  For example, I am using the ollama server and a Python client that
-does the prompting via REST.  There is overhead to the REST calls.  Regardless
-of those details, however, the logistic regression model only needs to compute a single dot product between two vectors of ~100k values
+does the prompting via REST.  There is overhead to the REST calls.  Regardless of those details, however, the logistic regression model
+only needs to compute a single dot product between two vectors of ~100k values
 per email, while the LLM needs to evaluate perform arithmetic on 3-billion parameters.
 
 ## Approaches for Improvements
@@ -121,8 +152,8 @@ labeled data.  Frequently, we don't have clean, labeled data sets.  And, manuall
 prohibitively so.  In genomics, it's particularly challenging because the objects are interest are very rare relative to the whole
 set, so it can be difficult to even find examples.
 
-A hybrid aproach might be feasible, though.  A LLM can be used to filter out a set of candidates from the larger set of data.
-It will be computationally expensive, but it only needs to be done once or a few times.  The results will likely be noisy with
+A hybrid aproach might be feasible, though.  A LLM can be used to select a set of promising candidates from the larger set of data.
+It will be computationally expensive, but it only needs to be done once or a handful of times.  The results will likely be noisy with
 incorrect predictions, but the minority class will be enriched so a human can identify representive samples much more quickly.
 Once a small but clean data set is prepared, a smaller model can be trained to produce an accurate and computationally-efficient
 classifier.
