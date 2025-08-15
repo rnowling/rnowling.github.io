@@ -97,7 +97,7 @@ Following the unsloth directions here:
 uv pip install -U transformers==4.52.4
 ```
 
-## reinstall pytorch
+## Reinstall pytorch
 When I tried to run the test script, I recieved an error indicating that only Nvidia and Intel GPUs were supported.  Wait a second...
 I tracked the error down to a test function that calls `torch.cuda.is_available()`.  Why wasn't pytorching finding the GPUs? Along the
 way, pytorch 2.8.0 with only CPU support was installed.  I need to reinstall the desired version:
