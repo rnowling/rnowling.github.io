@@ -30,11 +30,13 @@ Here, I document the steps I took to install the unsloth stack and get the [test
 test script working.
 
 ## Choosing the CUDA Toolkit Version
-There do not seem to be [nightly builds](https://download.pytorch.org/whl/nightly/torch/) with CUDA 12.8 for aarch64 as of 2025-08-14.
+There do not seem to be [PyTorch nightly builds](https://download.pytorch.org/whl/nightly/torch/) with CUDA 12.8 for aarch64 as of 2025-08-14.
 There are builds for CUDA 12.9, though, so I installed [CUDA Toolkit 12.9.1](https://developer.nvidia.com/cuda-12-9-1-download-archive?target_os=Linux&target_arch=arm64-sbsa&Compilation=Native&Distribution=Ubuntu&target_version=24.04&target_type=deb_network)
 from Nvidia.  I also made sure that no other CUDA toolkit versions were installed.
 
 ## Setting Up the Virtual Environment
+The various projects involved recommend using [uv](https://docs.astral.sh/uv/), so I'll be using that as well.  First, we set up
+our virtual environment.
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh && source $HOME/.local/bin/env
@@ -47,23 +49,17 @@ Note the [original instructions](https://docs.unsloth.ai/basics/training-llms-wi
 backticks rather than single quotes around the directory name.
 
 ## Installing Pytorch Nightly
-There are no builds of vllm for aarch64.  I followed the
-[instructions](https://docs.vllm.ai/en/latest/getting_started/installation/gpu.html#use-an-existing-pytorch-installation)
-for building from source using an existing pytorch installation.
-
-To avoid compiling pytorch from source, I installed a pytorch nightly wheel built for aarch64, Python 3.12, and CUDA 12.9.
+To avoid compiling PyTorch itself from source, I installed a
+nightly wheel built for aarch64, Python 3.12, and CUDA 12.9.
 
 ```bash
 uv pip install --prerelease=allow --index-url https://download.pytorch.org/whl/nightly/cu129 torch torchvision torchaudio
 ```
 
 ## Installing vllm from Source
-
-Need to install some dependencies:
-
-```bash
-sudo apt install libnuma-dev
-```
+There are no builds of vllm for aarch64.  I followed the
+[instructions](https://docs.vllm.ai/en/latest/getting_started/installation/gpu.html#use-an-existing-pytorch-installation)
+for building from source using an existing PyTorch installation.
 
 ```bash
 wget https://github.com/vllm-project/vllm/releases/download/v0.10.0/vllm-0.10.0.tar.gz
@@ -75,6 +71,7 @@ uv pip install --no-build-isolation .
 ```
 
 ## Install Triton from Source
+Triton also didn't offer an aarch64 wheel with CUDA 12.9, so I built that from source.
 
 ```bash
 wget https://github.com/triton-lang/triton/releases/download/v3.4.0/triton-3.4.0.tar.gz
@@ -85,6 +82,7 @@ pip install .
 ```
 
 ## Install Unsloth
+Lastly, we install unsloth itself.
 
 ```bash
 uv pip install unsloth unsloth_zoo bitsandbytes
@@ -100,7 +98,7 @@ uv pip install -U transformers==4.52.4
 ## Reinstall pytorch
 When I tried to run the test script, I recieved an error indicating that only Nvidia and Intel GPUs were supported.  Wait a second...
 I tracked the error down to a test function that calls `torch.cuda.is_available()`.  Why wasn't pytorching finding the GPUs? Along the
-way, pytorch 2.8.0 with only CPU support was installed.  I need to reinstall the desired version:
+way, PyTorch 2.8.0 with only CPU support was installed.  (I believe xformers did this.)  I reinstalled the desired version:
 
 ```bash
 uv pip install --prerelease=allow --index-url https://download.pytorch.org/whl/nightly/cu129 torch torchvision torchaudio
