@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Installing Unsloth on Ampere with Nvidia Blackwell"
-date:   2025-08-15 10:13:19
+date:   2025-08-14 10:13:19
 categories: "system-administration"
 tags: [ai", "llm", "fine-tuning", "machine-learning"]
 ---
