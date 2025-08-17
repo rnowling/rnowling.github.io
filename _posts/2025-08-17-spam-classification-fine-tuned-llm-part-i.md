@@ -58,7 +58,7 @@ Loading and printing out the [rotten tomatoes](https://huggingface.co/datasets/c
 illustrates this:
 
 ```python
->>> dataset = load_dataset("cornell-movie-review-data/rotten_tomatoes")
+>>> load_dataset("cornell-movie-review-data/rotten_tomatoes")
 DatasetDict({
     train: Dataset({
         features: ['text', 'label'],
@@ -74,6 +74,10 @@ DatasetDict({
     })
 })
 ```
+
+It should be noted that a lot of the documentation uses the variable name `dataset` to refer to either a Dataset or DatasetDict.
+The DatasetDict provides much of the same interface so functions like `map()` work the same on both.  It matters, however,
+when you pass the Datasets into the `Trainer` objects, so it's important to be aware of this ambiguity.
 
 I'm mostly interested in working with custom data sets.  It took me a little digging to figure out how to create my own Dataset objects.
 The [🤗 Datasets documentation](https://huggingface.co/docs/datasets/create_dataset#from-python-dictionaries) shows how to create Dataset objects from dictionaries:
