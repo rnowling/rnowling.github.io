@@ -19,7 +19,8 @@ in a series of posts, starting with what I learned about the [🤗 Datasets](htt
 The 🤗 Hugging Face ecosystem extensively uses the `Dataset` and `DatasetDict` data structures provided by the
 library.  Unfortunately, most of the tutorials don't really demonstrate
 the structure of these types or how to construct them for custom data sets.  Rather, most tutorials just use the `load_dataset()`
-function to load a pre-prepared data set and then use it without showing what's in it.  For example, from the quickstart guide:
+function to load a pre-prepared data set and then use it without showing what's in it.  For example, from the
+[quickstart guide](https://huggingface.co/docs/transformers/en/quicktour#trainer):
 
 ```python
 dataset = load_dataset("rotten_tomatoes")
@@ -97,7 +98,7 @@ def tokenize_dataset(dataset):
 dataset = dataset.map(tokenize_dataset, batched=True)
 ```
 
-The [map function](https://huggingface.co/docs/datasets/package_reference/main_classes#datasets.Dataset.map) can call the given function
+The [`map()` function](https://huggingface.co/docs/datasets/package_reference/main_classes#datasets.Dataset.map) can call the given function
 on each record, but it seems to be more common to pass the `batched=True` argument that will call the function on batches.  In that case,
 in each call, the function receives a dictionary with a subset of rows from the original Dataset, organized by columns.  The function is
 expected to return a dictionary of scalar (if not batched) or list (if batched) values.  The map function will use these values to
@@ -152,4 +153,3 @@ test_ds = Dataset.from_pandas(test_df)
 The Dataset objects are likely a Pandas DataFrame in some ways.  They store a 2D table of data as rows and columns.  They provide functions
 for adding and removing columns and vectorized transformation operations.  They also provide support for non-text data like audio or image
 data.
-
