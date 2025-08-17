@@ -6,8 +6,9 @@ categories: "machine-learning"
 tags: [ai", "llm", "fine-tuning", "spam-classification"]
 ---
 
-After my [previous blog post](https://rnowling.github.io/machine-learning/2025/08/09/zero-shot-spam-classification.html) describing
-zero-shot text classification with LLMs, I wanted to try fine tuning a LLM.  I had two specific goals:
+This post is part of my series of fine-tuning a LLM for spam classification.  In the [previous post](https://rnowling.github.io/machine-learning/2025/08/17/spam-classification-fine-tuned-llm-part-i.html),
+I discussed what I learned about the [🤗 Dataset library](https://huggingface.co/docs/datasets/index).  In this post, I'll describe a few
+things I learned about tokenizing text.
 
 ## Tokenization
 LLM models generally do not process text directly.  Rather, the tokenizer in a LLM maintains a finite set of "seen" character combination.
