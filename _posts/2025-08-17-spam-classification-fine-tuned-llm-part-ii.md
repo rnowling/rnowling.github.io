@@ -17,8 +17,10 @@ library provides an API for using tokenizers, including downloading
 them from the [🤗 Hugging Face Hub](https://huggingface.co/).
 
 The [`AutoTokenizer.from_pretrained()`](https://huggingface.co/docs/transformers/model_doc/auto#transformers.AutoTokenizer)
-factory method downloads a model from the 🤗 and loads it using a model-specific class. The `use_fast=True` causes the tokenizer
-to use a Rust-based instead of Python-based implementation.
+factory method downloads a model from the 🤗 Hub and loads it using a model-specific class. The `use_fast=True` causes the tokenizer
+to use a Rust-based instead of Python-based implementation.  It should be noted that you need to use the tokenizer from the model
+you are using.  You can't mix and match tokenizers from one model with a different model.  (Although I'm not really sure why
+the API doesn't just give you a tokenizer when you load the model instead of having to define the model path twice.)
 
 I ran into an issue with the [Meta Llama](https://www.llama.com/) models.  They don't seem to define a padding token. The workaround
 seems to be using the end-of-sentence token as the padding token.  This can apparently lead to some problems with text generation
