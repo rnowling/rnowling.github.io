@@ -6,12 +6,13 @@ categories: "machine-learning"
 tags: [ai", "llm", "fine-tuning", "spam-classification"]
 ---
 
-This post is part of my series of fine-tuning a LLM for spam classification.  In the previous posts, I described what I had learned
+This post ends my series of fine-tuning a LLM for spam classification.  In the previous posts, I described what I had learned
 about the [🤗 Dataset library](/machine-learning/2025/08/17/spam-classification-fine-tuned-llm-part-i.html),
 [tokenization](/machine-learning/2025/08/17/spam-classification-fine-tuned-llm-part-ii.html) and
 [loading pretrained models](/machine-learning/2025/08/17/spam-classification-fine-tuned-llm-part-iii.html)
 using the [🤗 transformers](https://huggingface.co/docs/transformers/index) library.  In this post, I describe how to perform training
-to fine tuning on a model and apply the model to perform classification.
+to fine tuning on a model, apply the model to perform classification, and (finally) evaluate how model performance scales with
+training set size.
 
 The [🤗 transformers](https://huggingface.co/docs/transformers/index) library uses two classes for training:
 
