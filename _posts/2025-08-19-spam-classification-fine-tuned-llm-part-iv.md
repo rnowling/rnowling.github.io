@@ -6,7 +6,7 @@ categories: "machine-learning"
 tags: [ai", "llm", "fine-tuning", "spam-classification"]
 ---
 
-This post ends my series of fine-tuning a LLM for spam classification.  In the previous posts, I described what I had learned
+This post ends my series on fine-tuning a LLM for spam classification.  In the previous posts, I described what I had learned
 about the [🤗 Dataset library](/machine-learning/2025/08/17/spam-classification-fine-tuned-llm-part-i.html),
 [tokenization](/machine-learning/2025/08/17/spam-classification-fine-tuned-llm-part-ii.html) and
 [loading pretrained models](/machine-learning/2025/08/17/spam-classification-fine-tuned-llm-part-iii.html)
