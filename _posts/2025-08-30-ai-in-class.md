@@ -18,9 +18,10 @@ determining how to use AI assistants effectively, describing requirements and di
 
 For now, I'm limiting AI use to programming assignments.  Students will not be allowed to use AI for writing lab reports or on exams.
 
-I'm requiring students to tell me when they use AI to complete assignments, write an end-of-term reflection on their use of AI, and collecting grade
-and other performance data to use in determining the impact of AI use.  I'm hoping these data will help me figure out *how* students are using AI,
-in what ways it's valuable, and what adaptions I need to make to both support their use and change my approaches to assessing their learning.
+I'm requiring students to tell me when they use AI to complete assignments and write an end-of-term reflection on their use of AI.
+I will also be collecting grade and other performance data.  I will analyze all of these data to determine the impact of AI use,
+figure out *how* students are using AI, in what ways it's valuable, and what adaptions I need to make to both support their use
+and change my approaches to assessing their learning.
 
 I'm providing my syllabus language here in case it's useful for others who are interested in taking the plunge.
 
@@ -40,7 +41,7 @@ I'm providing my syllabus language here in case it's useful for others who are i
 >   * Describe where the tool performed poorly and hindered your progress
 >   * Lessons you learned about using the tool effectively 
 >
-> If you use an AI programming assistant but did not indicate that in your assignment submission, it will be considered plagiarism.
+> If you use an AI programming assistant but do not indicate that in your assignment submission, it will be considered plagiarism.
 >
 > ## Using Data for Research
 > I will use grade data and reflections from students using AI programming assistants to evaluate the impact of AI-programming assistants on student learning and inform future approaches to incorporating them into classes.
