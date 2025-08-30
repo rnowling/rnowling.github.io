@@ -39,6 +39,7 @@ I'm providing my syllabus language here in case it's useful for others who are i
 >   * Describe where the tool performed well and were helpful for you
 >   * Describe where the tool performed poorly and hindered your progress
 >   * Lessons you learned about using the tool effectively 
+>
 > If you use an AI programming assistant but did not indicate that in your assignment submission, it will be considered plagiarism.
 >
 > ## Using Data for Research
