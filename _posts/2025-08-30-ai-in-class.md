@@ -11,12 +11,12 @@ to use AI assistants. As an educator, I have a mandate to prepare my students to
 
 So, I'm deciding to take the plunge this Fall: I'm not only allowing my students to use AI assistants for programming tasks -- I'm encouraging it.
 
-For now, I'm limiting AI use to programming assignments.  Students will not be allowed to use AI for writing lab reports or on exams.
-
 That said, I want to figure out how best to incorporate AI into my classes.  I want to use it to increase student learning.  I recognize that what students learn
 might be different in an AI-infused class.  For example, AI assistants are often used to figure out implementation details for abstract concepts -- something
 we generally expect our students to get really good at in programming-heavy courses.  Instead, students will need to improve their skills at 
 determining how to use AI assistants effectively, describing requirements and directions in written English, and evaluating suggestions and output critically.
+
+For now, I'm limiting AI use to programming assignments.  Students will not be allowed to use AI for writing lab reports or on exams.
 
 I'm requiring students to tell me when they use AI to complete assignments, write an end-of-term reflection on their use of AI, and collecting grade
 and other performance data to use in determining the impact of AI use.  I'm hoping these data will help me figure out *how* students are using AI,
