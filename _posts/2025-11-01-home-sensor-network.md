@@ -106,9 +106,9 @@ I placed the sensor nodes in three locations:
 I only recorded the temperature and humidity from the sensors and performed monitoring for about 12 hours.  Nonetheless,
 the data had some very interesting patterns!  The plots below show the temperature and humidity over time:
 
-![](/images/temperature_plot.png)
+![](/images/home-sensor-network/temperature_plot.png)
 
-![](/images/humidity_plot.png)
+![](/images/home-sensor-network/humidity_plot.png)
 
 A few patterns are noticeable:
 
