@@ -25,7 +25,7 @@ and inventory location and quality tracking, which fall under the umbrella of
 
 Unmaintained machines increase the safety risks for workers and cause production delays and increased
 costs due to unplanned downtime.  Most companies use planned maintenance schedules based on time or 
-usage volumne but those can be inefficient when maintenance that may not be needed is performed and
+usage volume but those can be inefficient when maintenance that may not be needed is performed and
 do not prevent all types of failures.  By attaching various types of sensors such as temperature, vibration,
 pressure, and even audio to these machines, they hope to be able to forecast when machines will need
 maintanance, allowing them to fix issues before they become a bigger and more expensive problem.
@@ -73,7 +73,7 @@ humidity\t56.2341
 end
 ```
 
-The service guesses the data types, converts the payload into JSON, and adds a timestamp for when the data were recieved
+The service guesses the data types, converts the payload into JSON, and adds a timestamp for when the data were received
 since the MCUs don't have real-time clocks:
 
 ```json
@@ -81,7 +81,7 @@ since the MCUs don't have real-time clocks:
 	"temperature" : 72.3453,
 	"humidity" : 72.3453,
 	"mac address": "78:21:84:7A:16:34",
-	"recieved_timestamp" : "2025-10-30T21:51:11.500404"
+	"received_timestamp" : "2025-10-30T21:51:11.500404"
 }
 ```
 
