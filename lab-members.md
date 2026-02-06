@@ -15,6 +15,16 @@ My research employs statistics and machine learning to study the genomic data fr
 
 ## **Current Students**
 
+### Leena A. (Summer 2025 - Present)
+Leena is a senior Computer Science major at MSOE.
+She is analyzing molecular dynamics simulation data to characterize dynamics
+of an $\alpha$-bungarotoxin peptide ligand.
+
+### Liam S. (Spring 2026 - Present)
+Liam is a sophomore Computer Science major at MSOE.
+He is analyzing molecular dynamics simulation data to characterize dynamics
+of an $\alpha$-bungarotoxin peptide ligand.
+
 ## **Alumni**
 
 ### Alex M. (Summer 2022 - Spring 2023)
