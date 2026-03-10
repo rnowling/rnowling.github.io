@@ -31,7 +31,7 @@ To participate in the program:
 * If needed, financial help with on-campus housing will be considered on a case-by-case basis.
 * The number of chosen participants will be dependent upon faculty capacity and funding.
 
-## Applying and Selection Process
+## Application and Selection Process
 To apply to the program,
 
 1. Review the faculty projects below.
@@ -40,7 +40,7 @@ To apply to the program,
 1. Selected participants will be matched with a faculty member based on indicated project interest and faculty capacity.
 1. Applicants will be notified of their admission.
 
-## Projects
+## Available Projects
 
 ### Advancing Cancer Histopathology with Mid-Infrared Spectroscopic Imaging
 #### Dr. Berisha
