@@ -1,12 +1,15 @@
 ---
 layout: page
-title: "DSAC Summer Research Program"
+title: "DSAC SRP"
 permalink: /dsac-srp/
 published: true
+hide_title: true
 ---
 
+# DSAC Summer Research Program
+
 The Diercks School of Advanced Computing is proud to announce a paid opportunity for students to
-collaborate faculty on research projects over the summer.  
+collaborate faculty on research projects over the summer.
 
 ## Program Features
 Over 8 weeks, participants will engage in a faculty-directed research project.
@@ -91,10 +94,19 @@ This project will aim to develop a theoretical characterization of the condition
 
 **Techniques:** Transfer learning, stochastic processes, self-supervision
 
-### Exploring the Mechanical Behavior of Anti-Venom Molecules
+### Exploring the Dynamics of Anti-Venom Molecules
 #### Dr. Nowling
 
-When bitten by a snake or other venomous animal, a patient doesn't have much time to receive a dose of a life-saving anti-venom. Yet, the current processes for producing anti-venoms are laborious and costly, leading to a limited supply. We desperately need synthetic anti-venoms that can be produced easily and at low cost. Before we can do that, however, we need to understand the mechanics of how anti-venoms work. Molecular dynamics is a simulation technique for producing high-fidelity simulations of molecular motions at the atomic scale – allowing us to see how molecules move in greater detail than experimental techniques. MD simulations of an anti-venom for the a-Bungarotoxin neurotoxin were generated and in need of analysis. In this project, students will visualize, analyze, and characterize the 3D structures and dynamics of an anti-venom protein using data science and mathematical modeling techniques while learning some biochemistry along the way. This project is a great fit for you if you enjoy data science and applying it to new, interesting problems.
+When bitten by a snake or other venomous animal, a patient doesn't have much time to receive a dose of a life-saving anti-venom.
+Yet, the current processes for producing anti-venoms are laborious and costly, leading to a limited supply.
+We desperately need synthetic anti-venoms that can be produced easily and at low cost.
+Before we can do that, however, we need to understand the mechanics of how anti-venoms work.
+Molecular dynamics is a simulation technique for producing high-fidelity simulations of molecular motions at the atomic scale --
+allowing us to see how molecules move in greater detail than experimental techniques.
+MD simulations of an anti-venom for the $\alpha$-Bungarotoxin neurotoxin were generated and are now in need of analysis.
+In this project, students will visualize, analyze, and characterize the 3D structures and dynamics of an anti-venom protein
+using data science and mathematical modeling techniques while learning some biochemistry along the way.
+This project is a great fit for you if you enjoy data science and applying it to new, interesting problems.
 
 **Techniques:** data science, visualizations, statistics, time-series analysis, clustering, stochastic processes
 
