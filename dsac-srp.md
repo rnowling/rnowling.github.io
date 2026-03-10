@@ -25,6 +25,8 @@ To participate in the program:
   be negotiated with the student's advisor.
 * Participants can work partially or entirely remotely with the advisor's approval, however, they must
   reside and perform all work in the state of Wisconsin during the program.
+* If needed, financial help with on-campus housing will be considered on a case-by-case basis.
+* The number of chosen participants will be dependent upon faculty capacity and funding.
 
 ## Applying and Selection Process
 To apply to the program,
