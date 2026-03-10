@@ -2,10 +2,10 @@
 layout: page
 title: "DSAC Summer Research Program"
 permalink: /dsac-srp/
-published: false
+published: true
 ---
 
-The Diercks School of Advanced Computing is proud to announce the opportunity for students to
+The Diercks School of Advanced Computing is proud to announce a paid opportunity for students to
 collaborate faculty on research projects over the summer.  
 
 ## Program Features
