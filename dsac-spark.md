@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "DSAC SPARK"
-permalink: /dsac-spark/
+permalink: /dsac-srp/
 published: true
 hide_title: true
 ---
