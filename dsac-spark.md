@@ -1,12 +1,12 @@
 ---
 layout: page
-title: "DSAC SRP"
-permalink: /dsac-srp/
+title: "DSAC SPARK"
+permalink: /dsac-spark/
 published: true
 hide_title: true
 ---
 
-# DSAC Summer Research Program
+# DSAC Summer Program for Advancing Research Knowledge (SPARK)
 
 The Diercks School of Advanced Computing is proud to announce a paid opportunity for students to
 collaborate faculty on research projects over the summer.
