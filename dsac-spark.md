@@ -35,7 +35,7 @@ To participate in the program:
 The application and selection process will proceed as follows:
 
 1. Review the faculty projects below.
-1. Fill out the [application form](https://forms.cloud.microsoft/r/FjaLSNCysD) by end of day, **Tuesday, March 31, 2026**.
+1. Fill out the [application form](https://forms.cloud.microsoft/r/FjaLSNCysD) by end of day, **Friday, April 3, 2026**.
 1. A committee of faculty members will review applications and if needed, reach out with further questions.
 1. Selected participants will be matched with a faculty member based on indicated project interest and faculty capacity.
 1. Applicants will be notified of their admission decision.
