@@ -110,6 +110,19 @@ This project is a great fit for you if you enjoy data science and applying it to
 
 **Techniques:** data science, visualizations, statistics, time-series analysis, clustering, stochastic processes
 
+### Can Signal Processing Techniques Improve Peak Calling for Genomic Sequencing Data?
+#### Dr. Nowling
+
+Biologists use chromatin accessibility and functional genomics sequencing techniques to characterize the
+activity of DNA subsequences in our genomes.  Processing of the raw data results in 
+noisy 1D spatial signals in which peaks indicate the location of subsequences of interest.
+The most widely used methods for segmenting the peaks rely on statistical testing with discrete count
+models like Poisson tests applied to sliding windows -- signal processing techniques are largely ignored.
+This project aims to determine if signal processing techniques can be applied to the genomic signal data
+to improve the accuracy of peak calling and segmentation.
+
+Techniques: statistical testing, signal processing, digital filtering, convolution, CNNs
+
 ### Inferring User Reasoning for Generalization
 #### Dr. Yoder
 
