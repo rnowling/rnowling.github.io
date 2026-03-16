@@ -123,6 +123,22 @@ to improve the accuracy of peak calling and segmentation.
 
 Techniques: statistical testing, signal processing, digital filtering, convolution, CNNs
 
+### Machine Learning for Early Prediction of Non-Invasive Ventilation Failure in ICU Patients
+#### Dr. Wang
+
+This project aims to develop machine learning models that help clinicians identify patients with acute hypoxemic respiratory failure who are likely to fail non-invasive ventilation (NIV) and require intubation within 72 hours. Early prediction of NIV failure is critical because delayed intubation is associated with worse clinical outcomes.
+
+We will analyze real-world intensive care unit (ICU) data from the Salzburg Intensive Care Database (SICdb), which contains more than 27,000 ICU admissions with detailed clinical measurements including laboratory results, ventilator settings, vital signs, and medication records.
+
+The project involves building predictive models that use clinical features collected at the start of NIV therapy and during the early treatment period. Two modeling strategies will be explored:
+
+1. Baseline prediction models using patient information available at the start of NIV therapy.
+1. Time-aware landmark models that update risk predictions as new clinical data becomes available over time.
+
+Students will work on extracting clinically meaningful features such as oxygenation measurements, blood gas values, ventilator parameters, and laboratory results. These features will be used to train machine learning survival.
+
+**Techniques:** Data cleaning and visualization, feature engineering, machine learning, and survival analysis
+
 ### Inferring User Reasoning for Generalization
 #### Dr. Yoder
 
