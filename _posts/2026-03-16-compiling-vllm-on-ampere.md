@@ -76,9 +76,7 @@ I haven't conclusively benchmarked vLLM versus Llama.cpp.  So far, however, I ca
 1. vLLM using a single NVidia GeForce RTX 5060 TI (16 GB VRAM) scales really well to 32 multiple concurrent connections without a significant
   drop in tokens per second or increase in overall request completion time compared to a single user.
 1. vLLM is NOT optimized for CPU.  It is very, very slow.
-1. Ampere's Llama.cpp fork provides a 20% speed up over upstream Llama.cpp on CPU.
-1. Llama.cpp single-request performance is within a factor of 2-3x of vLLM GPU performance.
-1. Neither Llama.cpp version scales well beyond a handful of concurrent connections.
+1. Llama.cpp doesn't scale well beyond a handful of concurrent connections.
 
 I still need to evaluate Llama.cpp performance using my GPU.  And I'm looking forward to evaluating vLLM performance on AmpereOne M. :)
 
