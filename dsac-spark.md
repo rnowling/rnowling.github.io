@@ -2,7 +2,7 @@
 layout: page
 title: "DSAC SPARK"
 permalink: /dsac-srp/
-published: true
+published: false
 hide_title: true
 ---
 
